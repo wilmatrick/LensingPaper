@@ -1,0 +1,42 @@
+\subsection{Strong Gravitational Lensing Formalism and Lens Model}
+
+\paragraph{Lensing Formalism.} A gravitational lens is a mass distribution, whose gravitational potential $\Phi$ acts as a lens for light coming from a source positioned somewhere on a plane behind the lens. The angular diameter distance from the observer to the lens is $D_d$, to the source plane it is $D_s$ and the distance between the lens and source plane is $D_{ds}$. The deflection potential of the lens is its potential, projected along the line of sight $z$ and rescaled to
+\begin{equation}
+\psi(\vec{\theta}) := \frac{D_{ds}}{D_d D_s} \frac{2}{c^2} \int \Phi(\vec{r}=D_d \vec{\theta},z) {\ \mathrm d} z, \label{eq:psidef}
+\end{equation}
+where $\vec{\theta}$ is a 2-dimensional vector on the plane of the sky. The light from the source at $\vec{\beta} = (\xi,\eta)$ is deflected according to the lens equation
+\begin{equation}
+\vec{\beta} = \vec{\theta}_i - \left.\vec{\nabla}_\theta \psi(\vec{\theta})\right|_{\vec{\theta}_i} \label{eq:lenseqpot}
+\end{equation}
+into an image $\vec{\theta}_i = (x_i,y_i)$. The gradient of the deflection potential $\vec{\nabla}_\theta \psi(\vec{\theta})$ is equal to the angle by which the light is deflected multiplied by $D_{ds}/D_{s}$.
+\\The total time delay of an deflected light path through $\vec{\theta}$ with respect to the unperturbed light path is given by 
+\begin{equation}
+\Delta t(\vec{\theta}) = \frac{(1+z_d)}{c} \frac{D_d D_s}{D_{ds}} \left[ \frac 12 (\vec{\theta} - \vec{\beta})^2 - \psi(\vec{\theta})\right], \label{eq:timedelay}
+\end{equation}
+\citep{BartGravLens}. According to Fermat's principle the image positions will be observed at the extrema of $\Delta t(\vec{\theta})$.
+\\The inverse magnification tensor
+\begin{equation}
+\mathscr{M}^{-1} \equiv \frac{\partial \vec{\beta}}{\partial \vec{\theta}} \overset{(\ref{eq:lenseqpot})}{=} \left(\delta_{ij} - \frac{\partial^2 \psi}{\partial \theta_i \partial \theta_j} \right)\label{eq:magnificationtensor}
+\end{equation}
+describes how the source position changes with image position. It also describes the distortion of the image shape for an extended source and its magnification due to lensing according to
+$$\mu \equiv \frac{\text{image area}}{\text{source area}} = \det \mathscr{M}.$$
+Lines in the image plane for which the magnification becomes infinite, i.e. $\det \mathscr{M}^{-1} = 0$, are called \emph{critical curves}. The corresponding lines in the source plane are called \emph{caustics}. The position of the source with respect to the caustic detemines the number of images and their configuration and shape with respect to each other.
+\\The \emph{Einstein mass} $M_\text{ein}$ and \emph{Einstein radius} $R_\text{ein}$ are defined via the relation
+\begin{equation*}
+M_\text{ein} \equiv M_\text{proj}(<R_\text{ein}) \overset{!}{=} \pi \Sigma_\text{crit} R_\text{ein}^2,
+\end{equation*}
+where $\Sigma_\text{crit} \equiv \frac{c^2}{4\pi G} \frac{D_s}{D_d D_{ds}}$ is the critical density and $M_\text{proj}(<R_\text{ein})$ is the mass projected along the line-of-sight within $R_\text{ein}$. $M_\text{ein}$ is similar to the projected mass within the critical curve $M_\text{crit}$.
+
+\paragraph{Lens Model.} Following \citet{EvansWitt} we assume a scale-free model
+\begin{equation*}
+\psi(R',\theta) = R^{'\alpha} F(\theta) \label{eq:scalefreemodel}
+\end{equation*}
+for the lensing potential, consisting of an angular part $F(\theta)$ and a power-law radial part, with $(R',\theta)$ being polar coordinates on the plane of the sky. The case $\alpha = 1$ corresponds to a flat rotation curve. We expand $F(\theta)$ into a Fourier series,
+\begin{equation}
+F(\theta) = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k\theta) + b_k \sin (k\theta) \right). \label{eq:Fourieransatz}
+\end{equation}
+For this scale-free lens model the lens equation (\ref{eq:lenseqpot}) becomes
+\begin{equation}
+\begin{pmatrix} \xi \\ \eta \end{pmatrix} = \begin{pmatrix} R'_i \cos \theta_i - R_i^{'\alpha-1} \left(\alpha \cos \theta_i F(\theta_i) - \sin \theta_i F'(\theta_i) \right) \\ R'_i \sin \theta_i - R_i^{'\alpha-1} \left(\alpha \sin \theta_i F(\theta_i + \cos \theta_i F'(\theta_i) \right)\end{pmatrix}\label{eq:Fourierlenseq}
+\end{equation}
+\citep{EvansWitt}, where $F'(\theta) = \partial F(\theta) / \partial \theta$. When we fix the slope $\alpha$, then the lens equation is a purely linear problem and can be solved numerically for the source position $(\xi,\eta)$ and the Fourier parameters $(a_k,b_k)$ given one observed image at position $(x_i=R'_i \cos \theta_i,y_i=R'_i \sin \theta_i)$. 
