@@ -1,4 +1,23 @@
 \subsection{Multi-Gaussian Expansion Formalism}
 
+Multi-Gaussian Expansions (MGE) are used to parametrize the observed surface brightness or projected total mass of a galaxy as a sum of $N$ two-dimensional, elliptical Gaussians \citep{1991ApJ...366..599B,1992A&A...253..366M,1994A&A...285..723E,1999MNRAS.303..495E}. This work makes use of the algorithm and code\footnote{Michele Cappellari's IDL code package for fitting MGEs to images is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap02}. We assume all Gaussians to have the same center and position angle $\phi$, i.e. orientation of w.r.t. the $y'$-axis of the coordinate system with polar coordinates $(R',\theta')$ [TO DO: CHECK]. Then the surface brightness can be written as
+\begin{eqnarray}
+I(R',\theta') &=& \sum_{i=1}^{N} I_{0,i} \exp\left[ - \frac{1}{2\sigma_i^2} \left(x^{'2} + \frac{y^{'2}}{q_i^{'2}}\right)\right]\label{eq:MGEgeneral}\\
+\text{with } I_{0,i} &=& \frac{L_i}{2\pi \sigma_i^2 q'_i}\nonumber\\%\label{eq:centralItotalL}\\
+\text{and } x'_i &=& R' \cos(\theta' - \phi)\nonumber\\
+y'_i &=& R' \sin(\theta' - \phi),\nonumber
+\end{eqnarray}
+where $I_{0,i}$ is the central surface brightness of each Gaussian, $L_i$ its total luminosity, $\sigma_i$ its dispersion along the major axis and $q'_i$ the axis ratio between the elliptical Gaussians major and minor axis.
+\\We can also expand the telescopes point-spread function (PSF) as a sum of circular Gaussians,
+\begin{equation}
+\text{PSF}(x,y) = \sum_j \frac{G_j}{2 \pi \delta_j^2} \exp\left[- \frac{1}{2 \delta_j^2} \left(x^2 + y^2 \right)\right], \label{eq:PSFgeneral}
+\end{equation}
+where $\sum_j G_j = 1$ and $\delta_j$ are in this case the dispersions of the circular PSF Gaussians. In this case the observed surface brightness distribution is a convolution of the intrinsic surface brightness in Eq. (\ref{eq:MGEgeneral}) with the PSF in Eq. (\ref{eq:PSFgeneral}): $(I \ast \text{PSF}) (x',y')$ is then again a sum of Gaussians and can be directly fitted to an image of the galaxy in question.
+
 [TO DO]
+
+\paragraph{Other stuff to mention}
+\begin{itemize}
+\item [TO DO] analytic deprojection into 3D Gaussians
+\end{itemize}
 

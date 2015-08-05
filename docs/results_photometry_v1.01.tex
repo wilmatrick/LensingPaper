@@ -1,4 +1,8 @@
-\subsection{Surface Photometry for J1331 with MGE}
+\subsection{Surface Photometry for J1331 with MGEs}
+
+To derive J1331's surface brightness distribution, we use the HST image in the infrared F814W filter, shown in Fig. \ref{fig:F814W}. In infrared J1331's central old and smooth stellar component is more extended than in the F450W filter in Fig. \ref{fig:F450W}, which is more sensitive to young clumpy star-forming regions. In infrared the bulge is also much brighter than the bluish lens images and the imaging is less prone to extinction. The F814W image is therefore best suited for fitting a MGE. 
+
+\paragraph{PSF for the HST/F814W filter.} We find a radial profile for the HST/F814W filter PSF from circular annuli within a synthetic PSF image from [TO DO: Where did we get this image from???], ignoring diffraction spikes. The one-dimensional MGE fit of Eq. (\ref{eq:PSFgeneral}) to this radial profile is performed using the code by [TO DO: REF and footnote to code]. The MGE parameters of the normalized PSF model are given in Tab. \ref{tab:PSFMGEF814W}.
 
 [TO DO]
 
@@ -30,10 +34,10 @@
 \begin{table*}
 \centering
 \begin{minipage}[t]{40mm}
-\caption{PSF F814W MGE ??????}
+\caption{F814W PSF MGE: Parameters of the circular four-Gaussian MGE in Eq. (\ref{eq:PSFgeneral} fitted to the radial profile of the synthetic HST/F814W PSF image by [TO DO].}
 \begin{tabular}{ccc}
 \hline
-$k$ & $G_k$ & $\sigma_k$ [arcsec] \\\hline
+$k$ & $G_k$ & $\delta_k$ [arcsec] \\\hline
 1 & 0.184 & 0.038\\
 2 & 0.485 & 0.085\\
 3 & 0.222 & 0.169\\
