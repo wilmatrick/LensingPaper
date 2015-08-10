@@ -1,5 +1,23 @@
 \subsection{Mass distribution from Lensing}
 
+\paragraph{Image Positions.} We determine the positions of the lensing images by first subtracting a smooth model for the galaxy's surface brightness from the original image. As models we use MGE fits (cf. \S\ref{kap:MGE}) and IRAF ellipse fits (???) to the galaxy in each the F450W and F814W filter. (For example the MGE we use for F814W is the MGE given in tab. \ref{tab:MGEF814W} convolved with the PSF in tab. \ref{tab:PSFMGEF814W}.) The lensing images become then visible in the residuals (see fig. \ref{fig:lens_just_imgpos}). Because the lensing images are extended, we use the position of the brightest pixel in each of the images. We also use the F814W-MGE subtracted residuals from \citet{SWELLSIII}. The lensing positions as determined from the latter are given in tab. \ref{tab:lenspos}. The scatter of lensing positions as determined from subtracting different surface brightness models from the galaxy in different filters gives an error of $\pm 1$ pixel on the image positions.
+
+\begin{table}
+\centering
+\begin{minipage}{70mm}
+\begin{tabular}{r|rrrr|c}
+\hline
+  & A & B & C & D & G\\\hline
+$x_i$ [pixel] & 12.1 & -8.5 & 21.7 & -3.3 & 0.5 $\pm \sqrt{2}$ \\
+$y_i$ [pixel] & 16.6 & -10.4 & -0.5 & 19.2 & 0.5 $\pm \sqrt{2}$ \\
+\hline
+\end{tabular}
+\caption{Positions of the lensing images (A-D) and the galaxy center (G) in fig. \ref{fig:lens_just_imgpos}. The image positions were determined from the lens subtracted image for J1331 in figure 4 of \citet{SWELLSIII}, rotated to the $(x,y)$ coordinate system in fig. \ref{fig:lens_just_imgpos}. The pixel scale is 1 pixel = 0.05 arcsec and the error of each image position is $\pm$ 1 pixel. \textit{SMALL PROBLEM: Somehow I used $\sqrt(2)$ pixel as the error on the galaxy center in the Monte Carlo sampling code instead of the 0.5 pixel I claim here. Should I change this table and the error bars in the figures to match this bug????}}
+\label{tab:lenspos}
+\end{minipage}
+\end{table}
+
+
 \paragraph{Best fit lens model.} The best fit lens model for the image positions in tab. \ref{tab:lenspos} is given in the first column of tab. \ref{tab:bestfitlensmodel}. Fig. \ref{fig:lensbestfiteinsteincurves} shows the corresponding critical curve, caustic and Einstein radius, and the best fit source position. In this case, where $\alpha=1$, the critical curve is also an equidensity contour of the galaxy model. Fig. \ref{fig:lensbestfittimedelay} overplots the smoothed residuals from the F814W image subtracted by the IRAF ellipse fit to the surface brightness with the contours of the best fit model's time delay surface. This demonstrates that, although we did not include any information about the shape of the lensing images in the fit, it is consistent with the predicted distortion for an extended source by the best fit lens model.
 \\To estimate how the uncertainties in the determination of the image positions and galaxy center affect the results, we Monte Carlo sample random positions from a two-dimensional Normal distribution centered at the positions in tab. \ref{tab:lenspos} and a standard deviation corresponding to the measurement error of 1 pixel. A Gaussian fit to the resulting distributions of best fit values leads to the constraints on the shape parameters and Einstein quantities in the second column in tab. \ref{tab:bestfitlensmodel}. We therefore constrain the Einstein radius to within 2\%, $R_\text{ein} = (0.91 \pm 0.02)$ arcsec and the projected mass within the critical curve with a relative error of 4\%, $M_\text{crit} =(7.9\pm0.3)\cdot 10^{10} M_\odot$. Our measurement of $R_\text{ein}$ is consistent with that from \citet{SWELLSIII}, $R_\text{ein,SWELLS} = (0.96 \pm 0.04)$ arcsec. The relative difference between our critical mass and that of \citet{SWELLSIII}, $M_\text{crit,SWELLS} =(8.86\pm0.61)\cdot 10^{10} M_\odot$, is 13\%.
 
@@ -48,7 +66,10 @@ Fourier Coefficients & $a_0$                               & $1.814$ & $1.82 $ &
 
 %========================================================================================
 
-\paragraph{Comparison with Light Distribution.} Fig. \ref{fig:lenscomparemass} shows the surface mass distribution as predicted by the best fit model in tab. \ref{tab:bestfitlensmodel}. We introduce random noise according to the uncertainties in the Fourier shape parameters to create a mock observation that visualizes the effect of the measurement errors. To be able to compare the predicted mass distribution to the observed light distribution we transform the surface brightness into a mass density: We first integrate the MGE in tab. \ref{tab:MGEF814W} to get the total luminosity within the Einstein radius and the predicted mass-to-light ratio as $\Upsilon_\text{I,ein} = M_\text{ein} / L_\text{I,ein}$. Fig. \ref{fig:lenscomparelight} shows then the observed surface brightness in the F814W filter multiplied by $\Upsilon_\text{I,ein}$.  Fig. \ref{fig:lenscompareboth} finally compares equidensity contours at the same values of both the predicted lens mass distribution and the observed surface brightness times $\Upsilon_\text{I,ein}$. We note the following three facts: 1.The mass predicted from lensing and the observed light distribution are oriented in the same direction. 2. Within the Einstein radius mass and light distribution have the same shape, while further out the mass distribution is more roundish. 3. The light distribution drops faster than the mass with increasing radius. This could indicate that the stellar component of the galaxy is superimposed by a more roundish dark matter component.
+\paragraph{Comparison with Light Distribution.} Fig. \ref{fig:lenscomparemass} shows the surface mass distribution as predicted by the best fit model in tab. \ref{tab:bestfitlensmodel}. We introduce random noise according to the uncertainties in the Fourier shape parameters to create a mock observation that visualizes the effect of the measurement errors. From the mock image's second moment we find an average axis ratio for the lens mass model of $q_\text{lens} \simeq 0.695$, which is consistent with the one found by \citet{SWELLSIII}, $q_\text{lens,SWELLSIII} = 0.67 \pm 0.09$, while the light's average axis ratio in Table \ref{tab:galaxyparameters} is $q' = 0.598$.
+\\To be able to compare the predicted mass distribution to the observed light distribution, we transform the surface brightness into a mass density: We first integrate the MGE in tab. \ref{tab:MGEF814W} to get the total luminosity within the Einstein radius and the predicted mass-to-light ratio as $\Upsilon_\text{I,ein} = M_\text{ein} / L_\text{I,ein}$. Fig. \ref{fig:lenscomparelight} shows then the observed surface brightness in the F814W filter multiplied by $\Upsilon_\text{I,ein}$.  Fig. \ref{fig:lenscompareboth} finally compares equidensity contours at the same values of both the predicted lens mass distribution and the observed surface brightness times $\Upsilon_\text{I,ein}$.
+\\Figure \ref{fig:lenslightcompareALL} leads to the following three findings: 1.The mass predicted from lensing and the observed light distribution are oriented in the same direction. 2. Within the Einstein radius, mass and light distribution have the same shape, while further out the mass distribution is more roundish. 3. The light distribution drops faster than the mass with increasing radius. 
+\\Reasons for the difference in observed light and measured mass distribution could be, e.g. an apparent change of shape due to dust extinction, a strongly changing $\Upsilon_*$, or the stellar component of the galaxy could be superimposed by a more roundish dark matter component.
 
 \paragraph{[TO DO: Stuff to mention]}
 \begin{itemize}
@@ -92,7 +113,7 @@ Total I-band luminosity within $R_\text{ein}$ & Mass-to-light ratio within $R_\t
   \label{fig:lenscompareboth}
 \end{subfigure}
 \caption{??? Preliminary crappy caption: Left: OBSERVED surface bightness multiplied with M/L in Einstein radius (overplotted in red). Middle: BEST FIT MODEL for mass distribution from lensing (including "wriggles" due to uncertainties in image positions). Contours are at the same levels. Right: Same contours, to directly show the difference in shape. ??? [TO DO: nice caption]}
-\label{fig:???}
+\label{fig:lenslightcompareALL}
 \end{figure*}
 
 

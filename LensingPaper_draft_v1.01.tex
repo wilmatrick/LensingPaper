@@ -18,6 +18,12 @@
 \setcounter{secnumdepth}{2}	%depth of section numbering
 \usepackage{hyperref} %ready-to-lick referencing
 
+%_____MACROS______
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
+\newcommand{\vect}[1]{\boldsymbol{#1}} % Uncomment for BOLD vectors.
+%\newcommand{\vect}[1]{\vec{#1}} % Uncomment for ARROW vectors.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[A spiral galaxy's mass distribution uncovered]{A spiral galaxy's mass distribution uncovered through lensing and dynamics}
@@ -72,6 +78,7 @@ blabla -- blabla: bla.
 
 %------------------------
 \section{Discussion and Conclusion}
+\include{docs/discussion_ML_v1.01}
 \include{docs/discussion_merger_v1.01}
 \include{docs/summary_v1.01}
 %------------------------
