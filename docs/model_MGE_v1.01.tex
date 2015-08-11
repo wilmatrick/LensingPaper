@@ -14,10 +14,14 @@ where $I_{0,i}$ is the central surface brightness of each Gaussian, $L_i$ its to
 \end{equation}
 where $\sum_j G_j = 1$ and $\delta_j$ are in this case the dispersions of the circular PSF Gaussians. In this case the observed surface brightness distribution is a convolution of the intrinsic surface brightness in Eq. (\ref{eq:MGEgeneral}) with the PSF in Eq. (\ref{eq:PSFgeneral}): $(I \ast \text{PSF}) (x',y')$ is then again a sum of Gaussians and can be directly fitted to an image of the galaxy in question.
 
-[TO DO]
+$I(R',\theta')$ describes the intrinsic, to 2D projected light distribution or surface density of the galaxy. Under the assumption that the galaxy is oblate and axisymmetric, and given the inclination angle $i$ of the galaxy with respect to the observer, MGEs allow an analytic deprojection of the 2D MGE to get a 3D light distribution or density $\nu(R,z)$ for the galaxy,
+\begin{equation}
+\nu(R,z) = \sum_i \nu_{0,i} \exp \left[-\frac{1}{2\sigma_i}\left(R^2 + \frac{z^2}{q_i^2} \right) \right]. \label{eq:deprojMGE}
+\end{equation}
+The flattening of each axisymmetric 3D Gaussian $q$ and its central density $\nu_{0,i}$ follow from the observed 2D axis ratio $q'_i$ and surface density $I_{0,i}$ as
+\begin{eqnarray*}
+q_i^2 &=& \frac{q_i'^2 - \cos^2 i}{\sin^2 i}\\
+\nu_{0,i} &=& \frac{q_i' I_{0,i}}{q_i \sqrt{2 \pi \sigma_i^2}}.
+\end{eqnarray*}
 
-\paragraph{Other stuff to mention}
-\begin{itemize}
-\item [TO DO] analytic deprojection into 3D Gaussians
-\end{itemize}
 
