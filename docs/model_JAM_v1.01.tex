@@ -17,3 +17,22 @@ where $n(\vect{x}) = \int f(\vect{x},\vect{v}) \diff3 v$ is the number density o
 \begin{equation*}
 v_\text{rms}^2 = \langle v_\text{los}^2 \rangle = v_\text{rot}^2 + \sigma^2.
 \end{equation*}
+The model in Eq. [TO DO] predicts the intrinsic $\langle v_\text{los}^2 \rangle$ at a given position on the sky, which have then to be modified to model the mode of observation, to be comparable to the measurements. The measured $v_\text{rms}$ is a light-weighted mean for a pixel along the long-slit of the spectrograph, with height $L_y = 1$ arcsec [TO DO: REF: Dutton 2013] and a certain given extent in along the major axis, $L_x$, i.e. for a rectangular aperture
+\begin{equation*}
+\text{AP}(x,y) = \left\{ \begin{array}{ll} 1 & \text{for } -\frac{L_x}{2} \leq x \leq + \frac{L_x}{2} \text{ and } - \frac{L_y}{2} \leq y \leq + \frac{L_y}{2}  \\ 0 & \text{otherwise} \end{array} \right. .
+\end{equation*}
+The light arriving at the spectrograph itself was subject to seeing, i.e. a Gaussian 
+\begin{equation*}
+\text{PSF}(x,y)=\mathscr{N}(0,FWHM/2\sqrt{2\ln2})
+\end{equation*}
+with FWHM=1.1 arcsec  [TO DO: REF: Dutton 2013]. The model predictions have therefore to be convolved with the convolution kernel
+\begin{eqnarray*}
+K(x,y) &=& (\text{PSF} \ast \text{AP})(x,y) \\
+&=& \frac{1}{4} \prod_{u \in \{x,y\}} \left[ \text{erf}\left( \frac{L_u/2 - u}{\sqrt{2}\sigma_\text{seeing}}\right) + \text{erf} \left( \frac{L_u/2 + u}{\sqrt{2} \sigma_\text{seeing}} \right) \right]
+\end{eqnarray*}
+and weighted by the surface brightness $I(x,y)$ [TO DO: primed x and y or not????]
+\begin{eqnarray*}
+I_\text{obs} &=& I \ast K\\
+\langle v_\text{los}^2 \rangle |_\text{obs} &=& \frac{(I \langle v_\text{los}^2\rangle) \ast K}{I_\text{obs}}.
+\end{eqnarray*}
+If provided with with the convolution kernel, the JAM code by [TO DO: REF: Cappellari 2008] [TO DO: reference code] performs the convolution numerically. We set $L_x = 0.21$ arcsec as the width of the model pixel, and get a prediction for the actual measurements in bins of width 0.63, 1.26 and 1.89 arcsec [TO DO: REF: Dutton 2013] as light-weighted mean from each 3, 6 and 9 model pixels.
