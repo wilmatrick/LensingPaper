@@ -10,14 +10,35 @@ M_\text{200} &=& M(<r_{200})\\
 \frac{M_{200}}{ \frac 43 \pi r_{200}^3} &=& 200 \rho_\text{crit}(z=0) \\
 v_\text{200} &=& \sqrt{\frac{GM_{200}}{r_\text{200}}}
 \end{eqnarray*}
-with $\rho_\text{crit}(z=0)=1.43 \cdot 10^{-7} M_\odot / \text{pc}^3$ in the WMAP5 cosmology by [TO DO: REF: Dunkley et al. 2009].
+with $\rho_\text{crit}(z=0)=1.43 \cdot 10^{-7} M_\odot / \text{pc}^3$ in the WMAP5 cosmology by [TO DO: REF: Dunkley et al. 2009]. How much the mass is concentrated in the center of the NFW halo is given by the concentration of the NFW halo defined by $c_{200}\equiv r_{200} / R_{s,NFW}$. [TO DO: so toll ist das mit der Radiusbenennung noch nicht.????]. There is a close relation between the concentration and halo mass in simulations [TO DO: REF: Navarro et al. 1996]. [TO DO: REF: Maccio et al 2008] found this relation for the WMAP5 cosmology [TO DO: REF: Dunkley 2009] to be
+\begin{equation}
+\langle \log c_{200} \rangle (M_{200}) = 0.830 - 0.098 \log \left(h \frac{M_{200}}{10^{12} M_\odot} \right) \label{eq:Maccio08}
+\end{equation}
+(their equation 10), with a Gaussian scatter of $\sigma_{\log c_{200}} = 0.105$ (their table A2).
 
-\paragraph{Priors.} [TO DO: REF: Dutton et al. 2010] give a relation for halo vs. stellar mass for late-type galaxies. For an Chabrier IMF stellar population they found
+
+\paragraph{Modelling and Priors.} The full set of fit parameters is $(\Upsilon_{I,*},R_\text{S,NFW},v_{200},\beta)$ [TO DO: $\beta$ or $\beta_0$???] [TO DO: Einheitlich $\Upsilon_{I,*}$????], where $\beta$ is the constant velocity anisotropy parameter (see [TO DO: REFERENCE TO SECTION???]). We will investigate this parameter space with a MCMC [TO DO: REFERENCE EMCEE???] and use priors for the halo parameters to guide the fit to a realistic NFW halo shape.
+\\{[TO DO: REF: Dutton et al. 2010]} give a relation for halo vs. stellar mass for late-type galaxies. For an Chabrier IMF stellar population they found
 \begin{equation*}
 y = y_0 \left( \frac{x}{x_0} \right)^\alpha \left[ \frac 12 + \frac 12 \left(\frac{x}{x_0} \right)^\gamma \right]^{(\beta - \alpha)/\gamma},
 \end{equation*}
-where $x= m_*$ [$M_\odot h^{-2}$] is the stellar mass, $y = \frac{\langle M_{200}\rangle}{m_*}$ and $\langle M_{200}\rangle$ [$M_\odot h^{-2}$] is the mean halo mass. The parameters for the mean and $2\sigma$ error curves for this relation are$\alpha = -0.5\pm0.15$, $\beta = 0$, $\gamma = 1.0$, $\log_{10} x_0 = 10.4$, $\log_{10} {y_0}_{-0.24}^{+0.28}$ [TO DO: REF: Dutton et al. 2010]. Using the stellar mass estimate for J1331 from \citet{SWELLSI} $m_* = (1.06 \pm 0.25) \cdot 10^{11} M_\odot$ for the Chabrier IMF estimate [TO DO: introduce somewhere], we find ${v_{200}} = (202_{-33}^{+44})_{-13}^{+12}$. The first of the two quoted errors is due to the $2\sigma$ scatter in the relation by [TO DO: REF: Dutton et al. 2010]. The second error is the propagated error due to the uncertainty in the stellar mass. We use this rough estimate for J1331's [TO DO: Continue on page 98]
-
+where $x= m_*$ [$M_\odot h^{-2}$] is the stellar mass, $y = \frac{\langle M_{200}\rangle}{m_*}$ and $\langle M_{200}\rangle$ [$M_\odot h^{-2}$] is the mean halo mass. The parameters for the mean and $2\sigma$ error curves for this relation are$\alpha = -0.5\pm0.15$, $\beta = 0$, $\gamma = 1.0$, $\log_{10} x_0 = 10.4$, $\log_{10} {y_0}_{-0.24}^{+0.28}$ [TO DO: REF: Dutton et al. 2010]. Using the stellar mass estimate for J1331 from \citet{SWELLSI} $m_* = (1.06 \pm 0.25) \cdot 10^{11} M_\odot$ for the Chabrier IMF estimate [TO DO: introduce somewhere], we find ${v_{200}} = (202_{-33}^{+44})_{-13}^{+12}$. The first of the two quoted errors is due to the $2\sigma$ scatter in the relation by [TO DO: REF: Dutton et al. 2010]. The second error is the propagated error due to the uncertainty in the stellar mass. We use this as a rough estimate for the halo of J1331 and as Gaussian prior on $v_{200}$, 
+\begin{equation*}
+p(v_{200}) = \mathscr{N}(200 \text{km/s} ,40 \text{km/s}).
+\end{equation*}
+\\We also use the concentration vs. halo mass relation by [TO DO: REF: Maccio 2008] in Eq. (\ref{eq:Maccio08}) as a prior on the concentration, i.e.
+\begin{equation*}
+p(\log c_{200} \mid v_{200}) = \mathscr{N}\left(\langle \log c_{200} \rangle (M_{200}) \mid 0.105 \right).
+\end{equation*}
+\\For the velocity anisotropy parameter $\beta$ we will again employ a uniform prior 
+\begin{equation*}
+p(\beta) = \mathscr{U}(-0.5,+0.5)
+\end{equation*}
+to exclude very unrealistic anisotropies. The full prior used is then
+\begin{equation*}
+p(\Upsilon_{I,*},R_\text{S,NFW},v_{200},\beta) = \frac{1}{\ln\left( 10 R_{s,NFW}\right)} p(\log c_{200} \mid v_{200}) \cdot p(v_{200}) \cdot p(\beta), 
+\end{equation*}
+where the factor $1/\ln\left( 10 R_{s,NFW}\right)$ is the Jacobian of the transformation from the halo parameters $(v_{200},\log c_{200})$ [TO DO: introduce concentration] to $(v_{200},R_{s,NFW})$.
 
 
 [TO DO]
