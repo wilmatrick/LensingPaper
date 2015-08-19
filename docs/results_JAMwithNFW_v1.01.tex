@@ -1,6 +1,6 @@
 \subsection{JAM with a NFW Dark Matter Halo}
 
-\paragraph{Including a NFW halo.} The dynamical modelling attempts in the previous sections suggest that J1331's inner regions have a slightly more roundish and at large radii more massive mass distribution than expected from the distribution of stars alone. A dark matter halo in addition to the stellar component could explain these findings. We therefore proceed by modelling the mass distribution with a) a stellar component, which we get from the light MGE in Table [TO DO: REF????] times a constant stellar mass-to-light ratio $\Upsilon_*$), and b) a spherical NFW dark matter component [TO DO: Navarro 1995 or 1996???], which is implemented in the JAM modelling as a fit of a 10-Gaussian MGE to the classical NFW profile
+\paragraph{Including a NFW halo.} The dynamical modelling attempts in the previous sections suggest that J1331's inner regions have a slightly more roundish and at large radii more massive mass distribution than expected from the distribution of stars alone. A dark matter halo in addition to the stellar component could explain these findings. We therefore proceed by modelling the mass distribution with a) a stellar component, which we get from the light MGE in Table \ref{tab:MGEF814W} times a constant stellar mass-to-light ratio $\Upsilon_*$), and b) a spherical NFW dark matter component \citep{Navarro+1995c,NFW96}. In the JAM modelling we use a 10-Gaussian MGE fit to the classical NFW profile
 \begin{equation*}
 \rho_\text{NFW}(r) \propto 1 / \frac{r}{R_\text{s,NFW}} \left( 1 + \frac{r}{R_\text{s,NFW}} \right)^2.
 \end{equation*}
@@ -10,23 +10,23 @@ M_\text{200} &=& M(<r_{200})\\
 \frac{M_{200}}{ \frac 43 \pi r_{200}^3} &=& 200 \rho_\text{crit}(z=0) \\
 v_\text{200} &=& \sqrt{\frac{GM_{200}}{r_\text{200}}}
 \end{eqnarray*}
-with $\rho_\text{crit}(z=0)=1.43 \cdot 10^{-7} M_\odot / \text{pc}^3$ in the WMAP5 cosmology by [TO DO: REF: Dunkley et al. 2009]. How much the mass is concentrated in the center of the NFW halo is given by the concentration of the NFW halo defined by $c_{200}\equiv r_{200} / R_{s,NFW}$. [TO DO: so toll ist das mit der Radiusbenennung noch nicht.????]. There is a close relation between the concentration and halo mass in simulations [TO DO: REF: Navarro et al. 1996]. [TO DO: REF: Maccio et al 2008] found this relation for the WMAP5 cosmology [TO DO: REF: Dunkley 2009] to be
+with $\rho_\text{crit}(z=0)=1.43 \cdot 10^{-7} M_\odot / \text{pc}^3$ in the WMAP5 cosmology by \citet{WMAP5cosm}. How much the mass is concentrated in the center of the NFW halo is given by the concentration of the NFW halo defined by $c_{200}\equiv r_{200} / R_{s,NFW}$. [TO DO: so toll ist das mit der Radiusbenennung noch nicht.????]. There is a close relation between the concentration and halo mass in simulations \citep{NFW96}. \citet{Maccio08} found this relation for the WMAP5 cosmology \citep{WMAP5cosm} to be
 \begin{equation}
 \langle \log c_{200} \rangle (M_{200}) = 0.830 - 0.098 \log \left(h \frac{M_{200}}{10^{12} M_\odot} \right) \label{eq:Maccio08}
 \end{equation}
 (their equation 10), with a Gaussian scatter of $\sigma_{\log c_{200}} = 0.105$ (their table A2).
 
 
-\paragraph{Modelling and Priors.} The full set of fit parameters is $(\Upsilon_{I,*},R_\text{S,NFW},v_{200},\beta)$ [TO DO: $\beta$ or $\beta_0$???] [TO DO: Einheitlich $\Upsilon_{I,*}$????], where $\beta$ is the constant velocity anisotropy parameter (see [TO DO: REFERENCE TO SECTION???]). We will investigate this parameter space with a MCMC [TO DO: REFERENCE EMCEE???] and use priors for the halo parameters to guide the fit to a realistic NFW halo shape.
-\\{[TO DO: REF: Dutton et al. 2010]} give a relation for halo vs. stellar mass for late-type galaxies. For an Chabrier IMF stellar population they found
+\paragraph{Modelling.} The full set of fit parameters is $(\Upsilon_{I,*},R_\text{S,NFW},v_{200},\beta)$ [TO DO: $\beta$ or $\beta_0$???] [TO DO: Einheitlich $\Upsilon_{I,*}$????], where $\beta$ is the constant velocity anisotropy parameter (see \S\ref{sec:model_JAM}). We will investigate this parameter space with a MCMC \citep{emcee} and use priors for the halo parameters to guide the fit to a realistic NFW halo shape.
+\\\citet{Dutton10} give a relation for halo vs. stellar mass for late-type galaxies. For an Chabrier IMF stellar population they found
 \begin{equation*}
 y = y_0 \left( \frac{x}{x_0} \right)^\alpha \left[ \frac 12 + \frac 12 \left(\frac{x}{x_0} \right)^\gamma \right]^{(\beta - \alpha)/\gamma},
 \end{equation*}
-where $x= m_*$ [$M_\odot h^{-2}$] is the stellar mass, $y = \frac{\langle M_{200}\rangle}{m_*}$ and $\langle M_{200}\rangle$ [$M_\odot h^{-2}$] is the mean halo mass. The parameters for the mean and $2\sigma$ error curves for this relation are$\alpha = -0.5\pm0.15$, $\beta = 0$, $\gamma = 1.0$, $\log_{10} x_0 = 10.4$, $\log_{10} {y_0}_{-0.24}^{+0.28}$ [TO DO: REF: Dutton et al. 2010]. Using the stellar mass estimate for J1331 from \citet{SWELLSI} $m_* = (1.06 \pm 0.25) \cdot 10^{11} M_\odot$ for the Chabrier IMF estimate [TO DO: introduce somewhere], we find ${v_{200}} = (202_{-33}^{+44})_{-13}^{+12}$. The first of the two quoted errors is due to the $2\sigma$ scatter in the relation by [TO DO: REF: Dutton et al. 2010]. The second error is the propagated error due to the uncertainty in the stellar mass. We use this as a rough estimate for the halo of J1331 and as Gaussian prior on $v_{200}$, 
+where $x= m_*$ [$M_\odot h^{-2}$] is the stellar mass, $y = \frac{\langle M_{200}\rangle}{m_*}$ and $\langle M_{200}\rangle$ [$M_\odot h^{-2}$] is the mean halo mass. The parameters for the mean and $2\sigma$ error curves for this relation are$\alpha = -0.5\pm0.15$, $\beta = 0$, $\gamma = 1.0$, $\log_{10} x_0 = 10.4$, $\log_{10} {y_0}_{-0.24}^{+0.28}$ \citet{Dutton10}. Using the stellar mass estimate for J1331 from \citet{SWELLSI} $m_* = (1.06 \pm 0.25) \cdot 10^{11} M_\odot$ for the Chabrier IMF estimate [TO DO: introduce somewhere], we find ${v_{200}} = (202_{-33}^{+44})_{-13}^{+12}$. The first of the two quoted errors is due to the $2\sigma$ scatter in the relation by \citet{Dutton10}. The second error is the propagated error due to the uncertainty in the stellar mass. We use this as a rough estimate for the halo of J1331 and as Gaussian prior on $v_{200}$, 
 \begin{equation*}
 p(v_{200}) = \mathscr{N}(200 \text{km/s} ,40 \text{km/s}).
 \end{equation*}
-\\We also use the concentration vs. halo mass relation by [TO DO: REF: Maccio 2008] in Eq. (\ref{eq:Maccio08}) as a prior on the concentration, i.e.
+\\We also use the concentration vs. halo mass relation by \citet{Maccio08} in Eq. (\ref{eq:Maccio08}) as a prior on the concentration, i.e.
 \begin{equation*}
 p(\log c_{200} \mid v_{200}) = \mathscr{N}\left(\langle \log c_{200} \rangle (M_{200}) \mid 0.105 \right).
 \end{equation*}
@@ -39,39 +39,57 @@ to exclude very unrealistic anisotropies. The full prior used is then
 p(\Upsilon_{I,*},R_\text{S,NFW},v_{200},\beta) = \frac{1}{\ln\left( 10 R_{s,NFW}\right)} p(\log c_{200} \mid v_{200}) \cdot p(v_{200}) \cdot p(\beta), 
 \end{equation*}
 where the factor $1/\ln\left( 10 R_{s,NFW}\right)$ is the Jacobian of the transformation from the halo parameters $(v_{200},\log c_{200})$ [TO DO: introduce concentration] to $(v_{200},R_{s,NFW})$.
+\\We restrict the $v_\text{rms}$ fit to a region $R' \lesssim 3.5$ arcsec, approximately within the effective half-light radius $R_\text{eff} = 2.6$ arcsec  [TO DO: make sure R' everywhere ???]. We also include the Einstein mass $M(<R_\text{ein}$ with a 10\% error as an additional constraint in the fit. 
 
 
-[TO DO]
+\paragraph{Result.} Figure \ref{fig:modelB4_triangle} shows the posterior probability distribution of the fit sampled with an MCMC. Overplotted are also the priors used to constrain the NFW halo. The best fit parameters are summarized in Table \ref{tab:modelB4_bestfit}. We find that the best fit NFW halo strives to be more massive and with a higher concentration than  proposed by the prior. At the same time the model prefers again very negative velocity anisotropies; the sample with the highest probability is pegged at the lower limit of the prior. Both, the concentrated halo and the low anisotropy are needed to reproduce the central dip of the $v_\text{rms}$ curve.
 
 \begin{figure*}
 \centering
 \includegraphics[width=0.9\linewidth]{fig/B4_contour_plot_short.ps}
-\caption{??? Preliminary crappy caption: Result of the MCMC sampling of the parameter space for a model with NFW halo and constant velocity anisotropy. Green and blue shows the priors. Grey diamonds are the models shown in next figure. ??? [TO DO: nice caption]}
-\label{fig:???}
+\caption{Posterior probability distribution sampled with MCMC (red dots and histograms) for a JAM model with NFW halo, parametrized by $R_\text{s,NFW}$ and $v_\text{200}$, a stellar mass distribution generated from the I-band MGE in Table \ref{tab:MGEF814W} and a constant stellar mass-to-light ratio $\Upsilon_{I,*}$, and constant velocity anisotropy $\beta_z$. Shown are also the priors used for J1331's NFW halo, $\mathscr{N}(200 \text{km/s},40 \text{km/s})$ (green) and the concentration vs. halo mass relation by \citet{Maccio08} from Eq. (\ref{eq:Maccio08}) in terms of $v_{200}$ vs. $R_\text{s,NFW}$ with $1\sigma$ scatter (blue). The MCMC samples are color coded according to their probability (darker red for higher probability); the sample point with the highest probability is marked by a black diamond. The black cross is the mean of the distribution and the ellipses are derived from the covariance of matrix of the sample set and correspond approximately to $1\sigma$ (black solid ellipse) and $2\sigma$ (black dotted ellipse). The histograms of the marginalized 1D distributions are overplotted by the mean (black solid lines) and $1\sigma$ error (black dashed lines), whose values are also quoted in the figure and in Table \ref{tab:modelB4_bestfit}. The grey diamonds mark a random sub-selection of 12 samples; the corresponding models are shown in Figure \ref{fig:modelB4_models}.}
+\label{fig:modelB4_triangle}
 \end{figure*}
+
+\begin{table}
+\centering
+\begin{tabular}{llrcl}
+\hline
+stellar I-band mass-to-light ratio & $\Upsilon_{I,*}$ & 4.2 & $\pm$ & 0.2\\
+velocity anisotropy & $\beta_z$ & -0.4 & $\pm$ & 0.1 \\
+NFW halo scale length & $R_\text{s,NFW}$ [kpc] & 40 & $\pm$ & 20\\
+NFW halo virial velocity & $v_{200}$ [km/s] & 240 & $\pm$ & 40\\
+NFW halo concentration & $c_{200}$ & 8 & $\pm$ & 2 \\
+NFW halo mass & $M_{200}$ [$10^{12} M_\odot$] & 5 & $\pm$ & 2\\
+\hline
+\end{tabular}
+\caption{Summary of the best fit parameters of the JAM model with NFW halo from the MCMC exploration in Figure \ref{fig:modelB4_triangle}. The halo mass and concentration are calculated from the the best fit $R_\text{s,NFW}$ and $v_{200}$.}
+\label{tab:modelB4_bestfit}
+\end{table}
 
 \begin{figure*}
 \centering
 \begin{subfigure}{\textwidth}
   \centering
   \includegraphics[width=0.8\linewidth]{fig/B4_rms_error_curves.ps}
-  \caption{???}
-  \label{fig:???}
+  \caption{Comparison of the $v_\text{rms}$ data with the best fit JAM models.}
+  \label{fig:modelB4_vrms}
 \end{subfigure}
-\begin{subfigure}{.5\textwidth}
+\begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.9\linewidth]{fig/B4_jam_profiles_errors_short_vcirc.ps}
-  \caption{????????}
-  \label{fig:???}
+  \caption{Circular velocity curve.}
+  \label{fig:modelB4_vcirc}
 \end{subfigure}%
-\begin{subfigure}{.5\textwidth}
+\hspace{.02\textwidth}
+\begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.9\linewidth]{fig/B4_jam_profiles_errors_short_projmass.ps}
-  \caption{???}
-  \label{fig:???}
+  \caption{Enclosed mass profile.}
+  \label{fig:modelB4_enclMass}
 \end{subfigure}
-\caption{??? Preliminary crappy caption: 12 samples from the parameter pdf found with the MCMC above for the model with NFW halo and constant velocity anisotropy. Big red dot shows the Einstein mass with a 10\% error (used in fit). ??? [TO DO: nice caption]}
-\label{fig:???}
+\caption{Best fit JAM model including a NFW halo and velocity anisotropy with parameters given in Table \ref{tab:modelB4_bestfit}. The 12 lines shown correspond to the 12 models randomly drawn from the posterior probability distribution and marked as grey diamonds in Figure \ref{fig:modelB4_triangle}. Overplotted are the Einstein radius (red dotted line) and the effective half-light radius (black dotted line). The blue dashed line marks the radius within which the data and model were fitted. \emph{Panel a)} shows the comparison of the symmetrized $v_\text{rms}$ data (solid blue points) with the best fit JAM models including a NFW halo (red solid lines). Also shown is the non-symmetrized data at larger radii (open blue dots) and an extrapolation of the best fit models, using the same model parameters but the I-band surface brightness MGE for the outer regions of J1331 derived from the Ellipse model (red dashed lines). \emph{Panel b)} shows the circular velocity curve of the total mass (green), and separately the contribution of the stellar mass (yellow, again generated from the MGE in Table \ref{tab:F814WMGE}) and dark matter (grey). \emph{Panel c)} shows the corresponding enclosed mass profile. Overplotted is also the Einstein mass at the Einstein radius with a 10\% error, which was used in the fit as an additional constraint.[TO DO: radius benennungen sind irgendwie verrutscht]}
+\label{fig:modelB4_models}
 \end{figure*}
 
 
