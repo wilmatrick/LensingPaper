@@ -42,7 +42,8 @@ where the factor $1/\ln\left( 10 R_{s,NFW}\right)$ is the Jacobian of the transf
 \\We restrict the $v_\text{rms}$ fit to a region $R' \lesssim 3.5$ arcsec, approximately within the effective half-light radius $R_\text{eff} = 2.6$ arcsec  [TO DO: make sure R' everywhere ???]. We also include the Einstein mass $M(<R_\text{ein}$ with a 10\% error as an additional constraint in the fit. 
 
 
-\paragraph{Result.} Figure \ref{fig:modelB4_triangle} shows the posterior probability distribution of the fit sampled with an MCMC. Overplotted are also the priors used to constrain the NFW halo. The best fit parameters are summarized in Table \ref{tab:modelB4_bestfit}. We find that the best fit NFW halo strives to be more massive and with a higher concentration than  proposed by the prior. At the same time the model prefers again very negative velocity anisotropies; the sample with the highest probability is pegged at the lower limit of the prior. Both, the concentrated halo and the low anisotropy are needed to reproduce the central dip of the $v_\text{rms}$ curve.
+\paragraph{Result.} Figure \ref{fig:modelB4_triangle} shows the posterior probability distribution of the fit sampled with an MCMC. Overplotted are also the priors used to constrain the NFW halo. The best fit parameters are summarized in Table \ref{tab:modelB4_bestfit}. We find that the best fit NFW halo strives to be more massive and with a higher concentration than  proposed by the prior. At the same time the model prefers again very negative velocity anisotropies; the sample with the highest probability is pegged at the lower limit of the prior. Both, the concentrated halo and the low anisotropy are needed to reproduce the central dip of the $v_\text{rms}$ curve. [TO DO: Rewrite. Not very good.]
+The first panel in Figure \ref{fig:modelB4_vrot} shows the mean best fit values from Table \ref{tab:modelB4_bestfit}.
 
 \begin{figure*}
 \centering
@@ -94,13 +95,11 @@ NFW halo mass & $M_{200}$ [$10^{12} M_\odot$] & 5 & $\pm$ & 2\\
 
 
 
-\subsubsection{Predicting the Rotation Curve at larger Radii}
-
-[TO DO]
+\paragraph{Rotation curve.} Following the procedure in \S\ref{sec:model_JAM} we find the rotation curve from the best fit mean model in Table \ref{tab:modelB4_bestfit} by fitting the rotation parameter $\kappa'$ to the symmetrized $v_\text{rot}$ data within $R' = 3.5$ arcsec. The best fit with $\kappa' = 0.76$ is shown in the second panel of Figure \ref{fig:modelB4_vrot}. The third panel gives the dispersion that was calculated simply by $\sigma = \sqrt{v_\text{rms}^2 - v_\text{rot}^2}$. Our assumptions for $\kappa(R)$ nicely reproduce a $v_\text{rot}$ model with counter-rotating core. Although we fitted $v_\text{rot}$ only to the inner regions, the extrapolation to large radii fits the data also very well. While the dispersion $\sigma$ in the center fits by construction quite good, there is a huge discrepancy at large radii. The predicted dispersion is much larger than the data; we would expect the disk rotationally supported and therefore have a low velocity dispersion; especially dispersions as high as $\sim 200 km/s$ are more likely to be observed in the pressure supported bulges of galaxies. There \emph{might} be something unexpeted with the $\sigma$ measurements around $\sim 5$ arcsec, but at large radii the the best fit model NFW halo is simply too massive. 
 
 \begin{figure*}
 \centering
 \includegraphics[width=0.7\linewidth]{fig/B4_rms_rot_curves_best_model.ps}
-\caption{??? Preliminary crappy caption: Model: NFW halo and constant velocity anisotropy, using the the mean / peak values of the MCMC result in the above pdf for the model parameters. Fitting one more free parameter to the rotation curve in the inner regions, predicting the rotation curve and dispersion at larger radii. Green dots are gas kinematics. ??? [TO DO: nice caption]}
-\label{fig:???}
+\caption{Generating the rotation curve from the JAM model with NFW halo and constant velocity anisotropy with the mean parameters in Table \ref{tab:modelB4_bestfit} and with the best fit rotation parameter $\kappa' = 0.76$ in Eq. (\ref{eq:kappa_profile}) (red solid lines). The second velocity moment in the first panel and the first velocity moment in the second panel with the additional fit parameter $\kappa'$ were fitted to the symmetrized data (solid blue points). The velocity dispersion is simply $\sigma = \sqrt{v_\text{rms}^2 - v_\text{rot}^2}$. At larger radii we compare the unsymmetrized data (open blue dots), the gas kinematics from \citet{SWELLSV} (green diamonds) and a JAM model using the same model parameters but the light distribution MGE generated from the Ellipse model in Figure [TO DO: REF FIGURE] as a prediction for the outer regions of J1331 (red dashed lines). The central regions are very well reproduced and we can also greatly predict the rotation curve at larger radii. Only at larger radii the $v_\text{rms}$ and $v_\text{rot}$ overestimate the measurements, probably due to a too massive NFW halo.}
+\label{fig:modelB4_vrot}
 \end{figure*}
