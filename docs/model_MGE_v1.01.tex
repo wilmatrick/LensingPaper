@@ -1,4 +1,4 @@
-\subsection{Multi-Gaussian Expansion Formalism} \ref{sec:MGE_theo}
+\subsection{Multi-Gaussian Expansion Formalism} \label{sec:MGE_theo}
 
 Multi-Gaussian Expansions (MGE) are used to parametrize the observed surface brightness or projected total mass of a galaxy as a sum of $N$ two-dimensional, elliptical Gaussians \citep{1991ApJ...366..599B,1992A&A...253..366M,1994A&A...285..723E,1999MNRAS.303..495E}. This work makes use of the algorithm and code\footnote{Michele Cappellari's IDL code package for fitting MGEs to images is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap02}. We assume all Gaussians to have the same center and position angle $\phi$, i.e. orientation of w.r.t. the $y'$-axis of the coordinate system with polar coordinates $(R',\theta')$ [TO DO: CHECK]. Then the surface brightness can be written as
 \begin{eqnarray}
@@ -18,7 +18,7 @@ $I(R',\theta')$ describes the intrinsic, to 2D projected light distribution or s
 \begin{equation}
 \nu(R,z) = \sum_i \nu_{0,i} \exp \left[-\frac{1}{2\sigma_i}\left(R^2 + \frac{z^2}{q_i^2} \right) \right]. \label{eq:deprojMGE}
 \end{equation}
-The flattening of each axisymmetric 3D Gaussian $q$ and its central density $\nu_{0,i}$ follow from the observed 2D axis ratio $q'_i$ and surface density $I_{0,i}$ as
+The flattening of each axisymmetric 3D Gaussian $q_i$ and its central density $\nu_{0,i}$ follow from the observed 2D axis ratio $q'_i$ and surface density $I_{0,i}$ as
 \begin{eqnarray*}
 q_i^2 &=& \frac{q_i'^2 - \cos^2 i}{\sin^2 i}\\
 \nu_{0,i} &=& \frac{q_i' I_{0,i}}{q_i \sqrt{2 \pi \sigma_i^2}}.
