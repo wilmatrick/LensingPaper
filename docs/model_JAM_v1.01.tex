@@ -31,7 +31,7 @@ with $N$ Gaussians describing the tracer distribution and $M$ Gaussians describi
 The JAM modelling code by \citet{Cap08} evaluates numerically Equation \ref{eq:explicitLOSvelCap} for a given luminous tracer and mass distribution MGE and a given inclination.
 
 
-\paragraph{Data comparison.} As data we use stellar line-of-sight rotation velocities $v_\text{rot} \equiv \langle v_\text{los} \rangle$ [TO DO: consistent, los or rot] and velocity dispersions $\sigma$ as described in Section \ref{sec:data}. The JAM models give us a prediction for the second line-of-sight velocity moment $\langle v_\text{los}^2 \rangle$. The root mean square (rms) line-of-sight velocity $v_\text{rms}$ allows a data-model comparison by relating theses velocities according to 
+\paragraph{Data comparison.} As data we use stellar line-of-sight rotation velocities $v_\text{rot} \equiv \langle v_\text{los} \rangle$ and velocity dispersions $\sigma$ as described in Section \ref{sec:data}. The JAM models give us a prediction for the second line-of-sight velocity moment $\langle v_\text{los}^2 \rangle$. The root mean square (rms) line-of-sight velocity $v_\text{rms}$ allows a data-model comparison by relating theses velocities according to 
 \begin{equation*}
 v_\text{rms}^2 = \langle v_\text{los}^2 \rangle = v_\text{rot}^2 + \sigma^2.
 \end{equation*}
@@ -54,7 +54,7 @@ and weighted by the surface brightness $I(x',y')$
 I_\text{obs} &=& I \ast K\\
 \langle v_\text{los}^2 \rangle |_\text{obs} &=& \frac{(I \langle v_\text{los}^2\rangle) \ast K}{I_\text{obs}}.
 \end{eqnarray*}
-If provided with the convolution kernel, the JAM code by \citet{Cap08} [TO DO: reference code] performs the convolution numerically. We set $L_x = 0.21$ arcsec as the width of the model pixel, and get a prediction for the actual measurements in bins of width 0.63, 1.26 and 1.89 arcsec \citep{SWELLSV} as light-weighted mean from each 3, 6 and 9 model pixels.
+If provided with the convolution kernel, the JAM code\footnote{The IDL code package for Jeans Axisymmetric Modelling (JAM) by \citet{Cap08} is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap08} performs the convolution numerically. We set $L_x = 0.21$ arcsec as the width of the model pixel, and get a prediction for the actual measurements in bins of width 0.63, 1.26 and 1.89 arcsec \citep{SWELLSV} as light-weighted mean from each 3, 6 and 9 model pixels.
 
 \paragraph{Rotation curve.} The intrinsic rotation curve is the first velocity moment $\langle v_\phi\rangle = \sqrt{\langle v_\phi^2 \rangle - \sigma_\phi^2}$. The observed rotation curve is the projection of the light-weighted contributions to $\langle v_\phi\rangle$ along the line-of-sight(\cite{Cap08}),
 \begin{equation*}
