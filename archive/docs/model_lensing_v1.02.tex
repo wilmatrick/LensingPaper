@@ -1,0 +1,58 @@
+\subsection{Strong gravitational lensing formalism and lens model} \label{sec:lensing_theo}
+
+\paragraph{Lensing formalism.} A gravitational lens is a mass distribution, whose gravitational potential $\Phi$ acts as a lens for light coming from a source positioned somewhere on a plane behind the lens. The angular diameter distance from the observer to the lens is $D_d$, to the source plane it is $D_s$ and the distance between the lens and source plane is $D_{ds}$. The deflection potential of the lens is its potential, projected along the line of sight $z$ and rescaled to
+\begin{equation}
+\psi(\vect{\theta}) := \frac{D_{ds}}{D_d D_s} \frac{2}{c^2} \int \Phi(\vect{r}=D_d \vect{\theta},z) {\ \mathrm d} z, \label{eq:psidef}
+\end{equation}
+where $\vect{\theta}$ is a 2-dimensional vector on the plane of the sky. The light from the source at $\vect{\beta} = (\xi,\eta)$\footnote{$\xi$ and $\eta$ are cartesian coordinates on the plane of the sky.} is deflected according to the lens equation
+\begin{equation}
+\vect{\beta} = \vect{\theta}_i - \left.\vect{\nabla}_\theta \psi(\vect{\theta})\right|_{\vect{\theta}_i} \label{eq:lenseqpot}
+\end{equation}
+into an image $\vect{\theta}_i = (x_i,y_i)$. The gradient of the deflection potential $\vect{\nabla}_\theta \psi(\vect{\theta})$ is equal to the angle by which the light is deflected multiplied by $D_{ds}/D_{s}$.
+\\The total time delay of an deflected light path through $\vect{\theta}$ with respect to the unperturbed light path is given by 
+\begin{equation}
+\Delta t(\vect{\theta}) = \frac{(1+z_d)}{c} \frac{D_d D_s}{D_{ds}} \left[ \frac 12 (\vect{\theta} - \vect{\beta})^2 - \psi(\vect{\theta})\right], \label{eq:timedelay}
+\end{equation}
+\citep{BartGravLens}. According to Fermat's principle the image positions will be observed at the extrema of $\Delta t(\vect{\theta})$.
+\\The inverse magnification tensor
+\begin{equation}
+\mathscr{M}^{-1} \equiv \frac{\partial \vect{\beta}}{\partial \vect{\theta}} \overset{(\ref{eq:lenseqpot})}{=} \left(\delta_{ij} - \frac{\partial^2 \psi}{\partial \theta_i \partial \theta_j} \right)\label{eq:magnificationtensor}
+\end{equation}
+describes how the source position changes with image position. It also describes the distortion of the image shape for an extended source and its magnification due to lensing according to
+$$\mu \equiv \frac{\text{image area}}{\text{source area}} = \det \mathscr{M}.$$
+Lines in the image plane for which the magnification becomes infinite, i.e. $\det \mathscr{M}^{-1} = 0$, are called \emph{critical curves}. The corresponding lines in the source plane are called \emph{caustics}. The position of the source with respect to the caustic detemines the number of images and their configuration and shape with respect to each other.
+\\The \emph{Einstein mass} $M_\text{ein}$ and \emph{Einstein radius} $R_\text{ein}$ are defined via the relation
+\begin{equation*}
+M_\text{ein} \equiv M_\text{proj}(<R_\text{ein}) \overset{!}{=} \pi \Sigma_\text{crit} R_\text{ein}^2,
+\end{equation*}
+where $\Sigma_\text{crit} \equiv \frac{c^2}{4\pi G} \frac{D_s}{D_d D_{ds}}$ is the critical density and $M_\text{proj}(<R_\text{ein})$ is the mass projected along the line-of-sight within $R_\text{ein}$. $M_\text{ein}$ is similar to the projected mass within the critical curve $M_\text{crit}$.
+
+\paragraph{Lens model.} Following \citet{EvansWitt} we assume a scale-free model
+\begin{equation}
+\psi(R',\theta') = R^{'\alpha} F(\theta') \label{eq:scalefreemodel}
+\end{equation}
+for the lensing potential, consisting of an angular part $F(\theta')$ and a power-law radial part, with $(R',\theta')$ being polar coordinates on the plane of the sky. The case $\alpha = 1$ corresponds to a flat rotation curve. We expand $F(\theta')$ into a Fourier series,
+\begin{equation}
+F(\theta') = \frac{a_0}{2} + \sum_{k=1}^{\infty} \left(a_k \cos(k\theta') + b_k \sin (k\theta') \right). \label{eq:Fourieransatz}
+\end{equation}
+For this scale-free lens model the lens equation (\ref{eq:lenseqpot}) becomes
+\begin{equation}
+\begin{pmatrix} \xi \\ \eta \end{pmatrix} = \begin{pmatrix} R'_i \cos \theta'_i - R_i^{'\alpha-1} \left(\alpha \cos \theta'_i F(\theta'_i) - \sin \theta'_i F'(\theta'_i) \right) \\ R'_i \sin \theta'_i - R_i^{'\alpha-1} \left(\alpha \sin \theta'_i F(\theta'_i + \cos \theta'_i F'(\theta'_i) \right)\end{pmatrix}\label{eq:Fourierlenseq}
+\end{equation}
+\citep{EvansWitt}, where $F'(\theta') \equiv \partial F(\theta') / \partial \theta'$. When we fix the slope $\alpha$, then the lens equation is a purely linear problem and can be solved numerically for the source position $(\xi,\eta)$ and the Fourier parameters $(a_k,b_k)$ given one observed image at position $(x_i=R'_i \cos \theta'_i,y_i=R'_i \sin \theta'_i)$. 
+
+\paragraph{Model fitting.} As described above our lensing model has the following free parameters: the source position $(\xi,\eta)$, and the radial slope $\alpha$ and Fourier parameters $(a_k,b_k)$ of the lens mass distribution in Equations \ref{eq:scalefreemodel} and \ref{eq:Fourieransatz}. We want to find the lensing model which minimizes for all four images the distance between the observed image positions $\vect{\theta}_{oi}$ and those predicted by the lensing model $\vect{\theta}_{pi}$. Because we want to avoid solving the lens equation (see Equations \ref{eq:lenseqpot} and \ref{eq:Fourierlenseq}) for $\vect{\theta}_{pi}$, we follow \citet{1991ApJ...373..354K} and cast the calculation back to the source plane using the magnification tensor in Equation \ref{eq:magnificationtensor} to approximate $\vect{\theta} \simeq (\partial \vect{\theta} / \partial \vect{\beta}) \vect{\beta} = \mathscr{M} \vect{\beta} $ and the $\chi^2_\text{lens}$ that the fit wants to minimize becomes
+\begin{eqnarray*}
+\chi^2_\text{lens} &=& \sum_{i=1}^{4} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right) \left( \vect{\theta}_{pi} - \vect{\theta}_{oi} \right)\right|^2\\
+&\simeq& \sum_{i=1}^{N} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right)  \left.\mathscr{M}\right|_{\vect{\theta}=\vect{\theta}_{oi}} \left( \begin{matrix} \xi - \tilde{\xi}_i \\ \eta - \tilde{\eta}_i \end{matrix} \right) \right|^2,
+\end{eqnarray*}
+where $(\Delta_x,\Delta_y)$ are the measurement errors of the image positions $\vect{\theta}_{oi}$. $\left.\mathscr{M}\right|_{\vect{\theta}=\vect{\theta}_{oi}}$ is the magnification tensor and $(\tilde{\xi}_i,\tilde{\eta}_i)$ the source position according to the lens equation, both evaluated at $\vect{\theta}_{oi}$. Following \citet{GlennEC} we add a term
+\begin{equation*}
+\chi^2_\text{shape} = \lambda \sum_{k \geq 3} \frac{\left(a_k^2 +b_k^2 \right)}{a_0^2} 
+\end{equation*}
+which forces the shape of the mass distribution to be close to an ellipse. The total $\chi^2$ to minimize is therefore
+\begin{equation*}
+\chi^2 = \chi^2_\text{lens} + \chi^2_\text{shape}
+\end{equation*}
+We set $a_1 = b_1 = 0$, which corresponds to the choice of origin; in this case the center of the galaxy.
+\\To be able to constrain the slope $\alpha$, we would have needed flux ratios for the images as in \citet{GlennEC}. But the extended quality of the images, possible dust obscuration and surface brightness fluctuations due to microlensing events, as well as the uncertainty in surface brightness subtraction make flux determination too unreliable and we do not include them in the fitting.
