@@ -1,4 +1,4 @@
-\subsection{Surface Photometry for J1331 with MGEs} \label{sec:MGE_results}
+\subsection{Surface photometry for J1331 with MGEs} \label{sec:MGE_results}
 
 %============================================================================
 
@@ -94,17 +94,12 @@ where $Z\simeq21.62$ is a the zero-point from \citet{Holtzman}  (updated accordi
 \begin{eqnarray*}
 I_0[L_\odot \text{pc}^{-2}] = \left( 64800/\pi\right)^2 \left(1+z \right)^4 10^{0.4\left(M_{\odot,I}-\mu_I \right)},
 \end{eqnarray*}
-where the term with $z$ accounts for redshift dimming and $M_{\odot,I}=4.08$ mag is the sun's absolute I-band magnitude \citep{1998gaas.book.....B}. The luminosity $L_k$[counts] and the corresponding surface brightness density $I \equiv I_{0,k}[L_\odot \text{pc}^{-2}]$ of each Gaussian are given in Table \ref{fig:MGEinnerRegions}. [TO DO: I'm really confused about this. Check, that everything is correct and the naming of quantities, e.g. with or without subscripts of 0, is fine???] [TO DO: Maybe shift to appendix or theory part???]
+where the term with $z$ accounts for redshift dimming and $M_{\odot,I}=4.08$ mag is the sun's absolute I-band magnitude \citep{1998gaas.book.....B}. The luminosity $L_k$[counts] and the corresponding surface brightness density $I \equiv I_{0,k}[L_\odot \text{pc}^{-2}]$ of each Gaussian are given in Table \ref{fig:MGEinnerRegions}. [TO DO: I'm really confused about this. Check, that everything is correct and the naming of quantities, e.g. with or without subscripts of 0, is fine???]
 
 \paragraph{Inclination.} To estimate the inclination of J1331 with respect to the observer, we use the observed axis ratio of the flattest ellipse in the Iraf Ellipse [TO DO] model for J1331, which is $q'=0.42$. This is similar to the disk axis ratio of $q' = 0.40$ found by \citet{SWELLSI}. If a typical thickness of an oblate disk was around $q_0 \sim 0.2$ \citep{1958MeLu2.136....1H}, the inclination would follow from $\cos^2 i = \frac{q'^2 - q_0^2}{1 - q_0^2}$ and a correction of $+3^\circ$ \citep{1988ngc..book.....T}. Our estimate for the inclination is therefore $i \approx 70^\circ$. Given this inclination, the 2D MGE models can be deprojected into three dimensions (see Section \ref{sec:MGE_theo}).
 
 \paragraph{Total luminosity and effective radius.} J1331's total I-band luminosity is easily determined by summing up the luminosity contributions of all the Gaussians of the MGE for the outer regions (shown as gray lines in Figure \ref{fig:MGEouterRegions}). We find $L_\text{tot,I} \simeq 5.6 \cdot 10^{10} L_\odot$. This corresponds to an apparent magnitude of $m_I = 15.77$ mag. We determine the circularized effective radius $R_\text{eff}$ of J1331 from the definition $L(<R_\text{eff}) \equiv \frac 12 L_\text{tot}$ and the growth curve $L(<R')$ from the MGE model of the outer regions [TO DO: Maybe I need a table anyway???], where $R'$ is the projected radius on the sky. We find the effective radius to be $R_\text{eff} \simeq 2.6 \text{ arcsec } \hat{=} 5.2 \text{ kpc}$.  All values are summarized in Table \ref{tab:galaxyparameters}.
 
-
-
-\paragraph{[TO DO: Stuff to mention]}
-\begin{itemize}
-\item the deporjecten if the galaxy under the assumption of oblate axisymmetry and an estimated inclination of $\sim70^\circ$ can be performed analytically.
-\end{itemize}
+[TO DO: Reff and Rein are also projected radii. Maybe prime them as well?]
 
 

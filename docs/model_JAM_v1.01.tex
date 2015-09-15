@@ -1,6 +1,6 @@
 \subsection{Jeans Axisymmetric Modelling (JAM)} \label{sec:model_JAM}
 
-Jeans axisymmetric models (JAM) assume galaxies (a) to be collisionless, i.e. the collisionless Boltzmann equation for the distribution function $f(\vect{x},\vect{v},t)$ has to be satisfied ($\frac{\diff f(\vect{x},\vect{v},t}{\diff t} = 0$), (b) in a steady state ($\frac{\partial}{\partial t} = 0$), (c) axisymmetric (best described in cylindrical coordinates $(R,z,\phi)$ and $\frac{\partial}{\partial \phi} = 0$). From this follow the axisymmetric Jeans equations as the vector-valued first moment of the Boltzmann equation, i.e.
+\paragraph{JAM modelling.} Jeans axisymmetric models (JAM) assume galaxies (a) to be collisionless, i.e. the collisionless Boltzmann equation for the distribution function $f(\vect{x},\vect{v},t)$ has to be satisfied ($\frac{\diff f(\vect{x},\vect{v},t}{\diff t} = 0$), (b) in a steady state ($\frac{\partial}{\partial t} = 0$), (c) axisymmetric (best described in cylindrical coordinates $(R,z,\phi)$ and $\frac{\partial}{\partial \phi} = 0$). From this follow the axisymmetric Jeans equations as the vector-valued first moment of the Boltzmann equation, i.e.
 \begin{equation*}
 \int \frac{\diff f}{\diff t} \Diff3 v = 0.
 \end{equation*}
@@ -72,3 +72,23 @@ is then the light-weighted circular velocity curve, given the second velocity mo
 \kappa(R) = \kappa' \frac{R^2 - R_0^2}{R^2 + R_0^2}. \label{eq:kappa_profile}
 \end{equation}
 We find $\kappa'$ by matching the model $\langle v_\text{los} \rangle$ with the symmetrized $v_\text{rot}$ data, where for a given $\kappa'$ the $\kappa_k$ are found from fitting the MGE generated profile $\kappa(R) = \sum_k \kappa_k \nu_k(r)/\sum_k \nu_k(r)$ to Equation \ref{eq:kappa_profile}. The observed zero point is at $R'_0\approx 2$ arcsec. In the deprojected galactic plane the radius of zero rotation would be at a $R_0 \gtrsim 2$ arcsec, and we choose it to be at 2.2 arcsec.
+
+\paragraph{Including a NFW halo.} As mentioned above, JAM modelling allows to incorporate an invisible matter component in addition to the luminous matter in the form of an MGE. In Section \ref{sec:results_JAM_NFW} we will include a spherical Navarro-Frenck-White (NFW) dark matter halo \citep{Navarro+1995c,NFW96} in the dynamical model. The classical NFW profile has the form
+\begin{equation}
+\rho_\text{NFW}(r) \propto \frac{1}{\frac{r}{r_s} \left( 1 + \frac{r}{r_s} \right)^2} \label{eq:NFWprofile}
+\end{equation}
+and two free parameters, the scale length $r_s$ and a parameter describing the total mass of the halo. We will use $v_\text{200}$, which is the circular velocity at the radius $r_\text{200}$ within which the mean density of the halo is 200 times the cosmological critical density $\rho_\text{crit} \equiv (2H^2)/(8\pi G)$, i.e.
+\begin{eqnarray*}
+M_\text{200} &=& M(<r_{200})\\
+\frac{M_{200}}{ \frac 43 \pi r_{200}^3} &=& 200 \rho_\text{crit}(z=0) \\
+v_\text{200} &=& \sqrt{\frac{GM_{200}}{r_\text{200}}}
+\end{eqnarray*}
+with $\rho_\text{crit}(z=0)=1.43 \cdot 10^{-7} M_\odot / \text{pc}^3$ in the WMAP5 cosmology by \citet{WMAP5cosm}. How much the mass is concentrated in the center of the NFW halo is given by the concentration of the NFW halo defined by 
+\begin{equation}
+c_{200}\equiv r_{200} / r_s. \label{eq:NFW_c}
+\end{equation} 
+There is a close relation between the concentration and halo mass in simulations \citep{NFW96}. \citet{Maccio08} found this relation for the WMAP5 cosmology \citep{WMAP5cosm} to be
+\begin{equation}
+\langle \log c_{200} \rangle (M_{200}) = 0.830 - 0.098 \log \left(h \frac{M_{200}}{10^{12} M_\odot} \right) \label{eq:Maccio08}
+\end{equation}
+(their equation 10), with a Gaussian scatter of $\sigma_{\log c_{200}} = 0.105$ (their Table A2). 
