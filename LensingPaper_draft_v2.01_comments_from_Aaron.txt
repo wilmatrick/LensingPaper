@@ -1,0 +1,162 @@
+
+
+
+
+check the MNRAS guidelines if you have not already, there is lots of useful stuff there.
+http://www.oxfordjournals.org/our_journals/mnras/for_authors/
+
+Also there is a new latex style file.
+
+
+
+Abstract:
+
+I think the word limit is 250.
+
+usually you don't cite papers in the abstract. So you can drop the references to Treu et al. 2011 and Dutton et al. 2013. You can just refer to Chabrier (2003) and Chabrier, and Salpeter (1955) as Salpeter, people will know what you mean.
+
+
+Introduction:
+
+2nd para. the order of brackets goes {[( )]}, so (decuced ...) goes to [deduced ...]
+
+2nd para. I thought Dunkley et al. was a WMAP paper?
+
+"infer" might be better than "predicts"
+
+dominated dwarf galaxies [TO DO: REF]
+e.g., Moore 1994, de Blok et al. 2001
+
+mass-to-light ratio [TO DO: REF]. 
+e.g., Dutton et al. 2011  "dark halo response and the IMF"
+
+This discrepancy, known as the core-cusp problem, might be *resolved by galaxy formation processes such as mergers and outflows (e.g., El-Zant et al. 2001, Pontzen \& Governato 2012).*
+
+
+Strong gravitational lensing is an independent method to tightly constrain the projected total mass of galaxies inside ∼ 1 arcsec [TO DO: REF].
+
+Treu 2010 is a good reference here.
+
+
+
+J1331 stands out of the SWELLS sample because of its large counter-rotating core (see Figure 1d), which might be an indication that J1331 underwent a minor merger in its *recent* past.
+
+
+I'm not sure you need all of the equations in the Lensing and JAM sections (but it is nice to have everything in one place). You could refer to various papers for the methods.  I defer to Glenns judgement on this.
+
+
+2.3 rotation curve
+To model the counter-rotating core of J1331 with one free parameter for,
+
+Is *for* a typo?
+
+
+Note you can use \subsubsection{} if you like.
+
+
+
+Navarro-Frenck- White (NFW) dark matter halo (Navarro et al. 1995, 1996)
+
+just the 96 reference is enough.
+
+And its *Frenk* (there were two occurances of this typo)
+
+
+3.DATA
+
+Redshift. [TO DO: WHO???]   Treu et al. 2011
+
+
+[TO DO: Do I have to explain the Acronym???]   I don't think so.
+
+
+[TO DO: Was it actually SWELLS I that confirmed that???].
+
+Yes,  Treu et al. 2011 is the discovery paper.
+
+
+
+Gas kinematics were extracted from fits to Hα and NII lines, as tracers for *inonized* gas.
+
+typo
+
+
+
+Outside of ∼ 3.5 arcsec there is a steep drop in the dispersion, which is *exptected*
+
+typo
+
+
+[TO DO: How to deal with the typo in J1331s name???? SWELLS call it J1331+3638, but its actual coordinates are 1331+3628.]
+
+36.46999 is 36d28m11.964s  
+
+good catch. I remember we had a typo in one of the names.  I suggest we use the correct name: 1331+3628.
+
+
+from [TO DO: Where did we get this image from???],
+
+don't worry about this. You already cite Treu et al. 2011 as the reference for the HST imaging.
+
+
+Section 4.2
+3) The light distribution drops faster than the mass with increasing radius.
+
+This is at least partly because of the assumption of a "flat rotation curve"
+The light almost always falls of faster than this.
+
+Section 4.3
+Since the alpha=1.1 fits the kinematics better at small radii, and alpha=0 better near Reff,  would a model with a variable alpha fit better?
+
+This is what real galaxies tend to do: alpha > 1 at small radii, alpha =1 near Re, alpha < 1 at large radii.
+
+
+section 4.4
+
+Modelling and priors.
+
+The parameters
+for the mean and 2σ error curves for this relation are\alpha
+*need a space between are and \alpha*
+
+
+We also include the Einstein mass M(< Rein *)*
+
+
+
+TO DO: Didn’t include the results from the Moster 2010 relation, because they where quite close to the Dutton 2010 relation anyway. Or should I?]
+
+The problem with the Moster relation is that is for Mstar  at a Mhalo. Due to the scatter in the relation and the steep halo mass function Mhalo (Mstar) and Mstar(Mhalo) are not symmetric.
+
+So if you used the Moster relation you would over estimate the halo mass.
+
+
+Rotation curve.
+
+especially dispersions as high as $\sim 200 {\rm km s^{-1}}$
+
+use roman font for units, and power notation.
+
+
+section 5.1
+[TO DO: Why are disk and bulge mass in SWELLS I different to the one in SWELLS IV??]
+
+Could you check the references? SWELLS I is Treu et al., SWELLS IV is Barnabe et al. on the 2141-0001 lens
+
+If you mean SWELLS V (Dutton et al.)
+The bulge and disk masses are given for a Chabrier IMF.
+
+
+section 5.3
+
+A search for color gradients in J1331 and/or investigation of absorption line indices could support or contradict the suspicion of the existence of stellar mass-to-light ratio gradients in J133*1*.
+
+missing a 1
+
+
+I think the main future work would be to get 2D kinematics. Is the drop in vrms real? Are the kinematics asysmmetric (we don't know because we only have the major axis slice). Did the slit miss the major axis of the disk?
+
+
+How much work would it be to look at the color profile?
+
+Just a plot of F450 / F814 fluxes in circular (or elliptical) rings would suffice.  Is there a hint of a color gradient in the bulge?  You could simply refer to any findings in the text, a figure is not necessary.
