@@ -1,3 +1,4 @@
 TO DO:
 
-* Komme nach e.g. and i.e.
+* Komma nach e.g. and i.e.
+* Think about using subsubsection in latex instead of paragraph titles.
