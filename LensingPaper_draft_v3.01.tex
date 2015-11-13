@@ -1,4 +1,4 @@
-\documentclass[useAMS,usenatbib]{mn2e}
+\documentclass[useAMS,usenatbib]{mnras}
 
 %_____GENERAL PACKAGES_____
 \usepackage{amsmath}	%for \text{} in math mode
@@ -23,6 +23,8 @@
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
 %\newcommand{\vect}[1]{\boldsymbol{#1}} % Uncomment for BOLD vectors.
 \newcommand{\vect}[1]{\vec{#1}} % Uncomment for ARROW vectors.
+\usepackage[usenames,dvipsnames]{xcolor}
+\newcommand{\Wilma}[1]{\textcolor{Magenta}{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -32,7 +34,7 @@ trick@mpia.de}, Glenn van de Ven$^{1}$ and Aaron A. Dutton$^{1}$\\
 $^{1}$Max-Planck-Institute for Astronomy, K\"{o}nigstuhl 17, 69117 Heidelberg, Germany}
 \begin{document}
 
-\date{Accepted [TO DO]. Received [TO DO]; in original form [TO DO]}
+\date{Accepted ???. Received ???; in original form ???}
 
 \pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2015}
 
@@ -43,47 +45,47 @@ $^{1}$Max-Planck-Institute for Astronomy, K\"{o}nigstuhl 17, 69117 Heidelberg, G
 %--------------------------------------------
 %Abstract
 \begin{abstract}
-\input{docs/abstract_v2.01}
+\input{docs/abstract_v3.01}
 \end{abstract}
 %--------------------------------------------
 
 \begin{keywords}
-blabla -- blabla: bla.
+blabla -- blabla: bla. \Wilma{[TO DO: Figure out proper MNRAS keywords.]}
 \end{keywords}
 
 %--------------------------------------------
 %Introduction
-\input{docs/introduction_v2.01}
+\input{docs/introduction_v3.01}
 %--------------------------------------------
 
 %------------------------
 \section{Modelling} \label{sec:Modelling}
-\input{docs/model_MGE_v2.01}
-\input{docs/model_lensing_v2.01}
-\input{docs/model_JAM_v2.01}
+\input{docs/model_MGE_v3.01}
+\input{docs/model_lensing_v3.01}
+\input{docs/model_JAM_v3.01}
 %------------------------
 
 %------------------------
-\input{docs/data_v2.01}
+\input{docs/data_v3.01}
 %------------------------
 
 %------------------------
 \section{Results} \label{sec:Results}
-\input{docs/results_photometry_v2.01}
-\input{docs/results_lensing_v2.01}
-\input{docs/results_JAMwithSB_v2.01}
-\input{docs/results_JAMwithNFW_v2.01}
+\input{docs/results_photometry_v3.01}
+\input{docs/results_lensing_v3.01}
+\input{docs/results_JAMwithSB_v3.01}
+\input{docs/results_JAMwithNFW_v3.01}
 %------------------------
 
 %------------------------
 \section{Discussion and Conclusion} \label{sec:Discussion}
-\input{docs/discussion_ML_v2.01}
-\input{docs/discussion_merger_v2.01}
-\input{docs/summary_v2.01}
+\input{docs/discussion_ML_v3.01}
+\input{docs/discussion_merger_v3.01}
+\input{docs/summary_v3.01}
 %------------------------
 
 %---------------------------------------------------------------------------
-\bibliographystyle{mn2e}
+\bibliographystyle{mnras}
 \bibliography{literaturelist}
 %---------------------------------------------------------------------------
 

@@ -35,12 +35,12 @@ The JAM modelling code by \citet{Cap08} evaluates numerically Equation \ref{eq:e
 \begin{equation*}
 v_\text{rms}^2 = \langle v_\text{los}^2 \rangle = v_\text{rot}^2 + \sigma^2.
 \end{equation*}
-The model in Equation \ref{eq:explicitLOSvelCap} predicts the intrinsic $\langle v_\text{los}^2 \rangle$ at a given position on the sky, which have then to be modified according to the mode of observation, to be comparable to the measurements. The measured $v_\text{rms}$ is a light-weighted mean for a pixel along the long-slit of the spectrograph, with height $L_y = 1$ arcsec \citep{SWELLSV} and a certain given extent in along the galaxy's major axis, $L_x$, i.e. for a rectangular aperture
+The model in Equation \ref{eq:explicitLOSvelCap} predicts the intrinsic $\langle v_\text{los}^2 \rangle$ at a given position on the sky, which have then to be modified according to the mode of observation, to be comparable to the measurements. The measured $v_\text{rms}$ is a light-weighted mean for a pixel along the long-slit of the spectrograph, with height $L_y = 1''$ \citep{SWELLSV} and a certain given extent in along the galaxy's major axis, $L_x$, i.e. for a rectangular aperture
 \begin{equation*}
 \text{AP}(x',y') = \left\{ \begin{array}{ll} 1 & \text{for } -\frac{L_x}{2} \leq x' \leq + \frac{L_x}{2}\\
 & \text{and } - \frac{L_y}{2} \leq y' \leq + \frac{L_y}{2}  \\ 0 & \text{otherwise.} \end{array} \right.
 \end{equation*}
-The light arriving at the spectrograph itself was subject to seeing, i.e. a Gaussian with Full Width Half Maximum (FWHM) of 1.1 arcsec \citep{SWELLSV}
+The light arriving at the spectrograph itself was subject to seeing, i.e. a Gaussian with Full Width Half Maximum (FWHM) of $1.1''$ \citep{SWELLSV}
 \begin{equation*}
 \text{PSF}(x',y')=\mathscr{N}(0,\text{FWHM}/2\sqrt{2\ln2}).
 \end{equation*}
@@ -54,7 +54,7 @@ and weighted by the surface brightness $I(x',y')$
 I_\text{obs} &=& I \ast K\\
 \langle v_\text{los}^2 \rangle |_\text{obs} &=& \frac{(I \langle v_\text{los}^2\rangle) \ast K}{I_\text{obs}}.
 \end{eqnarray*}
-If provided with the convolution kernel, the JAM code\footnote{The IDL code package for Jeans Axisymmetric Modelling (JAM) by \citet{Cap08} is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap08} performs the convolution numerically. We set $L_x = 0.21$ arcsec as the width of the model pixel, and get a prediction for the actual measurements in bins of width 0.63, 1.26 and 1.89 arcsec \citep{SWELLSV} as light-weighted mean from each 3, 6 and 9 model pixels.
+If provided with the convolution kernel, the JAM code\footnote{The IDL code package for Jeans Axisymmetric Modelling (JAM) by \citet{Cap08} is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap08} performs the convolution numerically. We set $L_x = 0.21''$ as the width of the model pixel, and get a prediction for the actual measurements in bins of width $0.63''$, $1.26''$ and $1.89''$ \citep{SWELLSV} as light-weighted mean from each 3, 6 and 9 model pixels.
 
 \paragraph{Rotation curve.} The intrinsic rotation curve is the first velocity moment $\langle v_\phi\rangle = \sqrt{\langle v_\phi^2 \rangle - \sigma_\phi^2}$. The observed rotation curve is the projection of the light-weighted contributions to $\langle v_\phi\rangle$ along the line-of-sight(\cite{Cap08}),
 \begin{equation*}
@@ -71,7 +71,7 @@ is then the light-weighted circular velocity curve, given the second velocity mo
 \begin{equation}
 \kappa(R) = \kappa' \frac{R^2 - R_0^2}{R^2 + R_0^2}. \label{eq:kappa_profile}
 \end{equation}
-We find $\kappa'$ by matching the model $\langle v_\text{los} \rangle$ with the symmetrized $v_\text{rot}$ data, where for a given $\kappa'$ the $\kappa_k$ are found from fitting the MGE generated profile $\kappa(R) = \sum_k \kappa_k \nu_k(r)/\sum_k \nu_k(r)$ to Equation \ref{eq:kappa_profile}. The observed zero point is at $R'_0\approx 2$ arcsec. In the deprojected galactic plane the radius of zero rotation would be at a $R_0 \gtrsim 2$ arcsec, and we choose it to be at 2.2 arcsec.
+We find $\kappa'$ by matching the model $\langle v_\text{los} \rangle$ with the symmetrized $v_\text{rot}$ data, where for a given $\kappa'$ the $\kappa_k$ are found from fitting the MGE generated profile $\kappa(R) = \sum_k \kappa_k \nu_k(r)/\sum_k \nu_k(r)$ to Equation \ref{eq:kappa_profile}. The observed zero point is at $R'_0\approx 2''$. In the deprojected galactic plane the radius of zero rotation would be at a $R_0 \gtrsim 2''$, and we choose it to be at $2.2''$.
 
 \paragraph{Including a NFW halo.} As mentioned above, JAM modelling allows to incorporate an invisible matter component in addition to the luminous matter in the form of an MGE. In Section \ref{sec:results_JAM_NFW} we will include a spherical Navarro-Frenck-White (NFW) dark matter halo \citep{Navarro+1995c,NFW96} in the dynamical model. The classical NFW profile has the form
 \begin{equation}
