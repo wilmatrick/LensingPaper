@@ -1,7 +1,8 @@
 \subsection{Surface photometry for J1331 with MGEs} \label{sec:MGE_results}
 
 In this section we construct a model for the galaxy's intrinsic light distribution in terms of an MGE, which we will then compare in Section \ref{sec:results_lensing} to the mass distribution. The light model will also be the basis of the dynamical Jeans modelling in Sections \ref{sec:results_JAM_SB} and \ref{sec:results_JAM_NFW}.
-\\To derive J1331's surface brightness distribution, we use the HST image in the F814W (I-band) filter, shown in Figure \ref{fig:F814W}. At longer wavelengths J1331's central old and smooth stellar component is more extended than in the F450W filter in Figure \ref{fig:F450W}, which is more sensitive to young clumpy star-forming regions. In the I-band the bulge is also much brighter than the bluish lens images and the imaging is less prone to extinction. The F814W image is therefore best suited for fitting a MGE. 
+
+To derive J1331's surface brightness distribution, we use the HST image in the F814W (I-band) filter, shown in Figure \ref{fig:F814W}. At longer wavelengths J1331's central old and smooth stellar component is more extended than in the F450W filter in Figure \ref{fig:F450W}, which is more sensitive to young clumpy star-forming regions. In the I-band the bulge is also much brighter than the bluish lens images and the imaging is less prone to extinction. The F814W image is therefore best suited for fitting a MGE. 
 
 \paragraph{PSF for the HST/F814W filter.} We find a radial profile for the HST/F814W filter PSF from circular annuli within a synthetic PSF image, ignoring diffraction spikes. The one-dimensional MGE fit of Equation \ref{eq:PSFgeneral} to this radial profile is performed using the code by \citet{Cap02}. The MGE parameters of the normalized PSF model are given in Table \ref{tab:PSFMGEF814W}.
 
@@ -62,7 +63,8 @@ $k$  & $L_k$ [counts] & $I_{0,k}$ [$L_\odot$/pc$^2$] & $\sigma_k$ [$''$] & $\sig
 %============================================================================
 
 \paragraph{Transformation into physical units.} To transform the MGE in units of counts into physical units, we apply a simplified version of the procedure described in \citet{Holtzman}.
-\\The scaling of the drizzled HST/WFC3 images is  $S = 0.05''/$pixel and the total exposure time $T = 1600$ sec. The total F814W luminosity in counts of each Gaussian of the MGE has a central surface brightness in counts per pixel of
+
+The scaling of the drizzled HST/WFC3 images is  $S = 0.05''/$pixel and the total exposure time $T = 1600$ sec. The total F814W luminosity in counts of each Gaussian of the MGE has a central surface brightness in counts per pixel of
 \begin{equation*}
 C_0\text{[counts/pixel]} = \frac{L[\text{counts}]}{2\pi \sigma[\text{pixel}]^2 q}.
 \end{equation*}

@@ -2,3 +2,8 @@ TO DO:
 
 * Komma nach e.g. and i.e.
 * Think about using subsubsection in latex instead of paragraph titles.
+* km s^{-1} instead of km/s
+* No //
+* ~ vor units
+* --- instead of -
+* Dark matter --> DM

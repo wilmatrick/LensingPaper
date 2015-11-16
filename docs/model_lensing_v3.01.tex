@@ -9,19 +9,22 @@ where $\vect{\theta}$ is a 2-dimensional vector on the plane of the sky. The lig
 \vect{\beta} = \vect{\theta}_i - \left.\vect{\nabla}_\theta \psi(\vect{\theta})\right|_{\vect{\theta}_i} \label{eq:lenseqpot}
 \end{equation}
 into an image $\vect{\theta}_i = (x_i,y_i)$. The gradient of the deflection potential $\vect{\nabla}_\theta \psi(\vect{\theta})$ is equal to the angle by which the light is deflected multiplied by $D_{ds}/D_{s}$.
-\\The total time delay of an deflected light path through $\vect{\theta}$ with respect to the unperturbed light path is given by 
+
+The total time delay of an deflected light path through $\vect{\theta}$ with respect to the unperturbed light path is given by 
 \begin{equation}
 \Delta t(\vect{\theta}) = \frac{(1+z_d)}{c} \frac{D_d D_s}{D_{ds}} \left[ \frac 12 (\vect{\theta} - \vect{\beta})^2 - \psi(\vect{\theta})\right], \label{eq:timedelay}
 \end{equation}
 \citep{BartGravLens}. According to Fermat's principle the image positions will be observed at the extrema of $\Delta t(\vect{\theta})$.
-\\The inverse magnification tensor
+
+The inverse magnification tensor
 \begin{equation}
 \mathscr{M}^{-1} \equiv \frac{\partial \vect{\beta}}{\partial \vect{\theta}} \overset{(\ref{eq:lenseqpot})}{=} \left(\delta_{ij} - \frac{\partial^2 \psi}{\partial \theta_i \partial \theta_j} \right)\label{eq:magnificationtensor}
 \end{equation}
 describes how the source position changes with image position. It also describes the distortion of the image shape for an extended source and its magnification due to lensing according to
 $$\mu \equiv \frac{\text{image area}}{\text{source area}} = \det \mathscr{M}.$$
 Lines in the image plane for which the magnification becomes infinite, i.e. $\det \mathscr{M}^{-1} = 0$, are called \emph{critical curves}. The corresponding lines in the source plane are called \emph{caustics}. The position of the source with respect to the caustic detemines the number of images and their configuration and shape with respect to each other.
-\\The \emph{Einstein mass} $M_\text{ein}$ and \emph{Einstein radius} $R_\text{ein}$ are defined via the relation
+
+The \emph{Einstein mass} $M_\text{ein}$ and \emph{Einstein radius} $R_\text{ein}$ are defined via the relation
 \begin{equation*}
 M_\text{ein} \equiv M_\text{proj}(<R_\text{ein}) \overset{!}{=} \pi \Sigma_\text{crit} R_\text{ein}^2,
 \end{equation*}
@@ -55,4 +58,5 @@ which forces the shape of the mass distribution to be close to an ellipse. The t
 \chi^2 = \chi^2_\text{lens} + \chi^2_\text{shape}
 \end{equation*}
 We set $a_1 = b_1 = 0$, which corresponds to the choice of origin; in this case the center of the galaxy.
-\\To be able to constrain the slope $\alpha$, we would have needed flux ratios for the images as in \citet{GlennEC}. But the extended quality of the images, possible dust obscuration and surface brightness fluctuations due to microlensing events, as well as the uncertainty in surface brightness subtraction make flux determination too unreliable and we do not include them in the fitting.
+
+To be able to constrain the slope $\alpha$, we would have needed flux ratios for the images as in \citet{GlennEC}. But the extended quality of the images, possible dust obscuration and surface brightness fluctuations due to microlensing events, as well as the uncertainty in surface brightness subtraction make flux determination too unreliable and we do not include them in the fitting.
