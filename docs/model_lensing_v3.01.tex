@@ -45,18 +45,18 @@ For this scale-free lens model the lens equation \eqref{eq:lenseqpot} becomes
 \citep{EvansWitt}, where $F'(\theta') \equiv \partial F(\theta') / \partial \theta'$. When we fix the slope $\alpha$, then the lens equation is a purely linear problem and can be solved numerically for the source position $(\xi,\eta)$ and the Fourier parameters $(a_k,b_k)$ given one observed image at position $(x_i=R'_i \cos \theta'_i,y_i=R'_i \sin \theta'_i)$. 
 
 \paragraph{Model fitting.} The free parameters of the lens model are: the source position $(\xi,\eta)$, the radial slope $\alpha$ and Fourier parameters $(a_k,b_k)$ of the lens mass distribution in Equations \eqref{eq:scalefreemodel} and \eqref{eq:Fourieransatz}. We want to minimize the distance between the observed image positions, $\vect{\theta}_{oi}$, and those predicted by the lensing model, $\vect{\theta}_{pi}$. To avoid having to solve the lens equation \eqref{eq:Fourierlenseq} for $\vect{\theta}_{pi}$, we follow \citet{1991ApJ...373..354K} and cast the calculation back to the source plane using the magnification tensor in Equation \eqref{eq:magnificationtensor} to approximate $\vect{\theta} \simeq (\partial \vect{\theta} / \partial \vect{\beta}) \vect{\beta} = \mathscr{M} \vect{\beta} $. The best fit lens model is then the one that minimizes
-\begin{eqnarray*}
-\chi^2_\text{lens} &=& \sum_{i} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right) \left( \vect{\theta}_{pi} - \vect{\theta}_{oi} \right)\right|^2\\
-&\simeq& \sum_{i} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right)  \left.\mathscr{M}\right|_{\vect{\theta}=\vect{\theta}_{oi}} \left( \begin{matrix} \xi - \tilde{\xi}_i \\ \eta - \tilde{\eta}_i \end{matrix} \right) \right|^2,
-\end{eqnarray*}
+\begin{eqnarray}
+\chi^2_\text{lens} &=& \sum_{i} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right) \left( \vect{\theta}_{pi} - \vect{\theta}_{oi} \right)\right|^2\nonumber\\
+&\simeq& \sum_{i} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right)  \left.\mathscr{M}\right|_{\vect{\theta}=\vect{\theta}_{oi}} \left( \begin{matrix} \xi - \tilde{\xi}_i \\ \eta - \tilde{\eta}_i \end{matrix} \right) \right|^2,\label{eq:chi2lens}
+\end{eqnarray}
 where $(\Delta_x,\Delta_y)$ are the measurement errors of the image positions $\vect{\theta}_{oi}$. $\left.\mathscr{M}\right|_{\vect{\theta}=\vect{\theta}_{oi}}$ is the magnification tensor and $(\tilde{\xi}_i,\tilde{\eta}_i)$ the source position according to the lens equation, both evaluated at the position of the $i$-th lensing image, $\vect{\theta}_{oi}$. Following \citet{GlennEC} we add a term
-\begin{equation*}
-\chi^2_\text{shape} = \lambda \sum_{k \geq 3} \frac{\left(a_k^2 +b_k^2 \right)}{a_0^2} 
-\end{equation*}
+\begin{equation}
+\chi^2_\text{shape} = \lambda \sum_{k \geq 3} \frac{\left(a_k^2 +b_k^2 \right)}{a_0^2} \label{eq:chi2shape}
+\end{equation}
 which forces the shape of the mass distribution to be close to an ellipse. The total $\chi^2$ to minimize is therefore
-\begin{equation*}
-\chi^2 = \chi^2_\text{lens} + \chi^2_\text{shape}
-\end{equation*}
+\begin{equation}
+\chi^2 = \chi^2_\text{lens} + \chi^2_\text{shape} \label{eq:chi2total}
+\end{equation}
 We set $a_1 = b_1 = 0$, which corresponds to the choice of origin; in this case the center of the galaxy.
 
 To be able to constrain the slope $\alpha$, we would need flux ratios for the images as in \citet{GlennEC}. But the extended quality of the images, possible dust obscuration and surface brightness fluctuations due to microlensing events, as well as the uncertainty in surface brightness subtraction, make flux determination too unreliable and we do not include them in the fitting.
