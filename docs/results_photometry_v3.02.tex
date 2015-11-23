@@ -1,6 +1,30 @@
+%============================================================================
+\begin{table}
+\centering
+\caption{Galaxy Parameters of J1331.}
+\begin{tabular}{lllr}
+\hline
+redshift \citep{SWELLSIII}                 & $z_d$ & 0.113 \\
+angular diameter distance & $D_d$ [Mpc] & 414 \\
+scaling                   & 1 kpc / 1 $''$ & 2.006 \\
+position angle from North          & $\phi$ [degrees] & $42.90^\circ$\\
+average axis ratio & $q'$ & 0.598\\
+average ellipticity & $\epsilon = 1 - q'$ & 0.402 \\
+apparent I-band magnitude & $m_\text{I}$ [mag] & 15.77 \\
+total I-band luminosity & $L_\text{tot,I}$ [$10^{10} L_\odot$] & 5.6 \\
+effective half-light radius & $R_\text{eff}$ [$''$] & 2.6 \\
+& $R_\text{eff}$ [pc]& 5.2 & \\
+\hline
+\end{tabular}
+\label{tab:galaxyparameters}
+\end{table}
+%============================================================================
+
 \subsection{Surface photometry for J1331 with MGEs} \label{sec:MGE_results}
 
 In this section we construct a model for the J1331's intrinsic light distribution in terms of MGEs (see Section \ref{sec:MGE_theo}). We use the HST image in the F814W (I-band) filter (Figure \ref{fig:F814W}) because J1331's central stellar component appears at longer wavelengths (a) smoother and more extended than in the F450W filter (Figure \ref{fig:F450W}), as it is less sensitive to young clumpy star-forming regions, (b) much brighter than the bluish lensing images, and (c) the imaging is less prone to extinction.
+
+\paragraph{PSF for the HST/F814W filter.} The one-dimensional MGE in Equation \eqref{eq:PSFgeneral} is fitted to the radial profile of a synthetic image of the HST/F814W filter PSF, ignoring diffraction spikes and using the code by \citet{Cap02}. The MGE parameters of the normalized PSF model are given in Table \ref{tab:PSFMGEF814W}.
 
 %============================================================================
 \begin{table}
@@ -18,10 +42,7 @@ $j$ & $G_j$ & $\delta_j$ [$''$] \\\hline
 \end{table}
 %============================================================================
 
-
-\paragraph{PSF for the HST/F814W filter.} The one-dimensional MGE in Equation \eqref{eq:PSFgeneral} is fitted to the radial profile of a synthetic image of the HST/F814W filter PSF, ignoring diffraction spikes and using the code by \citet{Cap02}. The MGE parameters of the normalized PSF model are given in Table \ref{tab:PSFMGEF814W}.
-
-\paragraph{MGE for the inner regions.} We fit a MGE to J1331's smooth central region within $\sim 5''$ from the HST/WFPC2/WF3/F814W image (Figure \ref{fig:F814W}). Bright objects close to the bulge (blobs possibly belonging to the background galaxy and parts of the foreground spiral arm) were masked during the fit. J1331's galaxy center, position angle and average apparent ellipticity (see Table \ref{tab:galaxyparameters}) are found from the images weighted first and second moment. The MGE fit splits the image in annuli with the given ellipticity and position angle and sectors of $5^\circ$ width and fits an 5-Gaussian MGE of the form in Equation \eqref{eq:MGEgeneral} convolved with the PSF MGE in Table \ref{tab:PSFMGEF814W} to it. The best fit MGE (PSF convolved) is compared to the data in Figure \ref{fig:MGEinnerRegions} and the corresponding parameters of the intrinsic surface brightness distribution are given in Table \ref{tab:MGEF814W}. The fit is a very good representation of the light distribution in the inner $5''$, but underestimates the light distribution outward.
+\paragraph{MGE for the inner regions.} We fit a MGE to J1331's smooth central region within $\sim 5''$ from the HST/WFPC2/WF3/F814W image (Figure \ref{fig:F814W}). Bright objects close to the bulge (blobs possibly belonging to the background galaxy and parts of the foreground spiral arm) were masked during the fit. J1331's galaxy center, position angle (with respect to North through East) and average apparent ellipticity (see Table \ref{tab:galaxyparameters}) are found from the images weighted first and second moment. The MGE fit splits the image in annuli with the given ellipticity and position angle and sectors of $5^\circ$ width and fits an 5-Gaussian MGE of the form in Equation \eqref{eq:MGEgeneral} convolved with the PSF MGE in Table \ref{tab:PSFMGEF814W} to it. The best fit MGE (PSF convolved) is compared to the data in Figure \ref{fig:MGEinnerRegions} and the corresponding parameters of the intrinsic surface brightness distribution are given in Table \ref{tab:MGEF814W}. The fit is a very good representation of the light distribution in the inner $5''$, but underestimates the light distribution outward.
 
 \paragraph{MGE for the outer regions.} To get a handle on the light distribution also in the outer parts of J1331, where spiral arms dominate, we first fit a IRAF \citep{1993ASPC...52..173T} \emph{ellipse} model to the F814W image (masking the brightest blobs in the spiral arms and outer regions). Only then we fit a 7-Gaussian MGE to the smooth ellipse model. The MGE does not perfectly reproduce the flatness of the ellipse model at every radius (see Figure \ref{fig:MGEouterRegions}), but considering the spiral arm dominated outer regions of J1331, it is good enough for an approximate handling of the overall light distribution.
 
@@ -42,8 +63,26 @@ $j$ & $G_j$ & $\delta_j$ [$''$] \\\hline
   \caption{MGE for J1331's outer regions.}
  \label{fig:MGEouterRegions}
 \end{subfigure}%
-\caption{MGEs for J1331's surface brightness distribution. Comparison of contours with constant F814W surface brightness (orange lines) with the corresponding iso-brightness contours of the best fit MGE, convolved with the PSF in Table \ref{tab:MGEF814W}, (gray lines). The black line has a length of $10''$ and it's orientation corresponds to the galaxy's position angle as found in Table \ref{tab:galaxyparameters}. For comparison the Einstein radius as found in Table \ref{tab:bestfitlensmodel}  is indicated as red dashed line. \emph{Panel (a)} Central regions of J1331. The MGE model is a good representation of the galaxy's light distribution along the major axis within $\sim 5''$. Its parameters are given in Table \ref{tab:MGEF814W}. This MGE is used as model for the stellar tracer distribution in the dynamical Jeans modelling in Sections \ref{sec:results_JAM_SB} and \ref{sec:results_JAM_NFW}. \emph{Panel (b)} Outer regions of J1331. The orange lines indicate here contours of a smooth IRAF \emph{ellipse} fit to J1331 in the F814W filter; the gray lines are the corresponding best fit MGE. The green box corresponds to the image section shown in Panel (a). This MGE is not used for dynamical modelling, because the dynamics in the outer regions are strongly affected by non-axisymmetries (e.g., spiral arms). We use it, however, to estimate the galaxy's total luminosity and effective radius, and to get a prediction for the dynamics of the outer regions.}
+\caption{MGEs for J1331's surface brightness distribution. Comparison of contours with constant F814W surface brightness (orange lines) with the corresponding iso-brightness contours of the best fit MGE, convolved with the PSF in Table \ref{tab:MGEF814W}, (gray lines). The black line has a length of $10''$ and it's orientation corresponds to the galaxy's position angle as found in Table \ref{tab:galaxyparameters}. For comparison the Einstein radius as found in Table \ref{tab:bestfitlensmodel}  is indicated as red dashed line. \emph{Panel (a)} Central regions of J1331. The MGE model is a good representation of the galaxy's light distribution along the major axis within $\sim 5''$. Its parameters are given in Table \ref{tab:MGEF814W}. This MGE is used as model for the stellar tracer distribution in the dynamical Jeans modelling in Sections \ref{sec:results_JAM_SB} and \ref{sec:results_JAM_NFW}. \emph{Panel (b)} Outer regions of J1331. The orange lines indicate here contours of a smooth IRAF \emph{ellipse} fit to J1331 in the F814W filter; the gray lines are the corresponding best fit MGE. The green box corresponds to the image section shown in Panel (a). This MGE is not used for dynamical modelling, because the dynamics in the outer regions are strongly affected by non-axisymmetries (e.g., spiral arms). We use it, however, to estimate the galaxy's total luminosity and effective radius, and to get a prediction for the dynamics of the outer regions. \Wilma{[TO DO: No dotted line]}}
 \end{figure*}
+%============================================================================
+
+%============================================================================
+\begin{table*}
+\centering
+\caption{Parameters of the best fit MGE to the F814W surface brightness of J1331 in Figure \ref{fig:MGEinnerRegions}. The fit is best inside an radius of $5''$. The position angle is given in Table \ref{tab:galaxyparameters}. This MGE is used in the dynamical modelling in Sections \ref{sec:results_JAM_SB} and \ref{sec:results_JAM_NFW}. The first column gives for each Gaussian the total F814W luminosity in Equation \eqref{eq:centralItotalL} in units of counts. The second column is the corresponding I-band peak surface brightness in Equation \eqref{eq:MGEgeneral} in units of a luminosity surface density. The third and fourth column give the dispersion and the last column the axis ratio of the Gaussian in Equation \eqref{eq:MGEgeneral}.}
+\begin{tabular}{cccccc}
+\hline
+ & total luminosity  & surface density & \multicolumn{2}{c}{Gaussian dispersion} & axis ratio\\
+$i$  & $L_i$ [counts] & $I_{0,i}$ [$L_\odot$/pc$^2$] & $\sigma_i$ [$''$] & $\sigma_i$ [kpc] & $q'_i$\\\hline
+1  &     9425.96 &      20768.  &  0.051   & 0.103  & 1.00\\
+2  &    13173.0 &        3161.2 &  0.178   & 0.358  & 0.76\\
+3  &    40235.0 &        1588.2 &  0.503   & 1.008  & 0.58\\
+4  &    67755.2 &         502.25&  1.180   & 2.368  & 0.56\\
+5  &    203677. &         136.51&  3.891   & 7.805  & 0.57\\\hline
+\end{tabular}
+\label{tab:MGEF814W}
+\end{table*}
 %============================================================================
 
 The scaling of the drizzled HST/WFC3 images is  $S \equiv 0.05''/\text{pixel width}$ and the total exposure time $T = 1600$ sec. Each Gaussian in the MGE has a total F814W luminosity $L_i$ (in counts) and a central surface brightness (in counts per pixel) of
@@ -59,26 +98,6 @@ where $Z\simeq21.62~\text{mag}$ is a the zero-point from \citet{Holtzman}, updat
 I_{0,i}[L_\odot \text{pc}^{-2}] = \left( 64800/\pi\right)^2 \left(1+z_d \right)^4 10^{0.4\left(M_{\odot,I}-\mu_{I,0,i} \right)},
 \end{eqnarray*}
 where the term with $z_d$ accounts for redshift dimming and $M_{\odot,I}=4.08~\text{mag}$ is the Sun's absolute I-band magnitude \citep{1998gaas.book.....B}. The luminosity $L_i$[counts] and the corresponding surface brightness density $I_{0,i} [L_\odot \text{pc}^{-2}]$ of each Gaussian are given in Table \ref{fig:MGEinnerRegions}.
-
-
-
-%============================================================================
-\begin{table*}
-\centering
-\caption{J1331's F814W MGE: Parameters of the best fit MGE to the F814W surface brightness of J1331 in Figure \ref{fig:F814W}. The fit is best inside an radius of $5''$. The galaxy center and position angle, which gives the orientation of the MGE with respect to the original image, are given in Table \ref{tab:galaxyparameters}. This MGE is used in the dynamical modelling in Sections \ref{sec:results_JAM_SB} and \ref{sec:results_JAM_NFW}.  The first column gives the total F814W luminosity of the Gaussian in Equation \eqref{eq:centralItotalL} in units of counts. The second column is the corresponding I-band peak surface brightness in Equation \eqref{eq:MGEgeneral} in units of a luminosity surface density, calculated from the first column following the procedure described in Section \ref{sec:MGE_results}. The third and fourth column give the dispersion and the last column the axis ratio of the Gaussian in Equation \eqref{eq:MGEgeneral}.}
-\begin{tabular}{cccccc}
-\hline
- & total luminosity  & surface density & \multicolumn{2}{c}{Gaussian dispersion} & axis ratio\\
-$i$  & $L_i$ [counts] & $I_{0,i}$ [$L_\odot$/pc$^2$] & $\sigma_i$ [$''$] & $\sigma_i$ [kpc] & $q'_i$\\\hline
-1  &     9425.96 &      20768.  &  0.051   & 0.103  & 1.00\\
-2  &    13173.0 &        3161.2 &  0.178   & 0.358  & 0.76\\
-3  &    40235.0 &        1588.2 &  0.503   & 1.008  & 0.58\\
-4  &    67755.2 &         502.25&  1.180   & 2.368  & 0.56\\
-5  &    203677. &         136.51&  3.891   & 7.805  & 0.57\\\hline
-\end{tabular}
-\label{tab:MGEF814W}
-\end{table*}
-%============================================================================
 
 \paragraph{Inclination.} To estimate the inclination of J1331 with respect to the observer, we use the observed axis ratio of the flattest ellipse in the IRAF \emph{ellipse} model for J1331, which is $q'=0.42$. This is similar to the disk axis ratio of $q' = 0.40$ found by \citet{SWELLSI}. If a typical thickness of an oblate disk is around $q_0 \sim 0.2$ \citep{1958MeLu2.136....1H}, the inclination follows from 
 \begin{equation*}
