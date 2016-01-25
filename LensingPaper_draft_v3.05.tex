@@ -631,7 +631,7 @@ Eight image position coordinates allow us to fit a lens mass model with only $<8
 Even though the constraint from the image positions on $\alpha$ is very weak, we were however able to show that the image positions in Table \ref{tab:lenspos} are consistent with a model with flat rotation curve. In the following we therefore set $\alpha=1$.
 
 %--------------------------------------------
-\subsubsection{Best fit lens model} 
+\subsubsection{Best fit lens model} \label{sec:results_lensing_bestfit}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -746,10 +746,10 @@ The best fit in Figure \ref{fig:JAM_modelA2} however strives to very negative $\
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.9\linewidth]{fig/B4_jam_profiles_errors_short_projmass.ps}
-  \caption{Enclosed mass profile.}
+  \caption{Enclosed mass profiles for the best fit models.}
   \label{fig:modelB4_enclMass}
 \end{subfigure}
-\caption{JAM model including a NFW halo and velocity anisotropy fitted to the stellar $v_\text{rms}$ data (blue solid dots) within $\sim3.5''$ and the Einstein mass (red solid dot). The 12 lines shown correspond to 12 models randomly drawn from the pdf (marked as grey diamonds in Figure \ref{fig:modelB4_triangle}) and demonstrate how tight the modelling constraints are. The mean and standard deviation of the pdf, i.e., the "best fit" parameters, are given in Table \ref{tab:modelB4_bestfit}. \emph{Panel (a):} At $R'\lesssim 3.5''$ the symmetrized $v_\text{rms}$ data used in the fit (solid blue points) is shown together with the best fit $v_\text{rms}$ models (red solid lines). At larger radii the non-symmetrized data (open blue dots) is compared to an extrapolation of the best fit models using the surface brightness MGE for the outer regions from Figure \ref{fig:MGEouterRegions} (red dashed lines). \Wilma{[TO DO: Fehler in Legend.]} \emph{Panel (b):} Shown is the circular velocity curve of the total mass (green), and separately the contribution of the stellar mass (yellow, again generated from the MGE in Table \ref{tab:MGEF814W}) and DM (grey). At the Einstein radius $R_\text{ein}$ (red dotted line) the Einstein mass $M_\text{ein}$ is overplotted with a 10\% error, which was also included in the fit as additional constraint. Overplotted is also the effective half-light radius (black dotted line) and the blue dashed line marks the radius within which the data and model were fitted.}
+\caption{JAM model including a NFW halo and constant velocity anisotropy fitted to the stellar $v_\text{rms}$ data (blue solid dots) within $\sim3.5''$ and the Einstein mass (red solid dot). The 12 lines shown correspond to 12 models randomly drawn from the pdf (marked as grey diamonds in Figure \ref{fig:modelB4_triangle}) and demonstrate how tight the modelling constraints are. The mean and standard deviation of the pdf, i.e., the "best fit" parameters, are given in Table \ref{tab:modelB4_bestfit}. \emph{Panel (a):} At $R'\lesssim 3.5''$ the symmetrized $v_\text{rms}$ data used in the fit (solid blue points) is shown together with the best fit $v_\text{rms}$ models (red solid lines). At larger radii the non-symmetrized data (open blue dots) is compared to an extrapolation of the best fit models using the surface brightness MGE for the outer regions from Figure \ref{fig:MGEouterRegions} (red dashed lines). \Wilma{[TO DO: Fehler in Legend.]} \emph{Panel (b):} Shown is the circular velocity curve of the total mass (green), and separately the contribution of the stellar mass (yellow, again generated from the MGE in Table \ref{tab:MGEF814W}) and DM (grey). At the Einstein radius $R_\text{ein}$ (red dotted line) the Einstein mass $M_\text{ein}$ is overplotted with a 10\% error, which was also included in the fit as additional constraint. Overplotted is also the effective half-light radius (black dotted line) and the blue dashed line marks the radius within which the data and model were fitted.}
 \label{fig:modelB4_models}
 \end{figure*}
 %============================================
@@ -769,7 +769,7 @@ NFW halo concentration & $c_{200}$ & 8 & $\pm$ & 2 \\
 NFW halo mass & $M_{200}$ [$10^{12} M_\odot$] & 5 & $\pm$ & 2\\
 \hline
 \end{tabular}
-\caption{Summary of the best fit parameters of the JAM model with NFW halo and velocity anisotropy, fitted to the $v_\text{rms}$ data within $\sim 3.5''$ and the Einstein mass. These estimates correspond to the mean and standard deviation of the pdf in Figure \ref{fig:modelB4_triangle}. The halo mass and concentration are calculated from the the best fit $r_s$ and $v_{200}$.}
+\caption{Summary of the best fit parameters of the JAM model with NFW halo and constant velocity anisotropy, fitted to the $v_\text{rms}$ data within $\sim 3.5''$ and the Einstein mass. These estimates correspond to the mean and standard deviation of the pdf in Figure \ref{fig:modelB4_triangle}. The halo mass and concentration are calculated from the the best fit $r_s$ and $v_{200}$.}
 \label{tab:modelB4_bestfit}
 \end{table*}
 %============================================
@@ -808,7 +808,7 @@ We therefore proceed by modelling the mass distribution with (a) a stellar compo
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{fig/B4_rms_rot_curves_best_model.ps}
-\caption{Generating the rotation curve from the JAM model with NFW halo and constant velocity anisotropy with the mean parameters in Table \ref{tab:modelB4_bestfit} and with the best fit rotation parameter $\kappa' = 0.76$ in Equation \eqref{eq:kappa_profile} (red solid lines). The second velocity moment in the first panel and the first velocity moment in the second panel with the additional fit parameter $\kappa'$ were fitted to the symmetrized data (solid blue points). The velocity dispersion is simply $\sigma = \sqrt{v_\text{rms}^2 - v_\text{rot}^2}$. At larger radii we compare the unsymmetrized data (open blue dots), the gas kinematics from \citet{SWELLSV} (green diamonds) and a JAM model using the same model parameters but the light distribution MGE generated from the Ellipse model in Figure \ref{fig:MGEouterRegions} as a prediction for the outer regions of J1331 (red dashed lines). The central regions are very well reproduced and we can also nicely predict the rotation curve at larger radii. Only at larger radii the $v_\text{rms}$ and $v_\text{rot}$ overestimate the measurements, probably due to a too massive NFW halo. \Wilma{[TO DO: There seem to be no minor ticks on x-axis.]}}
+\caption{Generating the rotation curve $v_\text{rot}(R')$ (red solid line in middle panel) from the best fit JAM model with NFW halo by fitting the rotation parameter $\kappa'$ to the symmetrized $v_\text{rot}$ data within $R'\sim3.5''$ (solid blue dots in central panel). The first panel shows the $v_\text{rms}$ data and model analogous to Figure \ref{fig:modelB4_vrms} for the mean parameters in Table \ref{tab:modelB4_bestfit}. The second panel shows the corresponding $v_\text{rot}$ for the best fit rotation parameter $\kappa' = 0.76$ in Equation \eqref{eq:kappa_profile} (red solid lines). The third panel shows simply the velocity dispersion $\sigma = \sqrt{v_\text{rms}^2 - v_\text{rot}^2}$. At larger radii we compare the unsymmetrized data (open blue dots), the gas kinematics from \citet{SWELLSV} (green diamonds) and an extrapolation of the JAM model, using the light distribution MGE from Figure \ref{fig:MGEouterRegions} for the outer regions (red dashed lines). The central regions are very well reproduced and we can also nicely predict the rotation curve at larger radii. Only at larger radii the $v_\text{rms}$ and $v_\text{rot}$ overestimate the measurements, probably due to a too massive NFW halo. \Wilma{[TO DO: There seem to be no minor ticks on x-axis.]}}
 \label{fig:modelB4_vrot}
 \end{figure}
 %============================================
@@ -846,7 +846,7 @@ We restrict the $v_\text{rms}$ fit to a region $R' \lesssim 3.5''$, approximatel
 
 
 %--------------------------------------------
-\subsubsection{Result}
+\subsubsection{Result} \label{sec:results_JAM_NFW_results}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -857,6 +857,7 @@ We also fitted a model with a cored logarithmic DM halo. The cored halo models a
 %============================================
 \begin{table*}
 \centering
+\caption{Total I-band luminosity, stellar mass and mass-to-light ratio, calculated from the I-band AB magnitudes and stellar masses found for J133's bulge and disk by \citet{SWELLSI} (their table 2) for comparison with this work. The transformation from AB magnitudes to the Johnson-Cousins I-Band used the relation $I[\text{mag}] = I[\text{ABmag}] - 0.309$ from \citet{FG1994} (their table 2). For the conversion from apparent magnitude to total luminosity the redshift $z=0.113$ \citet{SWELLSIII} was turned into a luminosity distance using the cosmology by \citet{WMAP5cosm}. }
 \begin{tabular}{cccccc}
 \hline\hline
 & & \multicolumn{2}{c}{Chabrier IMF} & \multicolumn{2}{c}{Salpeter IMF}\\
@@ -865,7 +866,6 @@ bulge &   $3.10 \pm 0.15 $  & $7.8 \pm 1.8$ & $2.5 \pm 0.6$ & $14.5 \pm 3.7 $ & 
 disk  &   $2.35 \pm 0.11 $  & $2.9 \pm 0.7$ & $1.2 \pm 0.3$ & $5.2 \pm 1.1$ & $2.2 \pm 0.5$ \\
 total &   $5.45 \pm 0.19$ & $10.6 \pm 1.9$& & $19.7 \pm 3.9$&\\\hline
 \end{tabular}
-\caption{Total I-band luminosity, stellar mass and mass-to-light ratio, calculated from the I-band AB magnitudes and stellar masses found for J133's bulge and disk by \citet{SWELLSI} (their table 2) for comparison with this work. The transformation from AB magnitudes to the Johnson-Cousins I-Band used the relation $I[\text{mag}] = I[\text{ABmag}] - 0.309$ from \citet{FG1994} (their table 2). For the conversion from apparent magnitude to total luminosity the redshift $z=0.113$ \citet{SWELLSIII} was turned into a luminosity distance using the cosmology by \citet{WMAP5cosm}. }
 \label{tab:previousresults}
 \end{table*}
 %============================================
@@ -913,7 +913,7 @@ We also compare our results from Section \ref{sec:results_JAM_NFW} with the stud
 \begin{figure}
 \centering
 \includegraphics[width=0.9\linewidth]{fig/B4_jam_profiles_errors_short_vcirc.ps}
-\caption{Comparison of the circular velocity curve of J1331's inner regions for different models: (a) JAM model with NFW DM halo from Section \ref{sec:results_JAM_NFW} and Figure \ref{fig:modelB4_models} (green). (b) Lens model from Section \ref{sec:results_lensing} and Figure \ref{fig:JAM_modelL} with $\alpha = 1.1$ (red dashed line), $\alpha = 1$ (red solid line) and $\alpha=0.9$ (red dash-dotted line). (c) Mass-follows-light model, which uses the F814W surface brightness in Table \ref{tab:MGEF814W} and the mass-to-light ratio in the Einstein radius, $\Upsilon^\text{ein}_\text{I,tot} = 5.56$, to generate a mass distribution, as in Figure \ref{fig:lenscomparelight} (orange line).  (d) Model from gas kinematics and Einstein mass found by \citet{SWELLSV} (their Figure 2, best model with 68\% confidence region) (blue lines).}
+\caption{Comparison of the circular velocity curve of J1331's inner regions for different models: (a) JAM model with NFW DM halo from Section \ref{sec:results_JAM_NFW_results} and Figure \ref{fig:modelB4_models} (green). (b) Lens model from Section \ref{sec:results_lensing_bestfit} and Figure \ref{fig:JAM_modelL} with $\alpha = 1.1$ (red dashed line), $\alpha = 1$ (red solid line) and $\alpha=0.9$ (red dash-dotted line). (c) Mass-follows-light model, which uses the F814W surface brightness in Table \ref{tab:MGEF814W} and the mass-to-light ratio in the Einstein radius, $\Upsilon^\text{ein}_\text{I,tot} = 5.56$, to generate a mass distribution, as in Figure \ref{fig:lenscomparelight} (orange line).  (d) Model from gas kinematics and Einstein mass found by \citet{SWELLSV} (their Figure 2, best model with 68\% confidence region) (blue lines).}
 \label{fig:vcirc_comparison}
 \end{figure}
 %============================================
