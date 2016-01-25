@@ -1,7 +1,7 @@
 %========================================================================================
 \begin{table}
 \centering
-\begin{minipage}{70mm}
+\caption{Positions of the lensing images (A-D) and the galaxy center (G) in Figure \ref{fig:lens_just_imgpos}. The image positions were determined from the lens \Wilma{[TO DO: lens subtracted??? Check.]} subtracted image for J1331 in Figure 4 of \citet{SWELLSIII}, rotated to the $(x,y)$ coordinate system in Figure \ref{fig:lens_just_imgpos}. The pixel scale is 1 pixel = $0.05''$ and the error of each image position is $\pm$ 1 pixel.}
 \begin{tabular}{r|rrrr|c}
 \hline
   & A & B & C & D & G\\\hline
@@ -9,9 +9,7 @@ $x_i$ [pixel] & 12.1 & -8.5 & 21.7 & -3.3 & 0.5 $\pm \sqrt{2}$ \\
 $y_i$ [pixel] & 16.6 & -10.4 & -0.5 & 19.2 & 0.5 $\pm \sqrt{2}$ \\
 \hline
 \end{tabular}
-\caption{Positions of the lensing images (A-D) and the galaxy center (G) in Figure \ref{fig:lens_just_imgpos}. The image positions were determined from the lens subtracted image for J1331 in Figure 4 of \citet{SWELLSIII}, rotated to the $(x,y)$ coordinate system in Figure \ref{fig:lens_just_imgpos}. The pixel scale is 1 pixel = $0.05''$ and the error of each image position is $\pm$ 1 pixel.}
 \label{tab:lenspos}
-\end{minipage}
 \end{table}
 %========================================================================================
 
@@ -30,7 +28,7 @@ Even though the constraint from the image positions on $\alpha$ is very weak, we
 \begin{figure}
 \centering
   \includegraphics[width=\linewidth]{fig/lens_all_in_one.ps}
-\caption{Lensing model (Table \ref{tab:bestfitlensmodel}) found as best fit to the image positions. In the background we show the central region of J1331 in the F450W filter, subtracted by an IRAF \emph{ellipse} model of the F450W surface brightness and smoothed to remove noise smaller than the PSF. The brightness peaks of the four lensing images and the galaxy center (Table \ref{tab:lenspos}) are marked as red dots. For the best fit lens model we show the Einstein radius (red dotted circle) and the critical curve (red solid line), which are located in the lens plane. We also show the caustic (green solid line) corresponding to the critical curve and best fit source position (green dot), which are located in the source plane. For $\alpha=1$ the critical curve is a contour of constant surface density of the mass model. The grey  lines show contours of the time delay surface given by Equation \eqref{eq:timedelay}. Not only the position of the extrema, but also their shape is consistent with the observed, extended images, even though we did not use information about the image shape in the analysis.}
+\caption{Lensing model (Table \ref{tab:bestfitlensmodel}) found as best fit to the image positions. In the background we show the central region of J1331 in the F450W filter, subtracted by an IRAF \emph{ellipse} model of the F450W surface brightness and smoothed to remove noise smaller than the PSF. The brightness peaks of the four lensing images and the galaxy center (Table \ref{tab:lenspos}) are marked as red dots. For the best fit lens model we show the Einstein radius (red dotted circle) and the critical curve (red solid line), which are located in the lens plane. We also show the caustic (green solid line) corresponding to the critical curve and the best fit source position (green dot), which are located in the source plane. For $\alpha=1$ the critical curve is a contour of constant surface density of the mass model. The grey  lines show contours of the time delay surface given by Equation \eqref{eq:timedelay}. Not only the position of the extrema, but also their shape is consistent with the observed, extended images, even though we did not use information about the image shape in the analysis.}
 \label{fig:bestfitlensmodel}
 \end{figure}
 
@@ -43,11 +41,11 @@ Even though the constraint from the image positions on $\alpha$ is very weak, we
 %========================================================================================
 \begin{table*}
 \centering
-\caption{Best fit lens model found from the peak image positions in Table \ref{tab:lenspos} (first column) following the procedure described in Section \ref{sec:lensing_theo} and assuming a flat rotation curve ($\alpha = 1$). The second column gives the corresponding best fit mean and standard deviation derived from Monte Carlo sampling of the Gaussian uncertainties around the image positions (column 2).}
+\caption{Best fit lens model (first column) found from the peak image positions in Table \ref{tab:lenspos} following the procedure described in Section \ref{sec:lensing_theo} and assuming a flat rotation curve ($\alpha = 1$). The second column gives the corresponding best fit mean and standard deviation derived from Monte Carlo sampling of the Gaussian uncertainties around the image positions, with the relative error given in parentheses.}
 \begin{tabular}{llrrclr}
 \hline
  &  & \multicolumn{1}{c}{lens model for} &\multicolumn{4}{c}{lens model from Monte Carlo sampling  } \\
- &  & \multicolumn{1}{c}{peak image positions}  & \multicolumn{4}{c}{of image positions }  \\ \hline
+ &  & \multicolumn{1}{c}{peak image positions}  & \multicolumn{4}{c}{of image position uncertainties}  \\ \hline
 Einstein radius      & $R_\text{ein}$ [$''$]             & $0.907$ & $0.91$  & $\pm$ & $     0.02$ & ($2\%$)\\
 Einstein mass        & $M_\text{ein}$ [$10^{10} M_\odot$]  & $7.72$  & $7.8 $  & $\pm$ & $      0.3$ & ($4\%$) \\
 Critical mass        & $M_\text{crit}$ [$10^{10} M_\odot$] & $7.87$  & $7.9$   & $\pm$ & $      0.3$ & ($4\%$)\\
@@ -76,7 +74,7 @@ Fourier coefficients & $a_0$                               & $1.814$ & $1.82 $ &
 \begin{subfigure}{.3\textwidth}
   \centering
   \includegraphics[width=.9\linewidth]{fig/lens_surface_density.ps}
-  \caption{Predicted mass distribution.}
+  \caption{Lens model mass distribution.}
   \label{fig:lenscomparemass}
 \end{subfigure}
 \begin{subfigure}{.3\textwidth}
@@ -85,7 +83,7 @@ Fourier coefficients & $a_0$                               & $1.814$ & $1.82 $ &
   \caption{Comparison of mass and light.}
   \label{fig:lenscompareboth}
 \end{subfigure}
-\caption{Comparison of the observed F814W/I-band surface brightness distribution (Panel (a) and orange contours) and predicted mass distribution from lensing constraints (Panel (b) and pink contours). To allow for a qualitative comparison of the contours in Panel (c), the light distribution was turned into a mass distribution by multiplication with the total mass-to-light ratio inside the Einstein radius $\Upsilon_\text{I,tot}^\text{ein} = 5.56 \Upsilon_{I,\odot}$. The Einstein radius is overplotted as red dotted circle. The uncertainties in the mass model in the second column of Table \ref{tab:bestfitlensmodel} were translated into random Monte Carlo noise in the mass contours. The smooth black contours correspond to the best fit model in the first column of Table \ref{tab:bestfitlensmodel}. The background in Panel (c) shows again the surface brightness subtracted center of the galaxy to make the lensing images visible.}
+\caption{Comparison of the observed F814W/I-band surface brightness distribution (panel (a) and orange contours) and derived mass distribution from lensing constraints (panel (b) and pink contours). To allow for a qualitative comparison of the contours in panel (c), the light distribution was turned into a mass distribution by multiplication with the total mass-to-light ratio inside the Einstein radius, $\Upsilon_\text{I,tot}^\text{ein} = 5.56 \Upsilon_{I,\odot}$. The Einstein radius is overplotted as red dotted circle. The uncertainties in the mass model in the second column of Table \ref{tab:bestfitlensmodel} were translated into random Monte Carlo noise in the mass contours. The smooth black contours correspond to the best fit model in the first column of Table \ref{tab:bestfitlensmodel}. We find, that the lens mass model is more roundish than the light distribution. The background in Panel (c) shows again the surface brightness subtracted center of the galaxy to make the lensing images visible.}
 \label{fig:lenslightcompareALL}
 \end{figure*}
 

@@ -1,18 +1,19 @@
 %============================================================================
 \begin{table}
 \centering
-\caption{Galaxy Parameters of J1331.}
+\caption{Galaxy parameters of J1331.}
 \begin{tabular}{lllr}
 \hline
-redshift \citep{SWELLSIII}                 & $z_d$ & 0.113 \\
-angular diameter distance & $D_d$ [Mpc] & 414 \\
-scaling                   & 1 kpc / 1 $''$ & 2.006 \\
+redshift \citep{SWELLSIII}                 & $z_d$ & $0.113$ \\
+angular diameter distance & $D_d$ [Mpc] & $414$ \\
+scaling                   & 1 kpc / 1$''$ & $2.006$ \\
 position angle from North          & $\phi$ [degrees] & $42.90^\circ$\\
-average axis ratio & $q'$ & 0.598\\
-average ellipticity & $\epsilon = 1 - q'$ & 0.402 \\
-apparent I-band magnitude & $m_\text{I}$ [mag] & 15.77 \\
-total I-band luminosity & $L_\text{I,tot}$ [$10^{10} L_\odot$] & 5.6 \\
-effective half-light radius & $R_\text{eff}$ [$''$] & 2.6 \\
+average axis ratio & $q'$ & $0.598$\\
+average ellipticity & $\epsilon = 1 - q'$ & $0.402$ \\
+estimated inclination & $i$ [degrees] & $70^\circ$\\
+apparent I-band magnitude & $m_\text{I}$ [mag] & $15.77$ \\
+total I-band luminosity & $L_\text{I,tot}$ [$10^{10} L_\odot$] & $5.6$ \\
+effective half-light radius & $R_\text{eff}$ [$''$] & $2.6$ \\
 & $R_\text{eff}$ [pc]& 5.2 & \\
 \hline
 \end{tabular}
@@ -60,10 +61,10 @@ $j$ & $G_j$ & $\delta_j$ [$''$] \\\hline
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.8\columnwidth]{fig/1331F814W_MGE_disk_L.ps}
-  \caption{MGE for J1331's outer regions.}
+  \caption{MGE and IRAF \emph{ellipse} model for J1331's outer regions.}
  \label{fig:MGEouterRegions}
 \end{subfigure}%
-\caption{MGEs for J1331's surface brightness distribution. Comparison of contours with constant F814W surface brightness (orange lines) with the corresponding iso-brightness contours of the best fit MGE, convolved with the PSF in Table \ref{tab:MGEF814W}, (gray lines). The black line has a length of $10''$ and it's orientation corresponds to the galaxy's position angle as found in Table \ref{tab:galaxyparameters}. For comparison the Einstein radius as found in Table \ref{tab:bestfitlensmodel}  is indicated as red dashed line. \emph{Panel (a)} Central regions of J1331. The MGE model is a good representation of the galaxy's light distribution along the major axis within $\sim 5''$. Its parameters are given in Table \ref{tab:MGEF814W}. This MGE is used as model for the stellar tracer distribution in the dynamical Jeans modelling in Sections \ref{sec:results_JAM_SB} and \ref{sec:results_JAM_NFW}. \emph{Panel (b)} Outer regions of J1331. The orange lines indicate here contours of a smooth IRAF \emph{ellipse} fit to J1331 in the F814W filter; the gray lines are the corresponding best fit MGE. The green box corresponds to the image section shown in Panel (a). This MGE is not used for dynamical modelling, because the dynamics in the outer regions are strongly affected by non-axisymmetries (e.g., spiral arms). We use it, however, to estimate the galaxy's total luminosity and effective radius, and to get a prediction for the dynamics of the outer regions.}
+\caption{MGEs for J1331's surface brightness distribution. Comparison of contours with constant F814W surface brightness (orange lines) with the corresponding iso-brightness contours of the best fit MGE, convolved with the PSF in Table \ref{tab:MGEF814W}, (grey lines). The black line has a length of $10''$ and its orientation corresponds to the galaxy's position angle as found in Table \ref{tab:galaxyparameters}. For comparison the Einstein radius as found in Table \ref{tab:bestfitlensmodel}  is indicated as red dashed circle. \emph{Panel (a):} Central regions of J1331. The MGE model is a good representation of the galaxy's light distribution along the major axis within $\sim 5''$. Its parameters are given in Table \ref{tab:MGEF814W}. This MGE is used as model for the stellar tracer distribution in the dynamical Jeans modelling in Sections \ref{sec:results_JAM_SB} and \ref{sec:results_JAM_NFW}. \emph{Panel (b):} Outer regions of J1331. The orange lines indicate here contours of a smooth IRAF \emph{ellipse} fit to J1331 in the F814W filter; the grey lines are the corresponding best fit MGE. This MGE is not used for dynamical modelling, because the dynamics in the outer regions are strongly affected by non-axisymmetries (e.g., spiral arms). We use it, however, to estimate the galaxy's total luminosity and effective radius, and to get a prediction for the dynamics of the outer regions.}
 \end{figure*}
 %============================================================================
 
@@ -105,6 +106,6 @@ where the term with $z_d$ accounts for redshift dimming and $M_{\odot,I}=4.08~\t
 \end{equation*}
 and a correction of $+3^\circ$ \citep{1988ngc..book.....T}. Our estimate for the inclination is therefore $i \approx 70^\circ$. Given this inclination, the 2D MGE models can be deprojected into three dimensions (see Section \ref{sec:MGE_theo}).
 
-\paragraph{Total luminosity and effective radius.} J1331's total I-band luminosity is determined by summing up the luminosity contributions of all the MGE Gaussians for the outer regions (shown as gray lines in Figure \ref{fig:MGEouterRegions}). We find $L_\text{I,tot} \simeq 5.6 \cdot 10^{10} ~L_\odot$. This corresponds to an apparent magnitude of $m_I = 15.77~\text{mag}$. We determine the circularized effective radius $R_\text{eff}$ of J1331 from the definition $L(<R_\text{eff}) \equiv \frac 12 L_\text{tot}$ and the growth curve $L(<R')$ from the MGE model of the outer regions, where $R'$ is the projected radius on the sky. We find the effective radius to be $R_\text{eff} \simeq 2.6'' \hat{=} 5.2 \text{ kpc}$.  All values are summarized in Table \ref{tab:galaxyparameters}.
+\paragraph{Total luminosity and effective radius.} J1331's total I-band luminosity is determined by summing up the luminosity contributions of all the MGE Gaussians for the outer regions (shown as grey lines in Figure \ref{fig:MGEouterRegions}). We find $L_\text{I,tot} \simeq 5.6 \cdot 10^{10} ~L_\odot$. This corresponds to an apparent magnitude of $m_I = 15.77~\text{mag}$. We determine the circularized effective radius $R_\text{eff}$ of J1331 from the definition $L(<R_\text{eff}) \equiv \frac 12 L_\text{tot}$ and the growth curve $L(<R')$ from the MGE model of the outer regions, where $R'$ is the projected radius on the sky. We find the effective radius to be $R_\text{eff} \simeq 2.6'' \hat{=} 5.2 \text{ kpc}$.  All values are summarized in Table \ref{tab:galaxyparameters}.
 
 
