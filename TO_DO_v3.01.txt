@@ -2,10 +2,16 @@ TO DO:
 
 * ~ vor units
 * --- instead of -
-* Dark matter --> DM
-* Zwischen�berschriften mit % rausl�schen
-* Makros mit Farben rausl�schen
+* Zwischenüberschriften mit % rauslöschen
+* Makros mit Farben rauslöschen
 * Sections neu referenzieren, da ich jetzt auch subsubsections habe
+* Section on JAM model noch mal durchgehen, ist noch nicht so toll.
 
 Glenn and Aaron fragen:
-* Brauch ich Acknowledgments?
+* Do I need Acknowledgments? Should I thank the SWELLS team?
+
+* Is there a classical reference for mass-anisotropy degeneracy? (Found many papers mentioning it, but none of them used references...) (I need this reference in section 4.3.2
+JAM with ”mass-follows-light”anisotropy)
+
+* "The mass profile at larger galactocentric radii can be probed by gas rotation curves that directly measure the galaxy’s circular velocity profile (e.g., Rubin et al. 1980)." Can I use the classical "flat rotation curve --> DM" paper as reference for this sentence? They used Halpha curves, so that should be ok, right?
+
