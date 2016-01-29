@@ -1,0 +1,8 @@
+XSIZE=10,YSIZE=8
+!x.margin = [7,1] or [5,1]
+!y.margin = [3.5,2.5]
+!x.thick=4
+!y.thick=4
+THICK=4
+charthick=3
+Orientation lines: THICK=2
