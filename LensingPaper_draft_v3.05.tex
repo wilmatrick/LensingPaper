@@ -25,8 +25,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[A spiral galaxy's mass distribution uncovered]{A spiral galaxy's mass distribution uncovered through lensing and dynamics}
-\author[W.H. Trick, G. van de Ven and A.A. Dutton]{Wilma H. Trick$^{1}$\thanks{E-mail:
-trick@mpia.de}, Glenn van de Ven$^{1}$ and Aaron A. Dutton$^{1,2}$\\
+\author[W.H. Trick, G. van de Ven and A.A. Dutton]{Wilma H. Trick$^{1}$\thanks{E-mail: trick@mpia.de}, Glenn van de Ven$^{1}$ and Aaron A. Dutton$^{1,2}$\\
 $^{1}$Max-Planck-Institute for Astronomy, K\"{o}nigstuhl 17, 69117 Heidelberg, Germany\\
 $^{2}$New York University Abu Dhabi, PO Box 129188, Abu Dhabi, UAE\\}
 \begin{document}
@@ -119,6 +118,7 @@ This paper is organized as follows: Section \ref{sec:data} summarizes the data, 
 
 %--------------------------------------------
 J1331 is located at right ascension = 202.91800$^\circ$ and declination = 36.46999$^\circ$ (epoch J2000). \citet{SWELLSI} found from SDSS spectra that J1331 has two redshifts inside $R'=1''$: J1331 itself has $z_d = 0.113$ and $z_s = 0.254$ is the redshift of the lensed background source \citep{SWELLSIII}. According to the WMAP5 cosmology \citep{WMAP5cosm}, J1331 has an angular diameter distance of 414 Mpc, which translates into a transverse scaling of $1'' \hat{=} 2.01~\text{kpc}$.
+%--------------------------------------------
 
 %--------------------------------------------
 \subsection{HST imaging}
@@ -126,6 +126,7 @@ J1331 is located at right ascension = 202.91800$^\circ$ and declination = 36.469
 
 %--------------------------------------------
 We use HST imaging of J1331 by \citet{SWELLSI}. They performed high resolution imaging with the Hubble Space Telescope's (HST) Wide-Field Planetary Camera 2 (WFPC2) and its WF3 CCD chip. The images are a combination of four exposures with each an exposure time of $400~\text{sec}$ and were drizzled to a pixel scale of 1 pixel = $0.05''$. In particular, we use the images in the filters F450W, to identify the positions of the bluish lensing images, and F814W (I-band) to create a surface brightness model of the reddish bulge.
+%--------------------------------------------
 
 %--------------------------------------------
 \subsection{Stellar kinematics} \label{sec:data_kinematics}
@@ -160,9 +161,13 @@ I(R',\theta') &=& \sum_{i=1}^{N} I_{0,i} \exp\left[ - \frac{1}{2\sigma_i^2} \lef
 y'_i &=& R' \sin(\theta' - \phi),\nonumber
 \end{eqnarray}
 where $I_{0,i}$ is the central surface brightness of each Gaussian, $L_i$ its total luminosity, $\sigma_i$ its dispersion along the major axis and $q'_i$ the axis ratio between the elliptical Gaussian's major and minor axis.
+%--------------------------------------------
 
+%--------------------------------------------
 \subsubsection{Convolution with the point spread function (PSF)}
+%--------------------------------------------
 
+%--------------------------------------------
 We can also expand the telescope's PSF as a sum of circular Gaussians,
 \begin{equation}
 \text{PSF}(x',y') = \sum_j \frac{G_j}{2 \pi \delta_j^2} \exp\left[- \frac{1}{2 \delta_j^2} \left({x'}^2 + {y'}^2 \right)\right], \label{eq:PSFgeneral}
@@ -170,9 +175,13 @@ We can also expand the telescope's PSF as a sum of circular Gaussians,
 where $\sum_j G_j = 1$ and $\delta_j$ are the dispersions of the circular PSF Gaussians. 
 
 The observed surface brightness distribution is a convolution of the intrinsic surface brightness in Equation \eqref{eq:MGEgeneral} with the PSF in Equation \eqref{eq:PSFgeneral}: $(I \ast \text{PSF}) (x',y')$ is then again a sum of Gaussians and can be directly fitted to an image of the galaxy in question.
+%--------------------------------------------
 
+%--------------------------------------------
 \subsubsection{Deprojection} \label{sec:MGE_theo_deprojection}
+%--------------------------------------------
 
+%--------------------------------------------
 $I(R',\theta')$ describes the intrinsic, to 2D projected light distribution or surface density of the galaxy. Under the assumption that the galaxy is oblate and axisymmetric, and given the inclination angle $i$ of the galaxy with respect to the observer, MGEs allow an analytic deprojection of the 2-dimensional MGE to get a 3-dimensional axisymmetric light distribution or density $\nu(R,z)$ for the galaxy,
 \begin{equation}
 \nu(R,z) = \sum_i \nu_{0,i} \exp \left[-\frac{1}{2\sigma_i}\left(R^2 + \frac{z^2}{q_i^2} \right) \right], \label{eq:deprojMGE}
@@ -222,6 +231,7 @@ The Einstein mass $M_\text{ein}$ and Einstein radius $R_\text{ein}$ are defined 
 M_\text{ein} \equiv M(<R_\text{ein}) \overset{!}{=} \pi \Sigma_\text{crit} R_\text{ein}^2,
 \end{equation*}
 where $\Sigma_\text{crit} \equiv \frac{c^2}{4\pi G} \frac{D_s}{D_d D_{ds}}$ is the critical density and $M(<R_\text{ein})$ is the mass projected along the line-of-sight within $R'=R_\text{ein}$. $M_\text{ein}$ is similar to the projected mass within the critical curve $M_\text{crit}$.
+%--------------------------------------------
 
 %--------------------------------------------
 \subsubsection{Lens model} 
@@ -245,6 +255,7 @@ For this scale-free lens model the lens equation \eqref{eq:lenseqpot} becomes
 \begin{pmatrix} x_s' \\ y_s' \end{pmatrix} = \begin{pmatrix} R'_i \cos \theta'_i - R_i^{'\alpha-1} \left(\alpha \cos \theta'_i F(\theta'_i) - \sin \theta'_i F'(\theta'_i) \right) \\ R'_i \sin \theta'_i - R_i^{'\alpha-1} \left(\alpha \sin \theta'_i F(\theta'_i + \cos \theta'_i F'(\theta'_i) \right)\end{pmatrix}\label{eq:Fourierlenseq}
 \end{equation}
 \citep{EvansWitt}, where $F'(\theta') \equiv \partial F(\theta') / \partial \theta'$. When we fix the slope $\alpha$, then the lens equation is a purely linear problem and can be solved numerically for the source position $(x_s',y_s')$ and the Fourier parameters $(a_k,b_k)$ given one observed image at position $(x'_i=R'_i \cos \theta'_i,y'_i=R'_i \sin \theta'_i)$. 
+%--------------------------------------------
 
 %--------------------------------------------
 \subsubsection{Model fitting}
@@ -418,20 +429,6 @@ effective half-light radius & $R_\text{eff}$ [$''$] & $2.6$ \\
 \end{table}
 %============================================
 
-%--------------------------------------------
-\subsection{Surface photometry for J1331 with MGEs} \label{sec:MGE_results}
-%--------------------------------------------
-
-%--------------------------------------------
-In this section we construct a model for J1331's intrinsic light distribution in terms of MGEs (see Section \ref{sec:MGE_theo}). We use the HST image in the F814W (I-band) filter (Figure \ref{fig:F814W}) because J1331's central stellar component appears at longer wavelengths (i) smoother and more extended than in the F450W filter (Figure \ref{fig:F450W}), as it is less sensitive to young clumpy star-forming regions, (ii) much brighter than the bluish lensing images, and (iii) the imaging is less prone to extinction.
-
-%--------------------------------------------
-\subsubsection{PSF for the HST/F814W filter}
-%--------------------------------------------
-
-%--------------------------------------------
-The one-dimensional MGE in Equation \eqref{eq:PSFgeneral} is fitted to the radial profile of a synthetic image of the HST/F814W filter PSF, ignoring diffraction spikes and using the code by \citet{Cap02}. The MGE parameters of the normalized PSF model are given in Table \ref{tab:PSFMGEF814W}.
-
 %============================================
 \begin{table}
 \centering
@@ -449,13 +446,18 @@ $j$ & $G_j$ & $\delta_j$ [$''$] \\\hline
 %============================================
 
 %--------------------------------------------
-\subsubsection{MGE for the inner and outer regions}
+\subsection{Surface photometry for J1331 with MGEs} \label{sec:MGE_results}
 %--------------------------------------------
 
 %--------------------------------------------
-We fit a MGE to J1331's smooth central region within $\sim 5''$ of the HST/WFPC2/WF3/F814W image (Figure \ref{fig:F814W}). Bright objects close to the bulge (blobs possibly belonging to the background galaxy and parts of the foreground spiral arm) were masked during the fit. J1331's galaxy center, position angle (with respect to North through East) and average apparent ellipticity (see Table \ref{tab:galaxyparameters}) are found from the images weighted first and second moment. The MGE fit splits the image in annuli with the given ellipticity and position angle and sectors of $5^\circ$ width and fits an 5-Gaussian MGE of the form in Equation \eqref{eq:MGEgeneral} convolved with the PSF MGE in Table \ref{tab:PSFMGEF814W} to it. The best fit MGE (PSF convolved) is compared to the data in Figure \ref{fig:MGEinnerRegions} and the corresponding parameters of the intrinsic surface brightness distribution are given in Table \ref{tab:MGEF814W}. The fit is a very good representation of the light distribution in the inner $5''$, but underestimates the light distribution further out.
+In this section we construct a model for J1331's intrinsic light distribution in terms of MGEs (see Section \ref{sec:MGE_theo}). We use the HST image in the F814W (I-band) filter (Figure \ref{fig:F814W}) because J1331's central stellar component appears at longer wavelengths (i) smoother and more extended than in the F450W filter (Figure \ref{fig:F450W}), as it is less sensitive to young clumpy star-forming regions, (ii) much brighter than the bluish lensing images, and (iii) the imaging is less prone to extinction.
 
-To get a handle on the light distribution also in the outer parts of J1331 where spiral arms dominate, we first fit a IRAF \citep{1993ASPC...52..173T} \emph{ellipse} model to the F814W image (masking the brightest blobs in the spiral arms and outer regions). Only then we fit a 7-Gaussian MGE to the smooth \emph{ellipse} model. The MGE does not perfectly reproduce the flatness of the \emph{ellipse} model at every radius (see Figure \ref{fig:MGEouterRegions}), but considering the spiral arm dominated outer regions of J1331 it is good enough for an approximate handling of the overall light distribution.
+%--------------------------------------------
+\subsubsection{PSF for the HST/F814W filter}
+%--------------------------------------------
+
+%--------------------------------------------
+The one-dimensional MGE in Equation \eqref{eq:PSFgeneral} is fitted to the radial profile of a synthetic image of the HST/F814W filter PSF, ignoring diffraction spikes and using the code by \citet{Cap02}. The MGE parameters of the normalized PSF model are given in Table \ref{tab:PSFMGEF814W}.
 %--------------------------------------------
 
 %============================================
@@ -494,6 +496,16 @@ $i$  & $L_i$ [counts] & $I_{0,i}$ [$L_\odot$/pc$^2$] & $\sigma_i$ [$''$] & $\sig
 \label{tab:MGEF814W}
 \end{table*}
 %============================================
+
+%--------------------------------------------
+\subsubsection{MGE for the inner and outer regions}
+%--------------------------------------------
+
+%--------------------------------------------
+We fit a MGE to J1331's smooth central region within $\sim 5''$ of the HST/WFPC2/WF3/F814W image (Figure \ref{fig:F814W}). Bright objects close to the bulge (blobs possibly belonging to the background galaxy and parts of the foreground spiral arm) were masked during the fit. J1331's galaxy center, position angle (with respect to North through East) and average apparent ellipticity (see Table \ref{tab:galaxyparameters}) are found from the images weighted first and second moment. The MGE fit splits the image in annuli with the given ellipticity and position angle and sectors of $5^\circ$ width and fits an 5-Gaussian MGE of the form in Equation \eqref{eq:MGEgeneral} convolved with the PSF MGE in Table \ref{tab:PSFMGEF814W} to it. The best fit MGE (PSF convolved) is compared to the data in Figure \ref{fig:MGEinnerRegions} and the corresponding parameters of the intrinsic surface brightness distribution are given in Table \ref{tab:MGEF814W}. The fit is a very good representation of the light distribution in the inner $5''$, but underestimates the light distribution further out.
+
+To get a handle on the light distribution also in the outer parts of J1331 where spiral arms dominate, we first fit a IRAF \citep{1993ASPC...52..173T} \emph{ellipse} model to the F814W image (masking the brightest blobs in the spiral arms and outer regions). Only then we fit a 7-Gaussian MGE to the smooth \emph{ellipse} model. The MGE does not perfectly reproduce the flatness of the \emph{ellipse} model at every radius (see Figure \ref{fig:MGEouterRegions}), but considering the spiral arm dominated outer regions of J1331 it is good enough for an approximate handling of the overall light distribution.
+%--------------------------------------------
 
 %--------------------------------------------
 \subsubsection{Transformation into physical units}
@@ -561,6 +573,7 @@ J1331's total I-band luminosity is determined by summing up the luminosity contr
 
 %--------------------------------------------
 In this section we use the gravitational lensing formalism summarized in Section \ref{sec:lensing_theo} to fit a scale-free galaxy mass model to the positions of the lensing images observed in J1331's central region.
+%--------------------------------------------
 
 %============================================
 \begin{table*}
@@ -611,7 +624,6 @@ Fourier coefficients & $a_0$                               & $1.814$ & $1.82 $ &
 \end{figure*}
 %============================================
 
-
 %--------------------------------------------
 \subsubsection{Image positions}
 %--------------------------------------------
@@ -622,6 +634,7 @@ We determine the positions of the lensing images by first subtracting a smooth m
 Eight image position coordinates allow us to fit a lens mass model with only $<8$ free parameters. We therefore do not fit Fourier components $(a_k,b_k)$ with $k > 3$ in the lens mass model in Equations \eqref{eq:scalefreemodel}-\eqref{eq:Fourieransatz}.
 
 Even though the constraint from the image positions on $\alpha$ is very weak, we were able to show that the image positions in Table \ref{tab:lenspos} are consistent with a model with flat rotation curve. In the following we therefore set $\alpha=1$.
+%--------------------------------------------
 
 %--------------------------------------------
 \subsubsection{Best fit lens model} \label{sec:results_lensing_bestfit}
@@ -664,7 +677,6 @@ Figure \ref{fig:lenslightcompareALL} leads to the following three findings: (i)T
   \label{fig:JAM_modelA2}
 \end{figure}
 %============================================
-
 
 %--------------------------------------------
 \subsection{JAM based on surface brightness} \label{sec:results_JAM_SB}
@@ -714,6 +726,7 @@ We also allow for an overall constant but non-zero velocity anisotropy $\beta_z$
 For $\beta_z$ we imposed the fitting limits $\beta_z \in [-0.5,+0.5]$. While the outer parts of galaxies often show radially biased velocity anisotropy up to $\sim 0.5$ (from dynamical modelling of observed elliptical galaxies, e.g., \citet{Kronawitter2000}) and cosmological simulations (e.g., \citealt{2004MNRAS.352..535D,2001ApJ...557..533F}), the centers of galaxies are near-isotropic or have negative velocity anisotropy \citep{2003ApJ...583...92G}. Only in extreme models (e.g., around in-spiralling supermassive black holes, e.g., \citealt{1997NewA....2..533Q}) velocity anisotropies as low as $\sim -1$ have been found.
 
 The best fit in Figure \ref{fig:JAM_modelA2} however strives to very negative $\beta_z$ to be able to reproduce the deep central dip in the  $v_\text{rms}$ curve.\footnote{Without limiting the fitting range, the best fit would be a unrealistically low $\beta_z \sim -2$.} But $\beta_z = -0.5$ is not even a remotely agreeable fit and lower anisotropies are not to be expected or realistic. We also tested radial profiles for $\beta_z(R)$ of the form proposed by \citet{BaesVanHese}, which was however equally unable to reproduce the data. We conclude that this is due to the well-known degeneracy between anisotropy and mass profile and the mass-follows-light model is \emph{not} a good representation of the mass distribution in J1331's inner regions.
+%--------------------------------------------
 
 %============================================
 \begin{figure*}
@@ -762,7 +775,6 @@ NFW halo mass & $M_{200}$ [$10^{12} M_\odot$] & 5 & $\pm$ & 2\\
 \label{tab:modelB4_bestfit}
 \end{table*}
 %============================================
-
 
 %--------------------------------------------
 \subsubsection{JAM with increasing mass-to-light ratio} \label{sec:results_JAM_SB_gradient}
@@ -826,7 +838,7 @@ to exclude very unrealistic anisotropies. The full prior used is then
 where the factor $1/\ln\left( 10 r_s\right)$ is the Jacobian of the transformation from the halo parameters $(v_{200},\log c_{200})$ to the fit parameters $(v_{200},r_s)$.
 
 We restrict the $v_\text{rms}$ fit to a region $R' \lesssim 3.5''$, approximately within the effective half-light radius $R_\text{eff} = 2.6''$. We also include the Einstein mass $M(<R_\text{ein})$ with a 10\% error as an additional constraint in the fit.
-
+%--------------------------------------------
 
 %--------------------------------------------
 \subsubsection{Best fit JAM modelt} \label{sec:results_JAM_NFW_results}
@@ -836,6 +848,7 @@ We restrict the $v_\text{rms}$ fit to a region $R' \lesssim 3.5''$, approximatel
 Figure \ref{fig:modelB4_triangle} shows the posterior probability distribution (pdf) of the fit sampled with an MCMC. Overplotted are also the priors used to constrain the NFW halo. The mean parameters are summarized in Table \ref{tab:modelB4_bestfit}. We find that the best fit NFW halo strives to be more massive and with a higher concentration (due to a smaller $r_s$) than  proposed by the priors. The model also prefers  very negative velocity anisotropies. Both, the high halo concentration and low $\beta_z$, are needed to reproduce the central dip of the $v_\text{rms}$ curve. Figure \ref{fig:modelB4_models} illustrates the range of best fit models according to the extent of the pdf. The models fit the $v_\text{rms}$ data in the inner regions quite well (Figure \ref{fig:modelB4_vrms}) and are also consistent with the Einstein mass (see Figure \ref{fig:modelB4_enclMass}). The extrapolation of the model to larger radii however overestimates the data, does not exhibit a drop around $\sim 6''$ at all and seems to be therefore overall too massive.
 
 We also fitted a model with a cored logarithmic DM halo. The cored halo models are in general slightly less massive than the NFW halo and therefore fit the outer regions of J1331 better. However, the density profile of the cored halo as well as the I-band light distribution within the plane drop as $\rho(r) \propto r^{-2}$. There is therefore a strong degeneracy between the stellar mass and the DM. Overall, we were not able to obtain tight constraints on the cored logarithmic halo.
+%--------------------------------------------
 
 %============================================
 \begin{table*}
