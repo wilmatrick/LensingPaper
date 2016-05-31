@@ -1,0 +1,164 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref}	%for URLs
+\usepackage[usenames,dvipsnames]{xcolor}	%for color text
+\newcommand{\Comment}[1]{\textsl{\textcolor{Blue}{$\Longrightarrow$ {#1}}}}
+\newcommand{\RM}{{\sl RoadMapping}}
+
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\newcommand{\Wilma}[1]{\textcolor{Magenta}{#1}}
+\newcommand{\Glenn}[1]{\textcolor{Green}{#1}}
+\newcommand{\Aaron}[1]{\textcolor{Orange}{#1}}
+
+\begin{document}
+
+From:  	ae@ras.org.uk
+Subject:  	MNRAS: MN-16-0473-MJ
+Date:  	Mon, March 14, 2016 1:00 pm
+To:  	trick@mpia.de
+Cc:  	trick@mpia.de,glenn@mpia.de,dutton@nyu.edu
+
+Dear Ms Trick
+
+Copied below are the reviewer's comments on your manuscript entitled "A spiral
+galaxy's mass distribution uncovered through lensing and dynamics", ref.
+MN-16-0473-MJ, which you submitted to Monthly Notices of the Royal Astronomical
+Society.
+
+Minor revision of your manuscript is requested before it is reconsidered for
+publication.
+
+You should submit your revised version, together with your response to the
+reviewer's comments via the Monthly Notices ScholarOne Manuscripts site
+https://mc.manuscriptcentral.com/mnras.
+Enter your Author Centre, where you will find your manuscript title listed under
+"Manuscripts with Decisions." Under "Actions," click on "Create a Revision." Your
+manuscript reference will be appended to denote a revision.
+
+IMPORTANT: do not submit your revised manuscript as a new paper!
+
+You will not be able to make your revisions to the originally submitted files of the
+manuscript held on ScholarOne Manuscripts. Instead, you must delete the original
+files and abstract and replace them with your revised files. Check that any requests
+for colour publication or online-only publication are correct. Carefully proof read
+the resulting PDF and HTML files that are generated. If you have used a .bib file to
+generate your bibliography in Latex, please include this in your .tar archive along
+with the .bbl and .tex files; this will aid the editing and typesetting process.
+
+When submitting your revised manuscript, you will be able to respond to the comments
+made by the reviewer in the space provided. You should also use this space to
+document any changes you make to the original manuscript. In order to expedite the
+processing of the revised manuscript, please be as specific as possible in your
+response to the reviewer. Changes to the manuscript should be highlighted (e.g. in
+bold or colour), to assist the referee and editor. Along with the highlighted
+manuscript you should also upload clean files (remove any bold font/track changes)
+for our publishers, as accepted manuscripts are now immediately published online
+ahead of the proof-corrected version.
+
+Because we are trying to facilitate timely publication of manuscripts submitted to
+MNRAS, your revised manuscript should be uploaded promptly. If you do not submit
+your revision within six months, we may consider it withdrawn and request it be
+resubmitted as a new submission.
+
+Please note that, due to the tight schedule, any post-acceptance changes notified
+after the paper has gone into production (i.e. the day after the acceptance email is
+sent) cannot be incorporated into the paper before it is typeset. Such changes will
+therefore need to be made as part of the proof corrections. To avoid excessive proof
+corrections and the delay that these can cause, you are strongly encouraged to
+ensure that each version of your paper submitted to MNRAS is completely ready for
+publication!
+
+I look forward to receiving your revised manuscript.
+
+Regards,
+
+Anna
+
+Anna Evripidou
+Assistant Editor
+"Monthly Notices" and "Geophysical Journal International"
+Royal Astronomical Society
+Email: ae@ras.org.uk
+Tel: (+44) 0207 734 3307 Ext. 124 (except Wednesday)
+Tel: (+44) 0207 734 3307 Ext. 117 (Wednesday)
+
+
+This message is confidential and is intended solely for the use of the individual(s)
+to whom it is addressed.  If you have received this message in error, do not open
+any attachment but please notify the sender (above) and delete this message from
+your system.
+
+cc: all listed co-authors.
+
+
+Reviewer's Comments:
+Reviewer: 1
+
+Comments to the Author
+
+====================================
+\begin{itemize}
+
+\item This is an interesting paper which makes neat use of the combination of stellar
+kinematics and strong lensing to investigate the mass structure of the spiral galaxy
+J1331. 
+
+\item The introduction could be re-written slightly to emphasise the points that the study
+wants to investigate; for instance, the opening paragraph talks about the methods
+used rather than the astrophysics that the study is hoping to probe. This could
+probably be removed altogether, and the second paragraph promoted to the beginning. \Comment{I understand the referee's point. I personally like the first paragraph however very much and I think the most interesting thing in this paper is to see that dynamical modelling and lensing can give independent and comparable results even in such a peculiar system. Our contribution to solving the "core-cusp" problem is actually rather weak, so I would not want to start my introduction with it. What do you think? On the other hand mentioning more astrophysics is always a good thing... Any idea how we could put that more in the foreground?}
+
+\item It would also be nice to include some more discussion of the possibility of a recent
+merger in the galaxy's past in the introduction, as this is a really interesting
+feature of the galaxy in question and is also a very active topic of research.
+
+\item The manuscript in its current form is also slightly longer than necessary at certain
+points: for instance, in section 3.2.1, it is not really necessary to present all
+the lensing equations (e.g. the time delay, equation 7), and similarly, section
+3.3.1 contains a lot of material that is implicit in Cappellari's JAM code, and
+therefore does not need to be explained equation by equation here. Section 3.3.4
+also rather throws the book at the NFW profile relations – it probably isn't
+necessary to include equation 22. \Aaron{What does that mean, "throw the book at something"?}
+
+\item From a scientific perspective, in section 4.3.3, the authors comment that the
+varying M/L JAM model is unable to reproduce the dynamics when M/L is forced to be
+always rising as a function of radius, but it would be interesting to see if the
+model could be improved by removing this constraint. Perhaps the authors could add
+such a model to this section, or else comment on why they do not attempt it. \Comment{We have indeed tried a ``mass-follows-light'' JAM model with constant anisotropy and free M/L profile early on in our investigations of J1331. This was unsuccessful to a degree that showing the result in the paper would not be reasonable. 1. JAM modelling (without additional mass components) allows us to assign a separate (constant) M/L to each Gaussian of the light MGE model. With only 5 Gaussians in the light MGE model and all of them with Gaussian dispersions $< 4$ arcsec (see Table 3) our ability to create arbitrary M/L profiles---especially at larger radii---is very restricted. At large radii, $\sim$ 7 arcsec, we would have effectively a pure mass-follows-light model with constant M/L and very flattened matter structure, which is not expected to be the case considering the results from the lensing model. 2. When leaving all 5 Gaussian M/Ls free, we got a wiggly and difficult to interpret M/L profile in the inner regions of the galaxy, with a slight decrease from 0 to $\sim$ 0.7 arcsec, a sharp rise around 1 arcsec, and a sharp drop around 3 arcsec. While this could be of course physical, there is no clear indication in the photometry that would support such an extreme profile. We therefore rather think that this wiggly profile was the result of over-fitting. 3. With only 6 data points and 5 fit M/L parameters within 5 arcsec, the fit result is not very well constrained or reliable. 4. It would have been of course possible to impose more constraints on the M/L profile and forcing it to rise in the center and to allow to profile to drop in the disk again. But with the spiral arms' dynamics starting to dominate at radii R $\gtrsim 5$ arcsec and our MGE light model not being a good model anymore in the outer regions, we thought it would not be reasonable to force to fit too much, when we know that the model has only limited abilities and the information content of the data is limited as well. As we lay out in the discussion, constraints on a varying stellar M/L ratio should be motivated by stellar population analysis in the future---or use more kinematics measurements than just the ones along the major axis. }
+
+\item In section 4.4.1, the NFW profile is fitted only to the inner data, and then is
+shown to not provide a good model for the data beyond that point. This is not
+entirely surprising, given that the outer data were not used to constrain the model!
+What happens if the NFW profile is fitted to both small- and large- radius data at
+once? (Perhaps it is impossible to find a good NFW model across the whole radius
+range, but if this is the case, then it should be stated.) \Comment{??? We set out to investigate the rather peculiar kinematics in the center of J133, which is strongly affected by the merger. We investigate different possibilities (velocity anisotropy, strong dark matter contribution in the center...), but none gives a satisfying result that is also consistent with the outer regions.??? }
+
+\item The discussion section is too non-committal and speculative in parts. For instance,
+in section 5.1, the M/Ls inferred from a number of the different models are compared
+with M/Ls from the literature, but the authors do not make any value judgement
+between the different models to come to any firmer conclusions about what they
+believe the most convincing description of the IMF to be. At the moment, this
+section seems to just be trying to show that their various models can be made to
+agree with previous models from the literature, but it would be much more
+interesting if some attempt could be made to resolve all the different models (both
+in this paper and in previous works) or at least present them in a more coherent
+framework, to try to come up with a better picture of the nature of J1331's IMF. \Glenn{No idea how to tackle this!!!!!!!!}
+
+\item In Section 5.2, the authors could make suggestions for what might be causing the two
+$v_{rms}$ dips. Currently, they just state what cannot be the cause, but do not make any
+more convincing suggestions – e.g. could it be associated with the possible recent
+merger that is explored in Section 5.3? It would be more satisfying if some
+suggestions like this could be put forward.
+
+\item While the use of English is impressive given that it is not the main author's mother
+tongue, I would also recommend giving the manuscript to a native speaker to correct
+the number of grammatical errors that remain. \Aaron{Aaron, could you have another look at the paper, specifically for grammar errors? Or should I try to find a student who is willing to read the paper?}
+
+\end{itemize}
+
+
+\end{document}
