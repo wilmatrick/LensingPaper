@@ -30,8 +30,8 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \newcommand{\NOTE}[1]{\textcolor{Cyan}{#1}}
 \newcommand{\NEW}[1]{\textcolor{ForestGreen}{#1}}
-\newcommand{\OLD}[1]{\textcolor{Red}{#1}}
-%\newcommand{\OLD}[1]{}
+%\newcommand{\OLD}[1]{\textcolor{Red}{#1}}
+\newcommand{\OLD}[1]{}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,11 +66,16 @@ gravitational lensing: strong -- stars: kinematics and dynamics -- galaxies: kin
 
 %--------------------------------------------
 \Wilma{[Referee says: "The introduction could be re-written slightly to emphasise the points that the study wants to investigate; for instance, the opening paragraph talks about the methods used rather than the astrophysics that the study is hoping to probe. This could probably be removed altogether, and the second paragraph promoted to the beginning."]}
-Gravitational lensing and dynamical modelling provide independent constraints on the mass distribution of galaxies. Combining them allows for valuable cross-checking opportunities to disentangle the galactic stellar and dark matter (DM) content.
+
+\NEW{Determining the overall mass distribution of galaxies and separating the dark matter (DM) from the stellar mass components is a crucial step in better understanding the structure and formation of galaxies and the nature of DM.}
+
+\OLD{Gravitational lensing and dynamical modelling provide independent constraints on the mass distribution of galaxies. Combining them allows for valuable cross-checking opportunities to disentangle the galactic stellar and dark matter (DM) content.}
 
 Cosmological simulations suggest that cold DM forms cuspy halos following a Navarro-Frenk-White (NFW) profile \citep{1996ApJ...462..563N}. However, the existence of central DM density cusps in massive galaxies depends strongly on the stellar mass-to-light ratio (e.g., \citealt{2011MNRAS.416..322D}) and DM dominated dwarf galaxies even favour DM halos with cores (e.g., \citealt{1994Natur.370..629M,2001ApJ...552L..23D}). This discrepancy, known as the core-cusp problem, might be resolved by galaxy formation processes such as mergers and outflows (e.g., \citealt{2001ApJ...560..636E,2012MNRAS.421.3464P}).
 
-Determining the overall mass distribution in massive galaxies and separating the DM from the stellar mass components is therefore a crucial step in better understanding the structure and formation of galaxies and nature of DM.
+\OLD{Determining the overall mass distribution in massive galaxies and separating the DM from the stellar mass components is therefore a crucial step in better understanding the structure and formation of galaxies and nature of DM.}
+
+\NEW{The mass distribution of massive galaxies can be observationally measured in completely independent fashions by gravitational lensing and dynamical modelling. Combining these two methods allows for valuable cross-checking opportunities to disentangle the galactic stellar and DM content.}
 
 Massive galaxies can act as gravitational lenses, deflect the light of background sources and give rise to multiple images. This strong gravitational lensing tightly constrains the projected total mass of the lens galaxy inside $\sim 1''$ (e.g., \citealt{2010ARA&A..48...87T}). 
 
@@ -82,9 +87,11 @@ The Sloan WFC Edge-on Late-type Lens Survey (SWELLS, WFC = Wide field camera) \c
 
 One of the SWELLS galaxies is the massive spiral SDSS J1331+3628, to which we refer as J1331 in the remainder of this work. It has bluish spiral arms and a large reddish bulge (see Figures \ref{fig:F450W} and \ref{fig:F814W}), which is superimposed by a quadruplet of extended bluish images approximately at a distance of $1''$ from the galaxy center (see Figure \ref{fig:lens_just_imgpos}). The lensed object might be a star-forming blob of a background galaxy. J1331 stands out of the SWELLS sample because of its large counter-rotating core (see Figure \ref{fig:kinematics}), which might be an indication that J1331 underwent a merger in its recent past.
 
-\citet{SWELLSI} confirmed that J1331 is a strong gravitational lens, measured its apparent brightness and estimated the stellar masses of disk and bulge. The lensing properties of J1331 were first analysed by \citet{SWELLSIII}. \citet{SWELLSV} measured the gas and stellar kinematics along the major axis and deduced J1331's mass profile from the gas rotation curve at large radii and total mass inside the Einstein radius from gravitational lensing, focusing mostly on the outer regions of J1331.
+\NEW{J1331 is therefore of special interest and a convenient candidate to investigate observationally if and how a merger might have modified the DM distribution of a massive galaxy. This would require in particular a precise disentanglement of stellar and DM components in the galaxy's inner regions.}
 
-The goal of this work is to complement the previous studies of J1331 by an in-depth analysis of the matter distribution in J1331's inner regions. We use stellar dynamical modelling in addition to lensing constraints, similar to a study of the Einstein Cross by \citet{GlennEC}. We attempt to disentangle the stellar and DM components and test if employed axisymmetric Jeans models work also in the presence of a counter-rotating core. Ideally, this work on J1331 could also help understanding how mergers modify the mass distribution of a galaxy.
+\NEW{J1331 has already been the subject of several studies:} \citet{SWELLSI} confirmed that J1331 is a strong gravitational lens, measured its apparent brightness and estimated the stellar masses of disk and bulge. The lensing properties of J1331 were first analysed by \citet{SWELLSIII}. \citet{SWELLSV} measured the gas and stellar kinematics along the major axis and deduced J1331's mass profile from the gas rotation curve at large radii and total mass inside the Einstein radius from gravitational lensing, focusing mostly on the outer regions of J1331.
+
+\OLD{The goal of this work is to complement the previous studies of J1331 by an in-depth analysis of the matter distribution in J1331's inner regions.}\NEW{The goal of this work is now the in-depth analysis of the matter distribution in J1331's inner regions. This will complement the previous studies of J1331 and is an important step in understanding J1331's merger-modified mass structure.} We use stellar dynamical modelling in addition to lensing constraints, similar to a study of the Einstein Cross by \citet{GlennEC}. We attempt to disentangle the stellar and DM components and test if employed axisymmetric Jeans models work also in the presence of a counter-rotating core. \OLD{Ideally, this work on J1331 could also help understanding how mergers modify the mass distribution of a galaxy.}
 
 This paper is organized as follows: Section \ref{sec:data} summarizes the data, Section \ref{sec:Modelling} gives an overview of the modelling techniques used in this work, and Section \ref{sec:Results} presents our results on the surface photometry of J1331 using Multi-Gaussian expansions (Section \ref{sec:MGE_results}), constraints from lensing (Section \ref{sec:results_lensing}) and Jeans modelling based on the surface brightness only (Section \ref{sec:results_JAM_SB}) and including a NFW DM halo (Section \ref{sec:results_JAM_NFW}). Finally, Section \ref{sec:Discussion} uses these results to discuss J1331's stellar mass-to-light ratio, central kinematics, possible merger history and starting points for future work.
 
