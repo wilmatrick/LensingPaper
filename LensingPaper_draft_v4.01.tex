@@ -65,13 +65,11 @@ gravitational lensing: strong -- stars: kinematics and dynamics -- galaxies: kin
 %--------------------------------------------
 
 %--------------------------------------------
-\Wilma{[Referee says: "The introduction could be re-written slightly to emphasise the points that the study wants to investigate; for instance, the opening paragraph talks about the methods used rather than the astrophysics that the study is hoping to probe. This could probably be removed altogether, and the second paragraph promoted to the beginning."]}
-
 \NEW{Determining the overall mass distribution of galaxies and separating the dark matter (DM) from the stellar mass components is a crucial step in better understanding the structure and formation of galaxies and the nature of DM.}
 
 \OLD{Gravitational lensing and dynamical modelling provide independent constraints on the mass distribution of galaxies. Combining them allows for valuable cross-checking opportunities to disentangle the galactic stellar and dark matter (DM) content.}
 
-Cosmological simulations suggest that cold DM forms cuspy halos following a Navarro-Frenk-White (NFW) profile \citep{1996ApJ...462..563N}. However, the existence of central DM density cusps in massive galaxies depends strongly on the stellar mass-to-light ratio (e.g., \citealt{2011MNRAS.416..322D}) and DM dominated dwarf galaxies even favour DM halos with cores (e.g., \citealt{1994Natur.370..629M,2001ApJ...552L..23D}). This discrepancy, known as the core-cusp problem, might be resolved by galaxy formation processes such as mergers and outflows (e.g., \citealt{2001ApJ...560..636E,2012MNRAS.421.3464P}).
+Cosmological simulations suggest that cold DM forms cuspy halos following a Navarro-Frenk-White (NFW) profile \citep{1996ApJ...462..563N}. However, the existence of central DM density cusps in massive galaxies depends strongly on the stellar mass-to-light ratio (e.g., \citealt{2011MNRAS.416..322D}) and DM dominated dwarf galaxies even favour DM halos with cores (e.g., \citealt{1994Natur.370..629M,2001ApJ...552L..23D}). This discrepancy, known as the core-cusp problem, might be resolved by galaxy formation processes such as mergers and outflows (e.g., \citealt{2001ApJ...560..636E,2012MNRAS.421.3464P}). \NEW{Especially the influence of mergers on the DM and baryonic structure of galaxies is currently an active field of research (e.g., \citealt{2009ApJ...697L..38J,2010ApJ...712...88L,2012MNRAS.425.3119H,2015MNRAS.453.2447D}).}
 
 \OLD{Determining the overall mass distribution in massive galaxies and separating the DM from the stellar mass components is therefore a crucial step in better understanding the structure and formation of galaxies and nature of DM.}
 
@@ -87,17 +85,13 @@ The Sloan WFC Edge-on Late-type Lens Survey (SWELLS, WFC = Wide field camera) \c
 
 One of the SWELLS galaxies is the massive spiral SDSS J1331+3628, to which we refer as J1331 in the remainder of this work. It has bluish spiral arms and a large reddish bulge (see Figures \ref{fig:F450W} and \ref{fig:F814W}), which is superimposed by a quadruplet of extended bluish images approximately at a distance of $1''$ from the galaxy center (see Figure \ref{fig:lens_just_imgpos}). The lensed object might be a star-forming blob of a background galaxy. J1331 stands out of the SWELLS sample because of its large counter-rotating core (see Figure \ref{fig:kinematics}), which might be an indication that J1331 underwent a merger in its recent past.
 
-\NEW{J1331 is therefore of special interest and a convenient candidate to investigate observationally if and how a merger might have modified the DM and stellar distribution of a massive galaxy. This would require in particular a precise disentanglement of stellar and DM components in the galaxy's inner regions.}
+\NEW{J1331 is therefore of special interest and a convenient candidate to investigate observationally if and how a merger might have modified the DM and stellar distribution of a massive spiral galaxy. This requires in particular a precise disentanglement of stellar and DM components in the galaxy's inner regions.}
 
 \NEW{J1331 has already been the subject of several studies:} \citet{SWELLSI} confirmed that J1331 is a strong gravitational lens, measured its apparent brightness and estimated the stellar masses of disk and bulge. The lensing properties of J1331 were first analysed by \citet{SWELLSIII}. \citet{SWELLSV} measured the gas and stellar kinematics along the major axis and deduced J1331's mass profile from the gas rotation curve at large radii and total mass inside the Einstein radius from gravitational lensing, focusing mostly on the outer regions of J1331.
 
 \OLD{The goal of this work is to complement the previous studies of J1331 by an in-depth analysis of the matter distribution in J1331's inner regions.}\NEW{The goal of this work is now the in-depth analysis of the matter distribution in J1331's inner regions. This will complement the previous studies of J1331 and is an important step in understanding J1331's merger-modified mass structure.} We use stellar dynamical modelling in addition to lensing constraints, similar to a study of the Einstein Cross by \citet{GlennEC}. We attempt to disentangle the stellar and DM components and test if employed axisymmetric Jeans models work also in the presence of a counter-rotating core. \OLD{Ideally, this work on J1331 could also help understanding how mergers modify the mass distribution of a galaxy.}
 
 This paper is organized as follows: Section \ref{sec:data} summarizes the data, Section \ref{sec:Modelling} gives an overview of the modelling techniques used in this work, and Section \ref{sec:Results} presents our results on the surface photometry of J1331 using Multi-Gaussian expansions (Section \ref{sec:MGE_results}), constraints from lensing (Section \ref{sec:results_lensing}) and Jeans modelling based on the surface brightness only (Section \ref{sec:results_JAM_SB}) and including a NFW DM halo (Section \ref{sec:results_JAM_NFW}). Finally, Section \ref{sec:Discussion} uses these results to discuss J1331's stellar mass-to-light ratio, central kinematics, possible merger history and starting points for future work.
-
-\Wilma{[Referee says: "It would also be nice to include some more discussion of the possibility of a recent
-merger in the galaxy's past in the introduction, as this is a really interesting
-feature of the galaxy in question and is also a very active topic of research."]}
 %--------------------------------------------
 
 %============================================
@@ -364,7 +358,7 @@ As data we use stellar line-of-sight rotation velocities $v_\text{rot} = \langle
 \begin{equation*}
  v_\text{rms}^2 = v_\text{rot}^2 + \sigma^2  \stackrel{!}{=} \langle v_\text{los}^2 \rangle_\text{obs}.
 \end{equation*}
-The model in Equation \eqref{eq:explicitLOSvelCap} predicts the intrinsic $\langle v_\text{los}^2 \rangle_\text{intr}\equiv\langle v_\text{los}^2\rangle$ at a given position on the sky, which needs then to be modified to $\langle v_\text{los}^2 \rangle_\text{obs}$ according to the mode of observation to be comparable to the measurements. The measured $v_\text{rms}$ is a light-weighted mean for a pixel along the long-slit of the spectrograph, with width $L_y = 1''$ \citep{SWELLSV} and a certain given extent along the galaxy's major axis, $L_x$, i.e., for a rectangular aperture
+\OLD{The model in Equation \eqref{eq:explicitLOSvelCap}}\NEW{The model derived from the Jeans equations as outlined in Section \ref{sec:model_JAM_JAM}} predicts the intrinsic $\langle v_\text{los}^2 \rangle_\text{intr}\equiv\langle v_\text{los}^2\rangle$ at a given position on the sky, which needs then to be modified to $\langle v_\text{los}^2 \rangle_\text{obs}$ according to the mode of observation to be comparable to the measurements. The measured $v_\text{rms}$ is a light-weighted mean for a pixel along the long-slit of the spectrograph, with width $L_y = 1''$ \citep{SWELLSV} and a certain given extent along the galaxy's major axis, $L_x$, i.e., for a rectangular aperture
 \begin{equation*}
 \text{AP}(x',y') \equiv \left\{ \begin{array}{ll} 1 & \text{for } -\frac{L_x}{2} \leq x' < + \frac{L_x}{2}\\
 & \text{and } - \frac{L_y}{2} \leq y' \leq + \frac{L_y}{2}  \\ 0 & \text{otherwise.} \end{array} \right.
@@ -383,7 +377,7 @@ and weighted by the surface brightness $I(x',y')$, i.e.,
 I_\text{obs} &=& I \ast K\\
 \langle v_\text{los}^2 \rangle_\text{obs} &=& \frac{(I \langle v_\text{los}^2\rangle_\text{intr}) \ast K}{I_\text{obs}}.
 \end{eqnarray*}
-If provided with the convolution kernel, the JAM code\footnote{The IDL code package for Jeans Anisotropic Models (JAM) by \citet{Cap08} is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap08} performs the convolution numerically. We set $L_x = 0.21''$ as the width of the model pixel, and get a prediction for the actual measurements in bins of width $0.63''$, $1.26''$ and $1.89''$ \citep{SWELLSV} as light-weighted mean from each 3, 6 and 9 model pixels.
+\NEW{We modified the JAM code by \citet{Cap08} to use this convolution kernel with non-square pixels. The JAM code then}\OLD{If provided with the convolution kernel, the JAM code\footnote{The IDL code package for Jeans Anisotropic Models (JAM) by \citet{Cap08} is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap08}} performs the convolution numerically. We set $L_x = 0.21''$ as the width of the model pixel, and get a prediction for the actual measurements in bins of width $0.63''$, $1.26''$ and $1.89''$ \citep{SWELLSV} as light-weighted mean from each 3, 6 and 9 model pixels.
 %--------------------------------------------
 
 %--------------------------------------------
@@ -391,21 +385,23 @@ If provided with the convolution kernel, the JAM code\footnote{The IDL code pack
 %-------------------------------------------- 
 
 %--------------------------------------------
-The intrinsic galaxy rotation curve is the first velocity moment $\langle v_\phi\rangle = \sqrt{\langle v_\phi^2 \rangle - \sigma_\phi^2}$. The observed rotation velocity is the projection of the light-weighted contributions to $\langle v_\phi\rangle$ along the line-of-sight \citep{Cap08},
+The intrinsic galaxy rotation curve is the first velocity moment $\langle v_\phi\rangle = \sqrt{\langle v_\phi^2 \rangle - \sigma_\phi^2}$. The observed rotation velocity is the projection of the light-weighted contributions to $\langle v_\phi\rangle$ along the line-of-sight \NEW{(Equation (31) in \citep{Cap08}).} \OLD{\citep{Cap08},
 \begin{equation*}
 I \langle v_\text{los}\rangle = \int_{-\infty}^{+\infty} \nu \langle v_\phi\rangle \cos \phi \sin i \diff z'.
-\end{equation*}
+\end{equation*}}
 The first velocity moments cannot be uniquely determined from the Jeans equations, which give only a prediction for the second velocity moments. Further assumptions are needed to separate the second velocity moments into ordered and random motion. \citet{Cap08} assumes that in a steady state there is no streaming velocity in $R$ direction, i.e., $\langle v_R \rangle = 0$ and therefore $\sigma_R^2 = \langle v_R^2 \rangle$. Then \citet{Cap08} relates the dispersions in $R$ and $\phi$ direction such that
-$$\langle v_\phi\rangle = \sqrt{\langle v_\phi^2 \rangle - \sigma_\phi^2} \equiv \kappa \sqrt{\langle v_\phi^2 \rangle - \langle v_R^2 \rangle},$$
+\begin{equation}
+\langle v_\phi\rangle = \sqrt{\langle v_\phi^2 \rangle - \sigma_\phi^2} \equiv \kappa \sqrt{\langle v_\phi^2 \rangle - \langle v_R^2 \rangle},
+\end{equation}
 and the $\kappa$ parameter quantifies the rotation: $\kappa = 0$ means no rotation at all and $|\kappa| = 1$ describes a velocity dispersion ellipsoid that is a circle in the $R$-$\phi$ plane \citep{Cap08}. The sign of $\kappa$ determines the rotation direction. We can assign a constant $\kappa_i$ to every Gaussian in the MGE formalism and
-\begin{equation*}
+\OLD{\begin{equation*}
 \nu \langle v_\phi\rangle = \left[\nu \sum_{i=1}^N \kappa_i^2 \left( [\nu\langle v_\phi^2 \rangle]_i - [\nu\langle v_R^2 \rangle]_i\right) \right]^{1/2}
 \end{equation*} 
-is then the light-weighted circular velocity curve, given the second velocity moments found from the Jeans equations.
+is then}\NEW{calculate} the light-weighted circular velocity curve, given the second velocity moments found from the Jeans equations \NEW{(see Equations (37) and (38) in \citet{Cap08} for the intrinsic and observed rotation curves, respectively)}.
 
 To model the counter-rotating core of J1331 with one free parameter, we employ the condition that the overall $\kappa(R)$ profile should smoothly and relatively steeply transit from $\kappa(R) = -\kappa' < 0$ at small $R$ through $\kappa(R_0) = 0$ and increase to $\kappa(R) = \kappa' > 0$ at large $R$. Our imposed profile is
 \begin{equation}
-\kappa(R) = \kappa' \frac{R^2 - R_0^2}{R^2 + R_0^2}. \label{eq:kappa_profile}
+\kappa(R) \OLD{=}\NEW{\equiv} \kappa' \frac{R^2 - R_0^2}{R^2 + R_0^2}. \label{eq:kappa_profile}
 \end{equation}
 We find $\kappa'$ by matching the model $\langle v_\text{los} \rangle_\text{obs}$ with the symmetrized $v_\text{rot}$ data, where for a given $\kappa'$ the $\kappa_i$ are found from fitting the MGE generated profile $\kappa(R) = \sum_i \kappa_i \nu_i(r)/\sum_i \nu_i(r)$ to Equation \eqref{eq:kappa_profile}. The observed zero point is at $R'_0\approx 2''$. In the deprojected galactic plane the radius of zero rotation would be at a $R_0 \gtrsim 2''$, and we choose it to be at $2.2''$.
 %--------------------------------------------
@@ -749,7 +745,7 @@ In this section we create dynamical models for J1331 following the procedure in 
 %--------------------------------------------
 
 %--------------------------------------------
-We make an independent prediction for the $v_\text{rms}$ curve by evaluating Equation \eqref{eq:explicitLOSvelCap} (with $\beta_z = 0$) for the lens mass model in Table \ref{tab:bestfitlensmodel} ($\alpha = 1$, flat rotation curve). In addition, we also calculate a  $v_\text{rms}$ curve for two lens models which were found analogously, but assumed a slightly rising (falling) rotation curve slope of $\alpha=1.1$ ($\alpha=0.9$). The predictions are compared with the data in Figure \ref{fig:JAM_modelL}. While the most reliable constraint is around $R_\text{ein}$, the agreement within $R' \sim 3''$ is still striking: The $\alpha > 1$ model recreates the observed central dip, while the $\alpha = 1$ model fits the wings around $R_\text{eff}$. This is in concordance with observations in other galaxies. For $R'> R_\text{eff}$ we would expect $\alpha<1$; and the lensing model for $\alpha=0.9$ has indeed a slightly dropping $v_\text{rms}$ around $R_\text{eff}$ like the data. A definite comparison in this regime is however difficult as the lens models are just extrapolations outside of $R_\text{ein}$. While our lensing model assumes $\alpha(R')=\text{const}$, Figure \ref{fig:JAM_modelL} suggests that a model with variable $\alpha(R')$ could fit even better. Overall the lensing model is in very good agreement with the $v_\text{rms}$ data within $R' \sim 3''$, even though it was derived completely independently.
+We make an independent prediction for the $v_\text{rms}$ curve by evaluating \OLD{Equation \eqref{eq:explicitLOSvelCap}}\NEW{the JAM equations} (with $\beta_z = 0$) for the lens mass model in Table \ref{tab:bestfitlensmodel} ($\alpha = 1$, flat rotation curve). In addition, we also calculate a  $v_\text{rms}$ curve for two lens models which were found analogously, but assumed a slightly rising (falling) rotation curve slope of $\alpha=1.1$ ($\alpha=0.9$). The predictions are compared with the data in Figure \ref{fig:JAM_modelL}. While the most reliable constraint is around $R_\text{ein}$, the agreement within $R' \sim 3''$ is still striking: The $\alpha > 1$ model recreates the observed central dip, while the $\alpha = 1$ model fits the wings around $R_\text{eff}$. This is in concordance with observations in other galaxies. For $R'> R_\text{eff}$ we would expect $\alpha<1$; and the lensing model for $\alpha=0.9$ has indeed a slightly dropping $v_\text{rms}$ around $R_\text{eff}$ like the data. A definite comparison in this regime is however difficult as the lens models are just extrapolations outside of $R_\text{ein}$. While our lensing model assumes $\alpha(R')=\text{const}$, Figure \ref{fig:JAM_modelL} suggests that a model with variable $\alpha(R')$ could fit even better. Overall the lensing model is in very good agreement with the $v_\text{rms}$ data within $R' \sim 3''$, even though it was derived completely independently.
 %--------------------------------------------
 
 %--------------------------------------------
