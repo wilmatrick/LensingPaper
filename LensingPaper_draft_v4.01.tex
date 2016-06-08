@@ -61,7 +61,7 @@ gravitational lensing: strong -- stars: kinematics and dynamics -- galaxies: kin
 \end{keywords}
 
 %--------------------------------------------
-\section{Introduction}
+\section{Introduction} \label{sec:intro}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -411,29 +411,26 @@ We find $\kappa'$ by matching the model $\langle v_\text{los} \rangle_\text{obs}
 %--------------------------------------------
 
 %--------------------------------------------
-\Wilma{[Referee says: "The manuscript in its current form is also slightly longer than necessary at certain
-points: [...] Section 3.3.4
-also rather throws the book at the NFW profile relations – it probably isn't
-necessary to include equation 22."]}
 As mentioned above, JAM modelling allows to incorporate an invisible matter component in addition to the luminous matter in the form of an MGE. In Section \ref{sec:results_JAM_NFW} we will include a spherical Navarro-Frenk-White (NFW) DM halo \citep{1996ApJ...462..563N} in the dynamical model. The classical NFW profile has the form
 \begin{equation}
 \rho_\text{NFW}(r) \propto r^{-1} \left( r+r_s \right)^{-2} \label{eq:NFWprofile}
 \end{equation}
-and two free parameters, the scale length $r_s$ and a parameter describing the total mass of the halo. We will use $v_\text{200}$, which is the circular velocity at the radius $r_\text{200}$ within which the mean density of the halo is 200 times the cosmological critical density $\rho_\text{crit} \equiv (2H^2)/(8\pi G)$, i.e.,
-\begin{eqnarray*}
+and two free parameters, the scale length $r_s$ and a parameter describing the total mass of the halo. We will use $v_\text{200}\NEW{\equiv \sqrt{GM_{200}/r_{200}}}$, which is the circular velocity at the radius $r_\text{200}$ within which the mean density of the halo is 200 times the cosmological critical density $\rho_\text{crit} \equiv (2H^2)/(8\pi G)$, \OLD{i.e.,}\NEW{ and where $M_{200} \equiv M(<r_{200}) \stackrel{!}{=} \frac 43 \pi r_{200}^3 \cdot \rho_\text{crit}(z=0)$.}
+\OLD{\begin{eqnarray*}
 M_\text{200} &=& M(<r_{200})\\
 \frac{M_{200}}{ \frac 43 \pi r_{200}^3} &=& 200 \rho_\text{crit}(z=0) \\
 v_\text{200} &=& \sqrt{\frac{GM_{200}}{r_\text{200}}}
-\end{eqnarray*}
-with $\rho_\text{crit}(z=0)=1.43 \cdot 10^{-7} M_\odot / \text{pc}^3$ in the WMAP5 cosmology by \citet{WMAP5cosm}. How much the mass is concentrated in the center of the NFW halo is given by the concentration parameter
+\end{eqnarray*}}
+with $\rho_\text{crit}(z=0)=1.43 \cdot 10^{-7} M_\odot / \text{pc}^3$ in the WMAP5 cosmology by \citet{WMAP5cosm}. \OLD{How much the mass is concentrated in the center of the NFW halo is given by the concentration parameter
 \begin{equation}
 c_{200}\equiv r_{200} / r_s. \label{eq:NFW_c}
-\end{equation} 
+\end{equation}}
+\NEW{The mass concentration of the NFW halo is quantified by $c_{200}\equiv r_{200} / r_s$.}
 There is a close relation between the concentration and halo mass in simulations \citep{1996ApJ...462..563N}. \citet{Maccio08} found this relation for the WMAP5 cosmology to be
 \begin{equation}
 \langle \log c_{200} \rangle (M_{200}) = 0.830 - 0.098 \log \left(h \frac{M_{200}}{10^{12} M_\odot} \right) \label{eq:Maccio08}
 \end{equation}
-(their equation 10), with a Gaussian scatter of $\sigma_{\log c_{200}} = 0.105$ (their Table A2). 
+(their equation 10), with a Gaussian scatter of $\sigma_{\log c_{200}} = 0.105$ (their Table A2). \NEW{In Section \Wilma{[TO DO ???]} we will use this relation as prior information to guide the modelling towards realistic NFW halo shapes.}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -819,14 +816,9 @@ In Section \ref{sec:results_lensing_compare} we found from lensing constraints, 
 
 Figure \ref{fig:enclMass_modelG} shows the best fit (projected local) mass-to-light ratio profile, which rises from $\Upsilon_\text{I,tot} = 2.53$ in the center and approaches a value of $\Upsilon_\text{I,tot} = 7.60$ outside of the fitted region at $R'\gtrsim 3''$. The central mass-to-light ratio is in agreement with the mass-to-light ratio $\Upsilon_\text{I,*}^\text{chab} = 2.5 \pm 0.6$, given in Table \ref{tab:previousresults} based on the results of \citet{SWELLSI} assuming a stellar population with a \citet{Chabrier2003} IMF (see also Section \ref{sec:MLdiscussion}). When assuming that galaxy bulges are in general older and redder in the center, i.e., $\Upsilon_\text{I,*}$ is more likely to drop with radius than rise, the strong increase of $\Upsilon_\text{I,tot}(R')$ might be due to a strong contribution of DM in J1331.
 
-Figure \ref{fig:JAM_modelG} shows that the best fit model nicely reproduces the central dip in the $v_\text{rms}$ curve, even though it has difficulties fitting the drop around $R' \sim 4''$. The latter is because we only allowed the $\Upsilon_\text{I,tot}(R')$ to rise. A slight drop could be expected when the reddish bulge turns into the bluish disk and the contribution of the stellar component becomes less due to a lower $\Upsilon_\text{I,*}$ for younger and bluer populations.
+Figure \ref{fig:JAM_modelG} shows that the best fit model nicely reproduces the central dip in the $v_\text{rms}$ curve, even though it has difficulties fitting the drop around $R' \sim 4''$. The latter is because we only allowed the $\Upsilon_\text{I,tot}(R')$ to rise. A slight drop could be expected when the reddish bulge turns into the bluish disk and the contribution of the stellar component becomes less due to a lower $\Upsilon_\text{I,*}$ for younger and bluer populations. \NEW{Corresponding fitting attempts with the matter model at hand were however unsuccessful: Leaving all five $\Upsilon_{\text{I,tot,}i}$ free lead to over-fitting in the central regions of J1331, while not allowing for sufficient flexibility further out at $R'\gtrsim4''$ (because four of the five $\sigma_i$ in the light MGE in Table \ref{tab:MGEF814W} are $< 1.2''$).}
 
-In Figure \ref{fig:enclMass_modelG} we overplot the enclosed mass profile with the Einstein mass $M_\text{ein} = (7.77 \pm 0.33) \cdot 10^{10} M_\odot$ at the Einstein radius found from lensing in Table \ref{tab:bestfitlensmodel}. The agreement between the Einstein mass and the independently found $M(<R_\text{ein}) = 7.49 \cdot 10^{10} M_\odot$ from dynamical modelling is striking.
-\Wilma{[TO DO: referee says: "From a scientific perspective, in section 4.3.3, the authors comment that the
-varying M/L JAM model is unable to reproduce the dynamics when M/L is forced to be
-always rising as a function of radius, but it would be interesting to see if the
-model could be improved by removing this constraint. Perhaps the authors could add
-such a model to this section, or else comment on why they do not attempt it." --> Add sentence that with 5 fit parameters and 6 data points within 5 arcsec and no additional information it is likely that we perform overfitting: The resulting best fit profile is wiggly and hard to interpret physically.]}
+\NEW{For the inner regions the model with rising $\Upsilon(R')$ seems to be a very good model:} In Figure \ref{fig:enclMass_modelG} we overplot the enclosed mass profile with the Einstein mass $M_\text{ein} = (7.77 \pm 0.33) \cdot 10^{10} M_\odot$ at the Einstein radius found from lensing in Table \ref{tab:bestfitlensmodel}. The agreement between the Einstein mass and the independently found $M(<R_\text{ein}) = 7.49 \cdot 10^{10} M_\odot$ from dynamical modelling is striking.
 %--------------------------------------------
 
 %--------------------------------------------
@@ -862,6 +854,8 @@ We proceed by modelling the mass distribution with (i) a stellar component, whic
 
 The full set of fit parameters is $(\Upsilon_\text{I,*},r_s,v_{200},\beta_z)$, where $\beta_z$ is again the constant velocity anisotropy parameter. We will investigate this parameter space with a Monte Carlo Markov Chain (MCMC)\footnote{The Python code package for \emph{emcee}, a Monte Carlo Markov Chain implementation by \citet{emcee} is available online at \url{http://dan.iel.fm/emcee/current/}. The version from October 2013 was used in this work.} \citep{emcee} and use priors for the halo parameters to guide the fit to a realistic NFW halo shape.
 
+\NEW{As we are particularly interested in the disentanglement of DM and stellar matter in the inner regions (see Section \ref{sec:intro}), we restrict the $v_\text{rms}$ fit to a region $R'\lesssim3.5''$, approximately within the effective half-light radius $R_\text{eff}=2.6''$. The constraints on a DM halo just from this data might be weak. To guide the fit towards a realistic halo, we therefore impose several priors on NFW halo.}
+
 \citet{Dutton10} give a relation for halo vs. stellar mass for late-type galaxies. Using the stellar mass estimate for J1331 from \citet{SWELLSI}, $m_* = (1.06 \pm 0.25) \cdot 10^{11} M_\odot$ (with generous error; see also Table \ref{tab:previousresults}) for the Chabrier IMF estimate, we find ${v_{200}} = (202_{-33}^{+44})_{-13}^{+12}$. The first error is due to the $2\sigma$ scatter in the relation by \citet{Dutton10}. The second error is the propagated error due to the uncertainty in the stellar mass. We use this as a rough estimate for the halo of J1331 and as Gaussian prior on $v_{200}$, 
 \begin{equation}
 p(v_{200}) = \mathscr{N}(200~\text{km s}^{-1},40~\text{km s}^{-1}). \label{eq:prior_v200}
@@ -883,7 +877,7 @@ to exclude very unrealistic anisotropies. The full prior used is then
 \end{eqnarray*}
 where the factor $1/\ln\left( 10 r_s\right)$ is the Jacobian of the transformation from the halo parameters $(v_{200},\log c_{200})$ to the fit parameters $(v_{200},r_s)$.
 
-We restrict the $v_\text{rms}$ fit to a region $R' \lesssim 3.5''$, approximately within the effective half-light radius $R_\text{eff} = 2.6''$. We also include the Einstein mass $M(<R_\text{ein})$ with a 10\% error as an additional constraint in the fit.
+\OLD{We restrict the $v_\text{rms}$ fit to a region $R' \lesssim 3.5''$, approximately within the effective half-light radius $R_\text{eff} = 2.6''$. }We also include the Einstein mass $M(<R_\text{ein})$ with a 10\% error as an additional constraint in the fit.
 %--------------------------------------------
 
 %--------------------------------------------
@@ -920,6 +914,10 @@ total &   $5.45 \pm 0.19$ & $10.6 \pm 1.9$& & $19.7 \pm 3.9$&\\\hline
 We generate a rotation curve from the best fit mean model in Table \ref{tab:modelB4_bestfit}, whose $v_\text{rms}$ curve is shown in the first panel of Figure \ref{fig:modelB4_vrot}. Following the procedure in Section \ref{sec:model_JAM_rotation}, we find the rotation curve by fitting the rotation parameter $\kappa'$ to the symmetrized $v_\text{rot}$ data within $R' = 3.5''$. The best fit with $\kappa' = 0.76$ is given in the second panel of Figure \ref{fig:modelB4_vrot}. The third panel shows the dispersion that follows from $\sigma = \sqrt{v_\text{rms}^2 - v_\text{rot}^2}$. Our assumptions for $\kappa(R)$ nicely reproduce a $v_\text{rot}$ model with counter-rotating core. Although we fitted $v_\text{rot}$ only to the inner regions, the extrapolation to large radii fits the data also very well.
 
 While the dispersion $\sigma$ in the center fits by construction quite good, the predicted dispersion is much larger than the data. We would expect the disk to be rotationally supported and therefore have a low velocity dispersion. Especially dispersions as high as $\sim 200~\text{km s}^{-1}$ are more likely to be observed in the pressure supported bulges of galaxies. There might be something unexpected with the $\sigma$ measurements around $\sim 5''$, but at large radii the best fit model NFW halo is simply too massive.
+
+\subsubsection{\NEW{Discussion}}
+
+\NEW{A fit to all nine available $v_\text{rms}$ data points forces the DM halo to be less massive. But with decreasing DM contribution in the inner regions the model approaches the mass-follows-light model in the center, that we already ruled out in Section \ref{sec:results_JAM_SB_MfL}. Allowing for free $\Upsilon_{*}(R')$, $\beta_z(R')$ and/or non-NFW $\rho_\text{halo}(r)$ profiles would over-fit the data again. Without further priors on the stellar $\Upsilon_{*}(R')$ and/or more data points, we can make only the following statement: A model with constant $\Upsilon_*$, moderately tangential \Wilma{[TO DO: Check]} $\beta_z$ and a spherical and massive DM component with high concentration can explain the central kinematics of J1331 very well, we have however ruled out that in this case the DM halo will follow a NFW halo at both small and large radii.}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -979,7 +977,7 @@ In Figure \ref{fig:vcirc_comparison} we compare the circular velocity curve foun
 
 The models in this work used more than just the Einstein mass to constrain the matter distribution at small radii: The lens mass model constrained also the shape of the mass distribution within the lensing image configuration at $R_\text{ein} \sim 1''$. The dynamical models used stellar kinematics inside $R' \simeq 3.5''$. We compare the lens mass model's $v_\text{circ}$ (for $\alpha=1.0\pm 0.1$) with the NFW JAM model (Table \ref{tab:modelB4_bestfit}) in Figure \ref{fig:vcirc_comparison} as well. Within and around $R_\text{ein}$ they are consistent with each other, even though they were independently derived. They do not agree with the mass-follows-light-like result by \citet{SWELLSV} and in Section \ref{sec:results_JAM_SB_MfL} we showed that ``mass-follows-light'' is not a good model for J1331.
 
-Overall, we were not able to find a consistent explanation for J1331's central $v_\text{rms}$ dip. It cannot be due to tangential velocity anisotropy in the center alone (see Section \ref{sec:results_JAM_SB_MfL}, Figure \ref{fig:JAM_modelA2}). It also cannot be explained by a strong contribution of DM inside the bulge together with a moderate tagential velocity anisotropy, because the corresponding DM halos would still be too massive to fit the data in the outer regions (see Section \ref{sec:results_JAM_NFW}, Figure \ref{fig:modelB4_vrms}).
+Overall, we were not able to find a consistent explanation for J1331's central $v_\text{rms}$ dip. It cannot be due to tangential velocity anisotropy in the center alone (see Section \ref{sec:results_JAM_SB_MfL}, Figure \ref{fig:JAM_modelA2}). It also cannot be explained by a strong contribution of DM inside the bulge together with a moderate tagential velocity anisotropy, because the corresponding \NEW{NFW} DM halo\OLD{s} would still be too massive to fit the data in the outer regions (see Section \ref{sec:results_JAM_NFW}, Figure \ref{fig:modelB4_vrms}).
 
 Another feature in the stellar kinematics that none of our JAM models was able to reproduce in the slightest and which we therefore excluded in the modelling, was the dip in $v_\text{rms}$ around $\sim 6''$, which occurs around the transition from bulge to disk (see Figures \ref{fig:F814W} and \ref{fig:kinematics}).
 %--------------------------------------------
@@ -1009,6 +1007,18 @@ Another way how galaxy encounters can modify the structure of galaxies is the ex
 
 We note that kinematics measured along an axis different from the kinematic major axis would result in $v_\text{rot}$ measurements being lower than the actual maximum $v_\text{circ}$. At large radii this could lead to an underestimation of the DM halo mass.
 %--------------------------------------------
+
+\subsection{\NEW{Speculations on J1331's matter distribution}}
+
+\NEW{The kinematics of the merger remnant J1331 are peculiar and hard to explain with standard modelling techniques. We think that in the end the truth will be somewhere in between the results of the different modelling attempts.}
+
+\NEW{The central $v_\text{rms}$ is most likely a combination of the three different aspects that we investigated separately: We expect a bit of tangential \Wilma{???} velocity anisotropy (Sections \ref{sec:results_JAM_SB_MfL} and \ref{sec:results_JAM_NFW}), a moderate contribution of a roundish DM halo (Sections 4.2.3 \Wilma{???} and 4.4.2) and different stellar populations inside the bulge due to the merger (Section 5.3) with different $\Upsilon_{*}$ but overall bottom-heavy IMF (Section 5.1), which add to an overall rising $\Upsilon_\text{tot}(R')$ profile.}
+
+\NEW{The drop in $v_\text{rms}$ around $R'\sim4''$ is most likely due to a sharp drop in $\Upsilon_{*}(R')$ at the transition from red bulge to blue disk (compare bulge size in Figures \ref{fig:F450W} and \ref{fig:F814W}). Unfortunately the spiral arms make the disk of the galaxy difficult to model. At these larger radii a possible mis-alignment of long-slit and Galaxy major axis would also cause a stronger underestimation of the true $v_\text{rot}$ and would add to the drop in $v_\text{rms}$.}
+
+\NEW{Around $R'\sim7''$ the rotation curve and dispersion show some wiggles which lead to a spontaneous rise of the $v_\text{rms}$. As the spiral arms cross the major axis around this radius, we suspect they cause this disturbance of the axisymmetric kinematics. The DM halo should also start to dominate the kinematics at larger radii, whose total mass we expect more of the order of what \citep{Dutton paper} \Wilma{???} found---unless J1331 has a strong kinematic warp in its disk, which cannot be detected in long-slit kinematics only.}
+
+\NEW{All of these speculations should be easily testable with 2D kinematics.} \Wilma{[TO DO: Proper referencing.]}
 
 %--------------------------------------------
 \subsection{Future work}
