@@ -430,7 +430,7 @@ There is a close relation between the concentration and halo mass in simulations
 \begin{equation}
 \langle \log c_{200} \rangle (M_{200}) = 0.830 - 0.098 \log \left(h \frac{M_{200}}{10^{12} M_\odot} \right) \label{eq:Maccio08}
 \end{equation}
-(their equation 10), with a Gaussian scatter of $\sigma_{\log c_{200}} = 0.105$ (their Table A2). \NEW{In Section \Wilma{[TO DO ???]} we will use this relation as prior information to guide the modelling towards realistic NFW halo shapes.}
+(their equation 10), with a Gaussian scatter of $\sigma_{\log c_{200}} = 0.105$ (their Table A2). \NEW{In Section \ref{sec:results_JAM_NFW} we will use this relation as prior information to guide the modelling towards realistic NFW halo shapes.}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -881,7 +881,7 @@ where the factor $1/\ln\left( 10 r_s\right)$ is the Jacobian of the transformati
 %--------------------------------------------
 
 %--------------------------------------------
-\subsubsection{Best fit JAM modelt} \label{sec:results_JAM_NFW_results}
+\subsubsection{Best fit JAM model} \label{sec:results_JAM_NFW_results}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -917,7 +917,7 @@ While the dispersion $\sigma$ in the center fits by construction quite good, the
 
 \subsubsection{\NEW{Discussion}}
 
-\NEW{A fit to all nine available $v_\text{rms}$ data points would force the DM halo to be less massive. But with decreasing DM contribution in the inner regions the model approaches the mass-follows-light model in the center, that we already ruled out in Section \ref{sec:results_JAM_SB_MfL}. Allowing for free $\Upsilon_{*}(R')$, $\beta_z(R')$ and/or non-NFW $\rho_\text{halo}(r)$ profiles would over-fit the data again. Without further priors on the stellar $\Upsilon_{*}(R')$ and/or more data points, we can make only the following statement: A model with constant $\Upsilon_*$, moderately tangential \Wilma{[TO DO: Check]} $\beta_z$ and a spherical and massive DM component with high concentration can explain the central kinematics of J1331 very well, we have however ruled out that in this case the DM halo will follow a NFW halo at both small and large radii.}
+\NEW{A fit to all nine available $v_\text{rms}$ data points would force the DM halo to be less massive. But with decreasing DM contribution in the inner regions the model approaches the mass-follows-light model in the center, that we already ruled out in Section \ref{sec:results_JAM_SB_MfL}. Allowing for free $\Upsilon_{*}(R')$, $\beta_z(R')$ and/or non-NFW $\rho_\text{halo}(r)$ profiles would over-fit the data again. Without further priors on the stellar $\Upsilon_{*}(R')$ and/or more data points, we can make only the following statement: A model with constant $\Upsilon_*$, moderately tangential $\beta_z$ and a spherical and massive DM component with high concentration can explain the central kinematics of J1331 very well, we have however ruled out that in this case the DM halo will follow a NFW halo profile at both small and large radii.}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -929,7 +929,7 @@ We have presented different dynamical models for the central region of J1331. So
 %--------------------------------------------
 
 %--------------------------------------------
-\subsection{On J1331's possible merger history\OLD{ and modelling failures}}
+\subsection{On J1331's possible merger history\OLD{ and modelling failures}} \label{sec:discussion_merger}
 %--------------------------------------------
 \NOTE{[This subsection was moved from a later position to the beginning of this section.]}
 
@@ -969,13 +969,13 @@ framework, to try to come up with a better picture of the nature of J1331's IMF.
 %--------------------------------------------
 Some of the ambiguities in recovering J1331's matter distribution could be resolved by learning more about stellar populations with different IMFs in J1331. In particular, a sophisticated guess for the stellar mass-to-light ratio in the bulge could be compared to our very reliable measurement of the total mass-to-light ratio inside the Einstein radius $\Upsilon_\text{I,tot}^\text{ein} = 5.56 \Upsilon_{I,\odot}$. This would then either support or contradict the presence of a significant amount of DM in the bulge.
 
-\NEW{In the following we discuss why we think---based on our results and previous analyses---that J1331's bulge has an IMF slightly less bottom-heavy than the Salpeter-like IMF.}
-
-\NEW{\emph{(i) Indications for a Salpeter-like IMF in J1331's bulge:}} 
-
 Traditional choices for the IMF are the bottom-heavy IMF by \citet{Salpeter1955},
 $$\xi(m) \propto m^{-x}, x=2.35,$$
 where $\xi(m) \diff m$ is the number of stars with mass $m$ in $[m,m+\diff m]$, and the IMFs by \citet{2002Sci...295...82K} and \citet{Chabrier2003}, which are in agreement with each other and predict less low-mass stars.
+
+\NEW{In the following we discuss why we think---based on our results and previous analyses---that J1331's bulge has an IMF slightly less bottom-heavy than the Salpeter-like IMF.}
+
+\NEW{\emph{(i) Indications for a slightly less bottom-heavy Salpeter-like IMF in J1331's bulge:}} 
 
 \citet{Ferreras} found a relation between the central stellar velocity dispersion $\sigma_0$ in early-type galaxies and the IMF slope $x$, where a higher $\sigma_0$ suggests a more bottom-heavy IMF. For a unimodal (Salpeter-like) IMF and $\sigma_0 \simeq 200~\text{km s}^{-1}$ in J1331 (see Figure \ref{fig:kinematics}) this relation predicts $x \approx 2.33$, which is close to the standard Salpeter slope, also supported by \citet{2014MNRAS.438.1483S}. When assuming a bi-modal (Kroupa-equivalent-like) IMF, \citet{Ferreras} predict $x \approx 2.85$ for J1331's central velocity dispersion. This is more bottom-heavy than the standard \citet{2002Sci...295...82K} IMF. Overall, the central velocity dispersion suggests a rather bottom-heavy IMF in J1331's bulge and therefore large stellar mass-to-light ratio. 
 
@@ -985,7 +985,7 @@ where $\xi(m) \diff m$ is the number of stars with mass $m$ in $[m,m+\diff m]$, 
 
 When \citet{SWELLSI} assumed a Chabrier IMF, their result translates to $\Upsilon_\text{I,*}^\text{chab} = 2.5 \pm 0.6$ (see Table \ref{tab:previousresults}). In Section \ref{sec:results_JAM_SB_gradient} we created a dynamical model from only the surface brightness distribution and an increasing mass-to-light ratio profile without additional DM halo \NEW{and without velocity anisotropy}. We found that such a model would be perfectly consistent with the Einstein mass, predict a total $\Upsilon_\text{I,tot}(R'\sim0) = 2.53$---being consistent with the Chabrier IMF estimate by \citet{SWELLSI}---and rise quickly to $\Upsilon_\text{I,tot}(R'\gtrsim R_\text{ein}) \gtrsim 6$. 
 
-\NEW{This rise could be either due to a cuspy DM halo (see Section \Wilma{4.4???}) or a very strong gradient in $\Upsilon_\text{I,*}$ (see Section \Wilma{5.1???}). However, we rule out that a DM cusp is the sole reason because a cuspy and therefore overall massive DM halo does not match the kinematics in J1331's outer regions. We also rule out that a very strong $\Upsilon_\text{I,*}$ gradient is the only reason, because---as mentioned in Section \Wilma{???}---photometry did not reveal the clear existence of a blue population in the very center of J1331's bulge. Also, our modelling attempts allowing for velocity anisotropy (Sections \Wilma{4.3.2} and \Wilma{4.4}) suggest that we do need some moderate $\beta_z<0$ to explain the central $v_\text{rms}$ dip. And lastly---as laid out in the previous paragraph---J1331's central velocity dispersion suggests a more bottom-heavy IMF. Overall it is therefore not very likely that the central regions of J1331 have such a low $\Upsilon_\text{I,*}^\text{chab} \sim 2.5$.}
+\NEW{This rise in $\Upsilon_\text{I,*}(R')$ could be either due to a cuspy DM halo (see Section \ref{sec:results_JAM_NFW}) or a very strong gradient in $\Upsilon_\text{I,*}$ (see Section \ref{sec:discussion_merger}). However, we rule out that a DM cusp is the sole reason because a cuspy and therefore overall massive DM halo does not match the kinematics in J1331's outer regions. We also rule out that a very strong $\Upsilon_\text{I,*}$ gradient is the only reason, because---as mentioned in Section \ref{sec:discussion_merger}---photometry did not reveal the clear existence of a blue population in the very center of J1331's bulge. Also, our modelling attempts allowing for velocity anisotropy (Sections \ref{sec:results_JAM_SB_MfL} and \ref{sec:results_JAM_NFW}) suggest that we do need some moderate $\beta_z<0$ to explain the central $v_\text{rms}$ dip. And lastly---as laid out in the previous paragraph---J1331's central velocity dispersion suggests a more bottom-heavy IMF. Overall it is therefore not very likely that the central regions of J1331 have such a low $\Upsilon_\text{I,*}^\text{chab} \sim 2.5$.}
 
 \NEW{\emph{(iii) Arguments against an IMF more bottom-heavy than the Salpeter IMF in J1331's bulge:}} 
 
@@ -1028,7 +1028,7 @@ suggestions like this could be put forward."]}
 
 \NEW{The kinematics of the merger remnant J1331 are peculiar and hard to explain with standard modelling techniques. We think that in the end the truth will be somewhere in between the results of the different modelling attempts.}
 
-\NEW{The central $v_\text{rms}$ is most likely a combination of the three different aspects that we investigated separately: We expect a bit of tangential \Wilma{???} velocity anisotropy (Sections \ref{sec:results_JAM_SB_MfL} and \ref{sec:results_JAM_NFW}), a moderate contribution of a roundish DM halo (Sections 4.2.3 \Wilma{???} and 4.4.2) and different stellar populations inside the bulge due to the merger (Section 5.3) with different $\Upsilon_{*}$ but overall bottom-heavy IMF (Section 5.1), which add to an overall rising $\Upsilon_\text{tot}(R')$ profile.}
+\NEW{The central $v_\text{rms}$ dip is most likely a combination of the three different aspects that we investigated separately: We expect a bit of tangential velocity anisotropy (Sections \ref{sec:results_JAM_SB_MfL} and \ref{sec:results_JAM_NFW}), a moderate contribution of a roundish DM halo (Sections \ref{sec:results_lensing_compare} and \ref{sec:results_JAM_NFW_results}) and different stellar populations inside the bulge due to the merger (Section \ref{sec:discussion_merger}) with different $\Upsilon_{*}$ but overall bottom-heavy IMF (Section \ref{sec:MLdiscussion}), which add to an overall rising $\Upsilon_\text{tot}(R')$ profile.}
 
 \NEW{The drop in $v_\text{rms}$ around $R'\sim4''$ is most likely due to a sharp drop in $\Upsilon_{*}(R')$ at the transition from red bulge to blue disk (compare bulge size in Figures \ref{fig:F450W} and \ref{fig:F814W}). Unfortunately the spiral arms make the disk of the galaxy difficult to model. At these larger radii a possible mis-alignment of long-slit and Galaxy major axis would also cause a stronger underestimation of the true $v_\text{rot}$ and would add to the drop in $v_\text{rms}$.}
 
