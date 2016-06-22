@@ -944,12 +944,12 @@ Usually ellipticals and the bulges of massive spirals appear reddest in their ce
 
 Even though investigation of the photometry of J1331 did not reveal a distinct blue core in J1331, we cannot fully exclude the possibility that J1331 has such a $\Upsilon_*$ gradient (see discussion in Sections \ref{sec:results_JAM_SB_MfL} and \ref{sec:results_JAM_SB_gradient}). \NEW{Spatially resolved stellar population analysis based on integral-field spectroscopy of J1331's bulge could provide further information on the true $\Upsilon_*(R')$.}\OLD{In this case the restrictive assumption of a constant $\Upsilon_*$ in our JAM modelling could have lead to wrong conclusions about the DM distribution.}
 
-Another way how galaxy encounters can modify the structure of galaxies is the excitation of warps \citep{1991wdir.book.....C,2013pss5.book..923S}. Warps lead to a twist in the projected kinematic major axis with radius, which is then also misaligned with the photometric major axis (\citealt{1998gaas.book.....B}, \S 8.2.4). From kinematics along the photometric major axis only it cannot be determined if such a twist or misalignment is present in J1331\NEW{, but it should be immediately visible in a 2D kinematic map}.\OLD{ But if it were, our modelling assumption of axisymmetry would not be satisfied anymore.}
+Another way how galaxy encounters can modify the structure of galaxies is the excitation of warps \citep{1991wdir.book.....C,2013pss5.book..923S}. Warps lead to a twist in the projected kinematic major axis with radius, which is then also misaligned with the photometric major axis (\citealt{1998gaas.book.....B}, \S 8.2.4). \NEW{We note that kinematics measured along an axis different from the kinematic major axis would result in $v_\text{rot}$ measurements being lower than the actual maximum $v_\text{circ}$. At large radii this could lead to an underestimation of the DM halo mass.} 
+
+From kinematics along the photometric major axis only it \OLD{cannot}\NEW{can however not} be determined if such a twist or misalignment is present in J1331\NEW{, but it should be immediately visible in a 2D kinematic map}.\OLD{ But if it were, our modelling assumption of axisymmetry would not be satisfied anymore.} \OLD{We note that kinematics measured along an axis different from the kinematic major axis would result in $v_\text{rot}$ measurements being lower than the actual maximum $v_\text{circ}$. At large radii this could lead to an underestimation of the DM halo mass.}
+
 \Wilma{[TO DO: Mention that warps would require other modelling techniques than the axisymmetric Jeans models.]}
-
-\Wilma{[More: "We note that kinematics measured along an axis different from the kinematic major axis would result in $v_\text{rot}$ measurements being lower than the actual maximum $v_\text{circ}$. At large radii this could lead to an underestimation of the DM halo mass." somewhere else.]}
 %--------------------------------------------
-
 
 %--------------------------------------------
 \subsection{On J1331's central stellar mass-to-light ratio} \label{sec:MLdiscussion}
@@ -992,6 +992,7 @@ When \citet{SWELLSI} assumed a Chabrier IMF, their result translates to $\Upsilo
 We also compare our results from Section \ref{sec:results_JAM_NFW} with the study by \citet{SWELLSV}. They found that the bulge of J1331 has an IMF \emph{more} bottom-heavy than the Salpeter IMF from fitting a NFW halo to (i) the Einstein mass and (ii) gas kinematics at larger radii $\gtrsim 8''$. In Section \ref{sec:results_JAM_NFW} we fitted a mass model with NFW halo to (i) the Einstein mass and (ii) stellar kinematics within $\sim 3.5''$. Our best fit $\Upsilon_\text{I,*} = 4.2 \pm 0.2$ (see Table \ref{tab:modelB4_bestfit}) indicates a \emph{less} bottom-heavy IMF than the Salpeter IMF. \NEW{In the following section we will argue why we do not think that the \cite{SWELLSV} model is a good model for the central regions of J1331. We therefore also do not believe their findings that the central IMF is more bottom-heavy than Salpeter.} \Wilma{[TO DO: Find new place for: "\cite{SWELLSV} found systematically lower NFW halo masses ($v_\text{circ,halo}(5'') \sim 120~\text{km s}^{-1}$ according to their Figure 2) than we did ($v_\text{circ,halo}(R'=5'') \sim 200~\text{km s}^{-1}$)."]}
 %--------------------------------------------
 
+
 %============================================
 \begin{figure}
 \centering
@@ -1002,17 +1003,28 @@ We also compare our results from Section \ref{sec:results_JAM_NFW} with the stud
 %============================================
 
 %--------------------------------------------
-\subsection{On J1331's central kinematics}
+\subsection{On J1331's \OLD{central }kinematics}
 %--------------------------------------------
 
 %--------------------------------------------
-In Figure \ref{fig:vcirc_comparison} we compare the circular velocity curve found by \citet{SWELLSV} with a mass-follows-light model scaled to fit our Einstein mass (by multiplying the light distribution in Table \ref{tab:MGEF814W} by $\Upsilon_\text{I,tot}^\text{ein} = 5.56$, analogous to Figure \ref{fig:lenscomparelight}). Within $R < 5''$ they agree with each other. 
+\NEW{Overall, the kinematics of the merger remnant J1331 are peculiar. In particular there are two features in the $v_\text{rms}$ curve that are hard to explain with standard modelling techniques. The first feature, the deep central $v_\text{rms}$ dip, was studied in detail in this work. The second feature, the drop and rise in $v_\text{rms}$ around \Wilma{[TO DO]}, is even harder to explain; below we will speculate about possible reasons that could cause such a signature.}
+
+\NEW{\emph{(i) The central $v_\text{rms}$ dip within $R'\lesssim1''$:}}
+
+\NEW{First, we will compare our modelling results with the modelling results by \citet{SWELLSV} within \Wilma{[TO DO]}.}
+
+\NEW{\citet{SWELLSV} fitted a stellar mass model and NFW halo to (i) the Einstein mass and (ii) gas kinematics at larger radii $\gtrsim8''$. } \OLD{In }Figure \ref{fig:vcirc_comparison} \OLD{we compare}\NEW{compares} the circular velocity curve found by \citet{SWELLSV} with a mass-follows-light model scaled to fit our Einstein mass (by multiplying the light distribution in Table \ref{tab:MGEF814W} by $\Upsilon_\text{I,tot}^\text{ein} = 5.56$, analogous to Figure \ref{fig:lenscomparelight}). Within $R < 5''$ they agree with each other. 
 
 The models in this work used more than just the Einstein mass to constrain the matter distribution at small radii: The lens mass model constrained also the shape of the mass distribution within the lensing image configuration at $R_\text{ein} \sim 1''$. The dynamical models used stellar kinematics inside $R' \simeq 3.5''$. We compare the lens mass model's $v_\text{circ}$ (for $\alpha=1.0\pm 0.1$) with the NFW JAM model (Table \ref{tab:modelB4_bestfit}) in Figure \ref{fig:vcirc_comparison} as well. Within and around $R_\text{ein}$ they are consistent with each other, even though they were independently derived. They do not agree with the mass-follows-light-like result by \citet{SWELLSV} and in Section \ref{sec:results_JAM_SB_MfL} we showed that ``mass-follows-light'' is not a good model for J1331.
 
-Overall, we were not able to find a consistent explanation for J1331's central $v_\text{rms}$ dip. It cannot be due to tangential velocity anisotropy in the center alone (see Section \ref{sec:results_JAM_SB_MfL}, Figure \ref{fig:JAM_modelA2}). It also cannot be explained by a strong contribution of DM inside the bulge together with a moderate tagential velocity anisotropy, because the corresponding \NEW{NFW} DM halo\OLD{s} would still be too massive to fit the data in the outer regions (see Section \ref{sec:results_JAM_NFW}, Figure \ref{fig:modelB4_vrms}).
+\NEW{Because we used more data constraints in the center than \citet{SWELLSV}, we think that our model for J1331's bulge is more reliable. In conclusion we suspect that the most likely model for J1331's central bulge is a moderate DM contribution in the center (Section \ref{sec:results_JAM_NFW_results}) with some tangential anisotropy (Sections \ref{sec:results_JAM_SB_MfL} and \ref{sec:results_JAM_NFW}) and an overall $\Upsilon_\text{*,I}$ in the bulge which is slightly lower than that of a Salpeter-like IMF (Section \ref{sec:MLdiscussion}). Different stellar populations inside the bulge due to the merger (Section \ref{sec:discussion_merger}) with different $\Upsilon_{*}$ could add to an overall rising $\Upsilon_\text{tot}(R')$ profile (Sections \ref{sec:results_lensing_compare} and \ref{sec:results_JAM_SB_gradient}).}
 
-Another feature in the stellar kinematics that none of our JAM models was able to reproduce in the slightest and which we therefore excluded in the modelling, was the dip in $v_\text{rms}$ around $\sim 6''$, which occurs around the transition from bulge to disk (see Figures \ref{fig:F814W} and \ref{fig:kinematics}).
+\OLD{Overall, we were not able to find a consistent explanation for J1331's central $v_\text{rms}$ dip. It cannot be due to tangential velocity anisotropy in the center alone (see Section \ref{sec:results_JAM_SB_MfL}, Figure \ref{fig:JAM_modelA2}). It also cannot be explained by a strong contribution of DM inside the bulge together with a moderate tagential velocity anisotropy, because the corresponding \NEW{NFW} DM halo\OLD{s} would still be too massive to fit the data in the outer regions (see Section \ref{sec:results_JAM_NFW}, Figure \ref{fig:modelB4_vrms}).}
+
+\OLD{Another feature in the stellar kinematics that none of our JAM models was able to reproduce in the slightest and which we therefore excluded in the modelling, was the dip in $v_\text{rms}$ around $\sim 6''$, which occurs around the transition from bulge to disk (see Figures \ref{fig:F814W} and \ref{fig:kinematics}).}
+
+\Wilma{[TO DO: Mention somewhere else: "Overall, we were not able to find a consistent explanation for J1331's central $v_\text{rms}$ dip. It cannot be due to tangential velocity anisotropy in the center alone (see Section \ref{sec:results_JAM_SB_MfL}, Figure \ref{fig:JAM_modelA2}). It also cannot be explained by a strong contribution of DM inside the bulge together with a moderate tagential velocity anisotropy, because the corresponding \NEW{NFW} DM halo\OLD{s} would still be too massive to fit the data in the outer regions (see Section \ref{sec:results_JAM_NFW}, Figure \ref{fig:modelB4_vrms})."]}
+
 %--------------------------------------------
 
 \Wilma{[TO DO: The referee says: "In Section 5.2, the authors could make suggestions for what might be causing the two
@@ -1021,25 +1033,18 @@ more convincing suggestions – e.g. could it be associated with the possible re
 merger that is explored in Section 5.3? It would be more satisfying if some
 suggestions like this could be put forward."]}
 
-\NEW{In conclusion we suspect that a moderate DM contribution in the center, with some tangential anisotropy and a $\Upsilon_\text{I,*}$ which is slightly lower than a Salpeter-like IMF is the most likely model for J1331's central bulge.}
+\NEW{\emph{(ii) The drop and rise of the $v_\text{rms}$ curve around $R'\sim 6''$:}}
 
+\NEW{The drop in $v_\text{rms}$ around $R'\sim4''$ (Figure \ref{fig:kinematics}) is most likely due to a sharp drop in $\Upsilon_{*}(R')$ at the transition from red bulge to blue disk (compare bulge size in Figures \ref{fig:F450W} and \ref{fig:F814W}). Unfortunately the spiral arms make the disk of the galaxy difficult to model. At these larger radii a possible misalignment of long-slit and galaxy's kinematic major axis would also cause a stronger underestimation of the true $v_\text{rot}$ and would add to the drop in $v_\text{rms}$.}
 
-\subsection{\NEW{Speculations on J1331's matter distribution}}
+\NEW{Around $R'\sim7''$ the rotation curve and dispersion show some wiggles which lead to a spontaneous rise of the $v_\text{rms}$. As the spiral arms cross the major axis around this radius, we suspect they cause this disturbance of the axisymmetric kinematics. The DM halo should also start to dominate the kinematics at larger radii, whose total mass we expect more of the order of what \citet{SWELLSV} found and which we suspect has a profile that deviates strongly from a NFW halo at both small and large radii. A more massive halo of NFW shape---as the one we found in this work---could however exist in J1331 if the galaxy had a strong kinematic warp in its disk due to the merger.}
 
-\NEW{The kinematics of the merger remnant J1331 are peculiar and hard to explain with standard modelling techniques. We think that in the end the truth will be somewhere in between the results of the different modelling attempts.}
-
-\NEW{The central $v_\text{rms}$ dip is most likely a combination of the three different aspects that we investigated separately: We expect a bit of tangential velocity anisotropy (Sections \ref{sec:results_JAM_SB_MfL} and \ref{sec:results_JAM_NFW}), a moderate contribution of a roundish DM halo (Sections \ref{sec:results_lensing_compare} and \ref{sec:results_JAM_NFW_results}) and different stellar populations inside the bulge due to the merger (Section \ref{sec:discussion_merger}) with different $\Upsilon_{*}$ but overall bottom-heavy IMF (Section \ref{sec:MLdiscussion}), which add to an overall rising $\Upsilon_\text{tot}(R')$ profile.}
-
-\NEW{The drop in $v_\text{rms}$ around $R'\sim4''$ is most likely due to a sharp drop in $\Upsilon_{*}(R')$ at the transition from red bulge to blue disk (compare bulge size in Figures \ref{fig:F450W} and \ref{fig:F814W}). Unfortunately the spiral arms make the disk of the galaxy difficult to model. At these larger radii a possible mis-alignment of long-slit and Galaxy major axis would also cause a stronger underestimation of the true $v_\text{rot}$ and would add to the drop in $v_\text{rms}$.}
-
-\NEW{Around $R'\sim7''$ the rotation curve and dispersion show some wiggles which lead to a spontaneous rise of the $v_\text{rms}$. As the spiral arms cross the major axis around this radius, we suspect they cause this disturbance of the axisymmetric kinematics. The DM halo should also start to dominate the kinematics at larger radii, whose total mass we expect more of the order of what \Wilma{[TO DO: Dutton paper]} found---unless J1331 has a strong kinematic warp in its disk, which cannot be detected in long-slit kinematics only.}
-
-\NEW{All of these speculations should be easily testable with 2D kinematics.} \Wilma{[TO DO: Proper referencing.]}
+\NEW{All of these speculations should be easily testable with 2D kinematics.}
 
 %--------------------------------------------
 \subsection{Future work}
 %--------------------------------------------
-
+\Wilma{[TO DO: Go through it and make it shorter.]}
 %--------------------------------------------
 Standard JAM modelling approaches seem not to work for J1331. The existing data---photometry and major axis kinematics---is however not sufficient to decide which of our model assumptions lead to the failure to find an overall consistent mass model.
 
@@ -1057,7 +1062,7 @@ All of the above would lead to a much better understanding of J1331's structure 
 %--------------------------------------------
 \subsection{Summary}
 %--------------------------------------------
-
+\Wilma{[TO DO: Go through it and make it shorter.]}
 %--------------------------------------------
 The goal of this work was to constrain the matter distribution of the massive spiral galaxy J1331. J1331 is of special interest because it firstly has a large counter-rotating core and might therefore be a merger remnant and it secondly acts as strong gravitational lens for a background source. The latter allowed us to constrain the galaxy's mass from gravitational lensing. As second independent approach we used dynamical Jeans modelling to recover and disentangle the stellar and DM distribution. We focussed on the bulge region of J1331 to complement previous studies of J1331 by \citet{SWELLSIII} and \citet{SWELLSV}. The independent mass constraints which we derived from lensing and dynamics agree very well with each other within $R_\text{eff}$.
 
