@@ -172,12 +172,14 @@ Inside of $\sim 4''$ the data appears to be symmetric; outside of it the data su
 
 %--------------------------------------------
 MGEs are used to parametrize the observed surface brightness (or projected total mass) of a galaxy as a sum of $N$ 2-dimensional, elliptical Gaussians \citep{1991ApJ...366..599B,1992A&A...253..366M,1994A&A...285..723E,1999MNRAS.303..495E}. This work makes use of the algorithm and code\footnote{The IDL code package for fitting MGEs to images by \citet{Cap02} is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap02}. We assume all Gaussians to have the same center and position angle $\phi$, i.e., the orientation of the Gaussians' major axis measured from North through East in the polar coordinate system $(R',\theta')$ on the plane of the sky. Then a surface brightness model can be expressed as
-\begin{eqnarray}
-I(R',\theta') &=& \sum_{i=1}^{N} I_{0,i} \exp\left[ - \frac{1}{2\sigma_i^2} \left(x^{'2} + \frac{y^{'2}}{q_i^{'2}}\right)\right]\label{eq:MGEgeneral}\\
-\text{with } I_{0,i} &=& \frac{L_i}{2\pi \sigma_i^2 q'_i}\label{eq:centralItotalL}\\
-\text{and } x'_i &=& R' \cos(\theta' - \phi)\nonumber\\
-y'_i &=& R' \sin(\theta' - \phi),\nonumber
-\end{eqnarray}
+\begin{align}
+I(R',\theta') &= \sum_{i=1}^{N} I_{0,i} \exp\left[ - \frac{1}{2\sigma_i^2} \left(x^{'2} + \frac{y^{'2}}{q_i^{'2}}\right)\right]\label{eq:MGEgeneral}\\
+\text{with } I_{0,i} &= \frac{L_i}{2\pi \sigma_i^2 q'_i}\label{eq:centralItotalL}\\
+\begin{split}
+\text{and } x'_i &= R' \cos(\theta' - \phi)\\
+y'_i &= R' \sin(\theta' - \phi),
+\end{split}
+\end{align}
 where $I_{0,i}$ is the central surface brightness of each Gaussian, $L_i$ its total luminosity, $\sigma_i$ its dispersion along the major axis and $q'_i$ the axis ratio between the elliptical Gaussian's major and minor axis.
 %--------------------------------------------
 
@@ -205,10 +207,10 @@ $I(R',\theta')$ describes the intrinsic, to 2D projected light distribution or s
 \nu(R,z) = \sum_i \nu_{0,i} \exp \left[-\frac{1}{2\sigma_i}\left(R^2 + \frac{z^2}{q_i^2} \right) \right], \label{eq:deprojMGE}
 \end{equation}
 where $R$ is the distance from the galaxy's short axis and $z$ the height above the galactic plane. The flattening $q_i$ of each axisymmetric 3D Gaussian and its central density $\nu_{0,i}$ follow from the observed 2D axis ratio $q'_i$ and surface density $I_{0,i}$ as
-\begin{eqnarray*}
+\begin{eqnarray}
 q_i^2 &=& \frac{q_i'^2 - \cos^2 i}{\sin^2 i}\\
 \nu_{0,i} &=& \frac{q_i' I_{0,i}}{q_i \sqrt{2 \pi \sigma_i^2}}.
-\end{eqnarray*}
+\end{eqnarray}
 %--------------------------------------------
 
 %--------------------------------------------
@@ -285,10 +287,12 @@ For this scale-free lens model the lens equation \eqref{eq:lenseqpot} becomes
 
 %--------------------------------------------
 The free parameters of the lens model are: the source position $(x_s',y_s')$, the radial slope $\alpha$ and Fourier parameters $(a_k,b_k)$ of the lens mass distribution in Equations \eqref{eq:scalefreemodel}-\eqref{eq:Fourieransatz}. We want to minimize the distance between the observed image positions, $\vect{\theta}_{oi}$, and those predicted by the lensing model, $\vect{\theta}_{pi}$. To avoid having to solve the lens equation \eqref{eq:Fourierlenseq} for $\vect{\theta}_{pi}$, we follow \citet{1991ApJ...373..354K} and cast the calculation back to the source plane using the magnification tensor in Equation \eqref{eq:magnificationtensor} to approximate $\vect{\theta} \simeq (\partial \vect{\theta} / \partial \vect{\beta}) \vect{\beta} = \mathscr{M} \vect{\beta} $. The best fit lens model is then the one that minimizes
-\begin{eqnarray}
-\chi^2_\text{lens} &=& \sum_{i} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right) \left( \vect{\theta}_{pi} - \vect{\theta}_{oi} \right)\right|^2\nonumber\\
-&\simeq& \sum_{i} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right)  \left.\mathscr{M}\right|_{\vect{\theta}=\vect{\theta}_{oi}} \left( \begin{matrix} x_s' - \tilde{x}'_{si} \\ y_s' - \tilde{y}'_{si} \end{matrix} \right) \right|^2,\label{eq:chi2lens}
-\end{eqnarray}
+\begin{align}
+\begin{split}
+\chi^2_\text{lens} &= \sum_{i} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right) \left( \vect{\theta}_{pi} - \vect{\theta}_{oi} \right)\right|^2\label{eq:chi2lens}\\
+&\simeq \sum_{i} \left|\left( \begin{matrix} \frac{1}{\Delta_x} & 0\\0 & \frac{1}{\Delta_y}\end{matrix}\right)  \left.\mathscr{M}\right|_{\vect{\theta}=\vect{\theta}_{oi}} \left( \begin{matrix} x_s' - \tilde{x}'_{si} \\ y_s' - \tilde{y}'_{si} \end{matrix} \right) \right|^2,
+\end{split}
+\end{align}
 where $(\Delta_x,\Delta_y)$ are the measurement errors of the image positions $\vect{\theta}_{oi}$. $\left.\mathscr{M}\right|_{\vect{\theta}=\vect{\theta}_{oi}}$ is the magnification tensor and $(\tilde{x}'_{si},\tilde{y}'_{si})$ the source position according to the lens equation, both evaluated at the position of the $i$-th lensing image, $\vect{\theta}_{oi}$. Following \citet{GlennEC} we add a term
 \begin{equation}
 \chi^2_\text{shape} = \lambda \sum_{k \geq 3} \frac{\left(a_k^2 +b_k^2 \right)}{a_0^2} \label{eq:chi2shape}
@@ -355,28 +359,28 @@ The JAM modelling code by \citet{Cap08} evaluates \OLD{Equation \eqref{eq:explic
 
 %--------------------------------------------
 As data we use stellar line-of-sight rotation velocities $v_\text{rot} = \langle v_\text{los} \rangle_\text{obs}$ and velocity dispersions $\sigma$ as described in Section \ref{sec:data_kinematics}. The JAM models give a prediction for the second line-of-sight velocity moment $\langle v_\text{los}^2 \rangle_\text{obs}$. The root-mean-square (rms) line-of-sight velocity $v_\text{rms}$ allows a data-model comparison by relating theses velocities according to 
-\begin{equation*}
+\begin{equation}
  v_\text{rms}^2 = v_\text{rot}^2 + \sigma^2  \stackrel{!}{=} \langle v_\text{los}^2 \rangle_\text{obs}.
-\end{equation*}
+\end{equation}
 \OLD{The model in Equation \eqref{eq:explicitLOSvelCap}}\NEW{The model derived from the Jeans equations as outlined in Section \ref{sec:model_JAM_JAM}} predicts the intrinsic $\langle v_\text{los}^2 \rangle_\text{intr}\equiv\langle v_\text{los}^2\rangle$ at a given position on the sky, which needs then to be modified to $\langle v_\text{los}^2 \rangle_\text{obs}$ according to the mode of observation to be comparable to the measurements. The measured $v_\text{rms}$ is a light-weighted mean for a pixel along the long-slit of the spectrograph, with width $L_y = 1''$ \citep{SWELLSV} and a certain given extent along the galaxy's major axis, $L_x$, i.e., for a rectangular aperture
-\begin{equation*}
+\begin{equation}
 \text{AP}(x',y') \equiv \left\{ \begin{array}{ll} 1 & \text{for } -\frac{L_x}{2} \leq x' < + \frac{L_x}{2}\\
 & \text{and } - \frac{L_y}{2} \leq y' \leq + \frac{L_y}{2}  \\ 0 & \text{otherwise.} \end{array} \right.
-\end{equation*}
+\end{equation}
 The light arriving at the spectrograph itself was subject to seeing, i.e., a Gaussian with Full Width Half Maximum (FWHM) of $1.1''$ \citep{SWELLSV},
-\begin{equation*}
+\begin{equation}
 \text{PSF}(x',y')\equiv\mathscr{N}(0,\sigma_\text{seeing}=\text{FWHM}/2\sqrt{2\ln2}).
-\end{equation*}
+\end{equation}
 The model predictions for $\langle v_\text{los}^2 \rangle_\text{intr}$ have therefore to be convolved with the convolution kernel
-\begin{eqnarray*}
-K(x',y') &\equiv& (\text{PSF} \ast \text{AP})(x',y') \\
+\begin{eqnarray}
+K(x',y') &\equiv& (\text{PSF} \ast \text{AP})(x',y') \nonumber\\
 &=& \frac{1}{4} \prod_{u \in \{x',y'\}} \left[ \text{erf}\left( \frac{L_u/2 - u}{\sqrt{2}\sigma_\text{seeing}}\right) + \text{erf} \left( \frac{L_u/2 + u}{\sqrt{2} \sigma_\text{seeing}} \right) \right],
-\end{eqnarray*}
+\end{eqnarray}
 and weighted by the surface brightness $I(x',y')$, i.e.,
-\begin{eqnarray*}
+\begin{eqnarray}
 I_\text{obs} &=& I \ast K\\
 \langle v_\text{los}^2 \rangle_\text{obs} &=& \frac{(I \langle v_\text{los}^2\rangle_\text{intr}) \ast K}{I_\text{obs}}.
-\end{eqnarray*}
+\end{eqnarray}
 \NEW{We modified the JAM code by \citet{Cap08} to use this convolution kernel with non-square pixels. The JAM code then}\OLD{If provided with the convolution kernel, the JAM code\footnote{The IDL code package for Jeans Anisotropic Models (JAM) by \citet{Cap08} is available online at \url{http://www-astro.physics.ox.ac.uk/~mxc/software}. The version from June 2012 was used in this work.} by \citet{Cap08}} performs the convolution numerically. We set $L_x = 0.21''$ as the width of the model pixel, and get a prediction for the actual measurements in bins of width $0.63''$, $1.26''$ and $1.89''$ \citep{SWELLSV} as light-weighted mean from each 3, 6 and 9 model pixels.
 %--------------------------------------------
 
@@ -415,7 +419,7 @@ As mentioned above, JAM modelling allows to incorporate an invisible matter comp
 \begin{equation}
 \rho_\text{NFW}(r) \propto r^{-1} \left( r+r_s \right)^{-2} \label{eq:NFWprofile}
 \end{equation}
-and two free parameters, the scale length $r_s$ and a parameter describing the total mass of the halo. We will use $v_\text{200}\NEW{\equiv \sqrt{GM_{200}/r_{200}}}$, which is the circular velocity at the radius $r_\text{200}$ within which the mean density of the halo is 200 times the cosmological critical density $\rho_\text{crit} \equiv (2H^2)/(8\pi G)$, \OLD{i.e.,}\NEW{ and where $M_{200} \equiv M(<r_{200}) \stackrel{!}{=} \frac 43 \pi r_{200}^3 \cdot \rho_\text{crit}(z=0)$.}
+and two free parameters, the scale length $r_s$ and a parameter describing the total mass of the halo. We will use $v_\text{200}\NEW{\equiv \sqrt{GM_{200}/r_{200}}}$, which is the circular velocity at the radius $r_\text{200}$ within which the mean density of the halo is 200 times the cosmological critical density $\rho_\text{crit} \equiv (2H^2)/(8\pi G)$, \OLD{i.e.,}\NEW{ and where $M_{200} \equiv M(<r_{200}) \stackrel{!}{=} \frac 43 \pi r_{200}^3 \cdot 200\rho_\text{crit}(z=0)$.}
 \OLD{\begin{eqnarray*}
 M_\text{200} &=& M(<r_{200})\\
 \frac{M_{200}}{ \frac 43 \pi r_{200}^3} &=& 200 \rho_\text{crit}(z=0) \\
@@ -546,17 +550,17 @@ To get a handle on the light distribution also in the outer parts of J1331 where
 To transform the MGE in units of counts into physical units, we apply a simplified version of the procedure described in \citet{Holtzman}.
 
 The scaling of the drizzled HST/WFC3 images is  $S \equiv 0.05''/\text{pixel width}$ and the total exposure time $T = 1600$ sec. Each Gaussian in the MGE has a total F814W luminosity $L_i$ (in counts) and a central surface brightness (in counts per pixel) of
-\begin{equation*}
+\begin{equation}
 C_{0,i}\text{[counts/pixel]} = \frac{L_i[\text{counts}]}{2\pi \sigma_i[\text{pixel}]^2 q_i}.
-\end{equation*}
+\end{equation}
 This is then transformed into an I-band surface brightness (in $\text{mag}\times(1'')^{-2}$) via
 \begin{equation}
 \mu_{I,0,i} \simeq -2.5 \log_{10}\left( \frac{C_{0,i}\text{[counts/pixel]}}{T[\text{sec}] \cdot S[''/\text{pixel width}]^2}\right) + Z + C + A_I, \label{eq:muI_}
 \end{equation}
 where $Z\simeq21.62~\text{mag}$ is the zero-point from \citet{Holtzman}, updated according to \citet{Dolphin,DolphinNew}, for the photometric system of the HST/WFPC2 camera and the F814W filter, plus a correction for the difference in gain between calibration and observation. $C= 0.1~\text{mag}$ corrects for the finite aperture of the WFPC2; and $A_I =0.015~\text{mag}$ is the extinction in the (Landolt) I-band towards J1331, according to the NASA/IPAC Extragalactic Database (NED)\footnote{The NASA/IPAC Extragalactic Database (NED, \url{https://ned.ipac.caltech.edu/}) is operated by the Jet Propulsion Laboratory, California Institute of Technology, under contract with the National Aeronautics and Space Administration. The data for J1331 (SDSS J133140.33+362811.9) was retrieved in October 2013.}. The colour-dependent correction between the F814W filter and the I-band of the UBVRI photometric system is  small \citep{Holtzman} and we neglect it therefore. The last step is to transform the surface brightness $\mu_{I,0,i}$ (in mag) to the I-band surface density $I_{0,i}$ (in $L_\odot$/pc$^2$) of the Gaussian, i.e.,
-\begin{eqnarray*}
+\begin{eqnarray}
 I_{0,i}[L_\odot \text{pc}^{-2}] = \left( 64800/\pi\right)^2 \left(1+z_d \right)^4 10^{0.4\left(M_{\odot,I}-\mu_{I,0,i} \right)},
-\end{eqnarray*}
+\end{eqnarray}
 where the term with $z_d$ accounts for redshift dimming and $M_{\odot,I}=4.08~\text{mag}$ is the Sun's absolute I-band magnitude \citep{1998gaas.book.....B}. The luminosity $L_i$[counts] and the corresponding surface brightness density $I_{0,i} [L_\odot \text{pc}^{-2}]$ of each Gaussian are given in Table \ref{fig:MGEinnerRegions}.
 %--------------------------------------------
 
@@ -581,9 +585,9 @@ $y_i'$ [pixel] & 16.6 & -10.4 & -0.5 & 19.2 & 0.5 $\pm \sqrt{2}$ \\
 
 %--------------------------------------------
 To estimate the inclination of J1331 with respect to the observer, we use the observed axis ratio of the flattest ellipse in the IRAF \emph{ellipse} model for J1331, which is $q'=0.42$. This is similar to the disk axis ratio of $q' = 0.40$ found by \citet{SWELLSI}. If a typical thickness of an oblate disk is around $q_0 \sim 0.2$ \citep{1958MeLu2.136....1H}, the inclination follows from 
-\begin{equation*}
+\begin{equation}
 \cos^2 i = \frac{q'^2 - q_0^2}{1 - q_0^2}
-\end{equation*}
+\end{equation}
 and a correction of $+3^\circ$ \citep{1988ngc..book.....T}. Our estimate for the inclination is therefore $i \approx 70^\circ$. Given this inclination, the 2-dimensional MGE models can be deprojected into three dimensions (see Section \ref{sec:MGE_theo_deprojection}).
 
 J1331's total I-band luminosity is determined by summing up the luminosity contributions of all the MGE Gaussians for the outer regions (shown as grey lines in Figure \ref{fig:MGEouterRegions}). We find $L_\text{I,tot} \simeq 5.6 \cdot 10^{10} ~L_\odot$. This corresponds to an apparent magnitude of $m_I = 15.77~\text{mag}$. We determine the circularized effective radius $R_\text{eff}$ of J1331 from the definition $L(<R_\text{eff}) \equiv \frac 12 L_\text{tot}$ and the growth curve $L(<R')$ from the MGE model of the outer regions, where $R'$ is the projected radius on the sky. We find the effective radius to be $R_\text{eff} \simeq 2.6'' \hat{=} 5.2~\text{kpc}$.  All values are summarized in Table \ref{tab:galaxyparameters}.
@@ -867,14 +871,16 @@ p(\log c_{200} \mid v_{200}) = \mathscr{N}\left(\langle \log c_{200} \rangle (M_
 \end{equation}
 
 For the velocity anisotropy parameter $\beta_z$ we will again employ a uniform prior 
-\begin{equation*}
+\begin{equation}
 p(\beta_z) = \mathscr{U}(-0.5,+0.5)
-\end{equation*}
+\end{equation}
 to exclude very unrealistic anisotropies. The full prior used is then
-\begin{eqnarray*}
-&&p(\Upsilon_\text{I,*},r_s,v_{200},\beta_z) \\
-&&= \frac{1}{\ln\left( 10 r_s\right)} p(\log c_{200} \mid v_{200}) \cdot p(v_{200}) \cdot p(\beta_z), 
-\end{eqnarray*}
+\begin{align}
+\begin{split}
+&p(\Upsilon_\text{I,*},r_s,v_{200},\beta_z) \\
+&= \frac{1}{\ln\left( 10 r_s\right)} p(\log c_{200} \mid v_{200}) \cdot p(v_{200}) \cdot p(\beta_z), 
+\end{split}
+\end{align}
 where the factor $1/\ln\left( 10 r_s\right)$ is the Jacobian of the transformation from the halo parameters $(v_{200},\log c_{200})$ to the fit parameters $(v_{200},r_s)$.
 
 \OLD{We restrict the $v_\text{rms}$ fit to a region $R' \lesssim 3.5''$, approximately within the effective half-light radius $R_\text{eff} = 2.6''$. }We also include the Einstein mass $M(<R_\text{ein})$ with a 10\% error as an additional constraint in the fit.
