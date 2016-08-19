@@ -1,0 +1,106 @@
+Dear Ms. Evripidou,
+Dear anonymous referee,
+
+thank you very much for having a detailed look at our paper draft and preparing this helpful report. We made an effort to account for all the referee's comments and to make some of the sections a bit more understandable---we hope you agree. We attach the original referee report below to which we added our answers.
+
+Kind regards,
+Wilma Trick
+
+Attachments:
+Trick_J1331_Modelling_revised.tex/.pdf - revised paper file ready for publishing (without any marked text or annotations), if the referee agrees.
+Trick_J1331_Modelling_revised_all_changes.pdf - file in which all changes with respect to the previous version of the paper are marked (new text = green, deleted text = red, annotations = blue).
+Trick_J1331_Modelling_revised_for_referee.pdf - file for the referee with the deleted text excluded to be more readable (new text = green, annotations = blue).
+
+====================================
+
+This is an interesting paper which makes neat use of the combination of stellar
+kinematics and strong lensing to investigate the mass structure of the spiral galaxy
+J1331. 
+
+--> ANSWER: Thanks. It is a very exiting galaxy that's definitely worth exploring.
+
+----------
+
+The introduction could be re-written slightly to emphasise the points that the study
+wants to investigate; for instance, the opening paragraph talks about the methods
+used rather than the astrophysics that the study is hoping to probe. This could
+probably be removed altogether, and the second paragraph promoted to the beginning. 
+
+--> ANSWER: That is a good point. We changed the opening paragraph to a general sentence why determining the matter distribution of galaxies is important. We mention the different methods now in the third paragraph.
+
+----------
+
+It would also be nice to include some more discussion of the possibility of a recent
+merger in the galaxy's past in the introduction, as this is a really interesting
+feature of the galaxy in question and is also a very active topic of research. 
+
+--> ANSWER: Good point. 1.) We added a sentence mentioning the important role of mergers in modifying the matter distribution and added some recent references. 2.) We added a short paragraph later in the introduction that points out that J1331 is a special and very interesting galaxy for researching mergers. We also explain better that this merger is one of the reasons why we especially focus on the inner regions of J1331 in our study.
+
+----------
+
+The manuscript in its current form is also slightly longer than necessary at certain
+points: for instance, in section 3.2.1, it is not really necessary to present all
+the lensing equations (e.g. the time delay, equation 7), and similarly, section
+3.3.1 contains a lot of material that is implicit in Cappellari's JAM code, and
+therefore does not need to be explained equation by equation here. Section 3.3.4
+also rather throws the book at the NFW profile relations – it probably isn't
+necessary to include equation 22. 
+
+--> ANSWER: We made an effort to remove unnecessary equations in Section 3.2.1, tighten the explanation of the derivation of the Jeans equations in Section 3.3.1 and 3.3.3 and removed big and clumsy mathematical expressions by referring to the explicit equations in the literature instead. In 3.3.2 we refer stronger to the changes we made to Capellari's JAM code and kept the corresponding equations. In Section 3.3.4 we moved equations that are definitions and therefore needed inline to make it shorter; we kept the concentration vs. halo mass relation (former equation 22) and explicitely mention that we will use this later as a prior in our modelling. In general we include a lot of equations and a substantial theory introduction because it is a paper that is potentially interesting for two communities, the lensing and the dynamics community. We wanted to make the paper understandable for both.
+
+----------
+
+From a scientific perspective, in section 4.3.3, the authors comment that the
+varying M/L JAM model is unable to reproduce the dynamics when M/L is forced to be
+always rising as a function of radius, but it would be interesting to see if the
+model could be improved by removing this constraint. Perhaps the authors could add
+such a model to this section, or else comment on why they do not attempt it. 
+
+--> ANSWER: We have indeed tried a ``mass-follows-light'' JAM model with constant anisotropy and free M/L profile early on in our investigations of J1331. This was unsuccessful to a degree that showing the result in the paper would not be reasonable.  The way how we can generate variable M/L profiles with our MGE mass model is restricted. We have 6 data points and 5 fit M/L parameter within 5 arcsec. This lead to an over-fitting in the inner regions where most of the Gaussians are, while not having enough flexibility at larger radii. (We added a sentence mentioning that in the paper.) The resulting profile was very wiggly, difficult to interpret and most likely unphysical.  As we lay out in the discussion, constraints on a varying stellar M/L ratio should be motivated by stellar population analysis in the future.
+
+----------
+
+In section 4.4.1, the NFW profile is fitted only to the inner data, and then is
+shown to not provide a good model for the data beyond that point. This is not
+entirely surprising, given that the outer data were not used to constrain the model!
+What happens if the NFW profile is fitted to both small- and large- radius data at
+once? (Perhaps it is impossible to find a good NFW model across the whole radius
+range, but if this is the case, then it should be stated.) 
+
+--> ANSWER: Yes, you are completely right. Our initial tests tried of course to fit the whole range of data, but failed. The problem is that we were never able to fit both the central $v_\text{rms}$ dip and the dip around $R'\sim 6''$ with any of the models we tried. If you think this is frustrating, we definitely feel the same way. Our best explanation was, that the spiral arms do weird things to the kinematics around $R'\sim 5-7''$ that cannot be captured by the axisymmtric Jeans models. In this region our MGE models also were not a good fit to the galaxy anymore. Considering also that there are other studies focussing on the outer regions and the counter-rotating core is the most interesting feature, we decided to focus our efforts on the inner regions and try to explain the central kinematics only. We added however a small new section 4.4.4 that discusses that and why modelling attempts to the whole data range fail and what possible next modelling steps should be.
+
+----------
+
+The discussion section is too non-committal and speculative in parts. For instance,
+in section 5.1, the M/Ls inferred from a number of the different models are compared
+with M/Ls from the literature, but the authors do not make any value judgement
+between the different models to come to any firmer conclusions about what they
+believe the most convincing description of the IMF to be. At the moment, this
+section seems to just be trying to show that their various models can be made to
+agree with previous models from the literature, but it would be much more
+interesting if some attempt could be made to resolve all the different models (both
+in this paper and in previous works) or at least present them in a more coherent
+framework, to try to come up with a better picture of the nature of J1331's IMF. 
+
+--> ANSWER: This is a valid point of criticism. We thought again about the different models and indications for different IMFs that we collected and came to the conclusion that an IMF slightly less bottom-beavy than the Salpeter IMF is the most likely model for J1331's bulge. We tried to give Section 5.2 (former 5.1) more structure and tweaked the discussion to present arguments for $\Upsilon_{I,*} \sim 4.2$ and and to argue against the alternative models.
+We also moved the section that discusses J1331's merger history to the beginning to the discussion section, focussed more on what the merger could have done to J1331's mass distribution and less on modelling failures. All following sections use the background information about mergers to discuss our models.
+Our scientific honesty is however, that without further data, we cannot be more commital and some of our statements have to stay in the "speculation regime".
+
+----------
+
+In Section 5.2, the authors could make suggestions for what might be causing the two
+$v_{rms}$ dips. Currently, they just state what cannot be the cause, but do not make any
+more convincing suggestions – e.g. could it be associated with the possible recent
+merger that is explored in Section 5.3? It would be more satisfying if some
+suggestions like this could be put forward. 
+
+--> ANSWER: Good point. We admit that the text was formulated a bit too negative, and that we can do better in explaining J1331 based on our models than just ruling out things. Also, some of the effects that mergers can have on galaxies could, if they occured in J1331, actually explain some of the peculiar kinematic features of J1331. We tried to re-formulate section 5.3 (former 5.2) and discuss several aspects of the kinematics with respect to the merger history.
+
+----------
+
+While the use of English is impressive given that it is not the main author's mother
+tongue, I would also recommend giving the manuscript to a native speaker to correct
+the number of grammatical errors that remain. 
+
+--> ANSWER: One of the authors is a native speaker and he had a look at the language again. We corrected everything he thought should be corrected. Hopefully it is fine now.
+
