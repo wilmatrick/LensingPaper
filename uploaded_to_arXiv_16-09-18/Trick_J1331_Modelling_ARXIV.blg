@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/TeX Live for SUSE Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Trick_J1331_Modelling_ARXIV.aux
+The style file: mnras.bst
+Database file #1: literaturelist.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--can't use both author and editor fields in 2013pss5.book..923S
+You've used 69 entries,
+            2881 wiz_defined-function locations,
+            1344 strings with 26116 characters,
+and the built_in function-call counts, 33207 in all, are:
+= -- 2661
+> -- 2421
+< -- 193
++ -- 1079
+- -- 349
+* -- 4102
+:= -- 5254
+add.period$ -- 0
+call.type$ -- 69
+change.case$ -- 138
+chr.to.int$ -- 68
+cite$ -- 70
+duplicate$ -- 1606
+empty$ -- 1653
+format.name$ -- 561
+if$ -- 5719
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 76
+newline$ -- 227
+num.names$ -- 492
+pop$ -- 403
+preamble$ -- 1
+purify$ -- 276
+quote$ -- 0
+skip$ -- 935
+stack$ -- 0
+substring$ -- 1845
+swap$ -- 890
+text.length$ -- 282
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 600
+warning$ -- 1
+while$ -- 527
+width$ -- 0
+write$ -- 707
+(There was 1 warning)
